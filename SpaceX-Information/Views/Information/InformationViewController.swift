@@ -6,8 +6,10 @@
 //
 
 import UIKit
-import Logic
-import Domain
+//import Logic
+//import Domain
+//import Repository
+import Configuration
 
 class InformationViewController: UIViewController {
 
@@ -18,7 +20,7 @@ class InformationViewController: UIViewController {
 
 		decorateInterface()
 		
-		let viewModel = Logic.InformationViewModel(useCase: DefaultRetrieveCompanyInformationUseCase())
+		let viewModel = ViewModelFactory.makeInformationViewModel()
 		
 		guard let navigationController = navigationController else { return }
 		

@@ -22,12 +22,38 @@
 		308CAA652744640200ABBA90 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
 		308CAA6C2744640200ABBA90 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA6B2744640200ABBA90 /* LogicTests.swift */; };
 		308CAA6E2744640200ABBA90 /* Logic.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAA5E2744640200ABBA90 /* Logic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		308CAA712744640200ABBA90 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
-		308CAA722744640200ABBA90 /* Logic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAA7D2744641F00ABBA90 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */; };
 		308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */; };
 		308CAA822744667000ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
 		308CAA832744667000ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAA95274466CB00ABBA90 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; };
+		308CAA9C274466CB00ABBA90 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA9B274466CB00ABBA90 /* RepositoryTests.swift */; };
+		308CAA9E274466CB00ABBA90 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAA8E274466CA00ABBA90 /* Repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		308CAAA9274466DC00ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
+		308CAAAA274466DC00ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAAB02744671E00ABBA90 /* CompanyInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAAF2744671E00ABBA90 /* CompanyInformationRepository.swift */; };
+		308CAAB1274467A500ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
+		308CAAB2274467A500ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAABE274467D000ABBA90 /* Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAABC274467D000ABBA90 /* Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		308CAAC1274467D000ABBA90 /* Configuration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAABA274467D000ABBA90 /* Configuration.framework */; };
+		308CAAC2274467D000ABBA90 /* Configuration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAABA274467D000ABBA90 /* Configuration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAAC6274467E400ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
+		308CAAC7274467E400ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAACA274467E400ABBA90 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
+		308CAACB274467E400ABBA90 /* Logic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAACE274467E400ABBA90 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; };
+		308CAACF274467E400ABBA90 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAAD52744680700ABBA90 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAD42744680700ABBA90 /* ViewModelFactory.swift */; };
+		308CAAE427446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
+		308CAAEB27446A8900ABBA90 /* SpaceXAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */; };
+		308CAAED27446A8900ABBA90 /* SpaceXAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAADD27446A8900ABBA90 /* SpaceXAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		308CAAF027446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
+		308CAAF127446A8900ABBA90 /* SpaceXAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAAF827446B5500ABBA90 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; };
+		308CAAF927446B5600ABBA90 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAAFD27446B6200ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
+		308CAAFE27446B6200ABBA90 /* SpaceXAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAB0327446BAA00ABBA90 /* CompanyInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0227446BAA00ABBA90 /* CompanyInformationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,19 +85,103 @@
 			remoteGlobalIDString = 308CA9DF2744509300ABBA90;
 			remoteInfo = "SpaceX-Information";
 		};
-		308CAA6F2744640200ABBA90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 308CAA5B2744640200ABBA90;
-			remoteInfo = Logic;
-		};
 		308CAA842744667000ABBA90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 308CAA35274463D100ABBA90;
 			remoteInfo = Domain;
+		};
+		308CAA96274466CB00ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA8B274466CA00ABBA90;
+			remoteInfo = Repository;
+		};
+		308CAA98274466CB00ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CA9DF2744509300ABBA90;
+			remoteInfo = "SpaceX-Information";
+		};
+		308CAAAB274466DC00ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA35274463D100ABBA90;
+			remoteInfo = Domain;
+		};
+		308CAAB3274467A500ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA35274463D100ABBA90;
+			remoteInfo = Domain;
+		};
+		308CAABF274467D000ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAAB9274467D000ABBA90;
+			remoteInfo = Configuration;
+		};
+		308CAAC8274467E400ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA35274463D100ABBA90;
+			remoteInfo = Domain;
+		};
+		308CAACC274467E400ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA5B2744640200ABBA90;
+			remoteInfo = Logic;
+		};
+		308CAAD0274467E400ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA8B274466CA00ABBA90;
+			remoteInfo = Repository;
+		};
+		308CAAE527446A8900ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAADA27446A8900ABBA90;
+			remoteInfo = SpaceXAPI;
+		};
+		308CAAE727446A8900ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CA9DF2744509300ABBA90;
+			remoteInfo = "SpaceX-Information";
+		};
+		308CAAEE27446A8900ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAADA27446A8900ABBA90;
+			remoteInfo = SpaceXAPI;
+		};
+		308CAAFA27446B5600ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA8B274466CA00ABBA90;
+			remoteInfo = Repository;
+		};
+		308CAAFF27446B6200ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAADA27446A8900ABBA90;
+			remoteInfo = SpaceXAPI;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,7 +192,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				308CAA722744640200ABBA90 /* Logic.framework in Embed Frameworks */,
+				308CAAB2274467A500ABBA90 /* Domain.framework in Embed Frameworks */,
+				308CAAC2274467D000ABBA90 /* Configuration.framework in Embed Frameworks */,
+				308CAAF127446A8900ABBA90 /* SpaceXAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +206,42 @@
 			dstSubfolderSpec = 10;
 			files = (
 				308CAA832744667000ABBA90 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAAD274466DC00ABBA90 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				308CAAAA274466DC00ABBA90 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAD2274467E400ABBA90 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				308CAAC7274467E400ABBA90 /* Domain.framework in Embed Frameworks */,
+				308CAAFE27446B6200ABBA90 /* SpaceXAPI.framework in Embed Frameworks */,
+				308CAACB274467E400ABBA90 /* Logic.framework in Embed Frameworks */,
+				308CAACF274467E400ABBA90 /* Repository.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAFC27446B5600ABBA90 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				308CAAF927446B5600ABBA90 /* Repository.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +274,24 @@
 		308CAA6D2744640200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
 		308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveCompanyInformationUseCase.swift; sourceTree = "<group>"; };
+		308CAA8C274466CA00ABBA90 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAA8E274466CA00ABBA90 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
+		308CAA8F274466CA00ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAA94274466CB00ABBA90 /* RepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAA9B274466CB00ABBA90 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		308CAA9D274466CB00ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAAAF2744671E00ABBA90 /* CompanyInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationRepository.swift; sourceTree = "<group>"; };
+		308CAABA274467D000ABBA90 /* Configuration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAABC274467D000ABBA90 /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		308CAABD274467D000ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAAD42744680700ABBA90 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpaceXAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAADD27446A8900ABBA90 /* SpaceXAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceXAPI.h; sourceTree = "<group>"; };
+		308CAADE27446A8900ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAAE327446A8900ABBA90 /* SpaceXAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXAPITests.swift; sourceTree = "<group>"; };
+		308CAAEC27446A8900ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAB0227446BAA00ABBA90 /* CompanyInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +299,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308CAA712744640200ABBA90 /* Logic.framework in Frameworks */,
+				308CAAB1274467A500ABBA90 /* Domain.framework in Frameworks */,
+				308CAAC1274467D000ABBA90 /* Configuration.framework in Frameworks */,
+				308CAAF027446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,17 +336,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		308CAA89274466CA00ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAA9274466DC00ABBA90 /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA91274466CB00ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA95274466CB00ABBA90 /* Repository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAB7274467D000ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAC6274467E400ABBA90 /* Domain.framework in Frameworks */,
+				308CAAFD27446B6200ABBA90 /* SpaceXAPI.framework in Frameworks */,
+				308CAACA274467E400ABBA90 /* Logic.framework in Frameworks */,
+				308CAACE274467E400ABBA90 /* Repository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAD827446A8900ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAF827446B5500ABBA90 /* Repository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAE027446A8900ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAE427446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		308CA9D72744509300ABBA90 = {
 			isa = PBXGroup;
 			children = (
+				308CAABB274467D000ABBA90 /* Configuration */,
 				308CA9E22744509400ABBA90 /* SpaceX-Information */,
 				308CAA37274463D100ABBA90 /* Domain */,
 				308CAA44274463D200ABBA90 /* DomainTests */,
 				308CAA5D2744640200ABBA90 /* Logic */,
 				308CAA6A2744640200ABBA90 /* LogicTests */,
+				308CAA8D274466CA00ABBA90 /* Repository */,
+				308CAA9A274466CB00ABBA90 /* RepositoryTests */,
+				308CAADC27446A8900ABBA90 /* SpaceXAPI */,
+				308CAAE927446A8900ABBA90 /* SpaceXAPITests */,
 				308CA9E12744509400ABBA90 /* Products */,
 				308CAA812744667000ABBA90 /* Frameworks */,
 			);
@@ -192,6 +408,11 @@
 				308CAA3E274463D200ABBA90 /* DomainTests.xctest */,
 				308CAA5C2744640200ABBA90 /* Logic.framework */,
 				308CAA642744640200ABBA90 /* LogicTests.xctest */,
+				308CAA8C274466CA00ABBA90 /* Repository.framework */,
+				308CAA94274466CB00ABBA90 /* RepositoryTests.xctest */,
+				308CAABA274467D000ABBA90 /* Configuration.framework */,
+				308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */,
+				308CAAE327446A8900ABBA90 /* SpaceXAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -314,6 +535,78 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		308CAA8D274466CA00ABBA90 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				308CAAAE2744671200ABBA90 /* Information */,
+				308CAA8E274466CA00ABBA90 /* Repository.h */,
+				308CAA8F274466CA00ABBA90 /* Info.plist */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		308CAA9A274466CB00ABBA90 /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA9B274466CB00ABBA90 /* RepositoryTests.swift */,
+				308CAA9D274466CB00ABBA90 /* Info.plist */,
+			);
+			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
+		308CAAAE2744671200ABBA90 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				308CAAAF2744671E00ABBA90 /* CompanyInformationRepository.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		308CAABB274467D000ABBA90 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				308CAAD3274467ED00ABBA90 /* View Model Factory */,
+				308CAABC274467D000ABBA90 /* Configuration.h */,
+				308CAABD274467D000ABBA90 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		308CAAD3274467ED00ABBA90 /* View Model Factory */ = {
+			isa = PBXGroup;
+			children = (
+				308CAAD42744680700ABBA90 /* ViewModelFactory.swift */,
+			);
+			path = "View Model Factory";
+			sourceTree = "<group>";
+		};
+		308CAADC27446A8900ABBA90 /* SpaceXAPI */ = {
+			isa = PBXGroup;
+			children = (
+				308CAB0127446B8000ABBA90 /* Information */,
+				308CAADD27446A8900ABBA90 /* SpaceXAPI.h */,
+				308CAADE27446A8900ABBA90 /* Info.plist */,
+			);
+			path = SpaceXAPI;
+			sourceTree = "<group>";
+		};
+		308CAAE927446A8900ABBA90 /* SpaceXAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */,
+				308CAAEC27446A8900ABBA90 /* Info.plist */,
+			);
+			path = SpaceXAPITests;
+			sourceTree = "<group>";
+		};
+		308CAB0127446B8000ABBA90 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				308CAB0227446BAA00ABBA90 /* CompanyInformationService.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -333,6 +626,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		308CAA87274466CA00ABBA90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA9E274466CB00ABBA90 /* Repository.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAB5274467D000ABBA90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAABE274467D000ABBA90 /* Configuration.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAD627446A8900ABBA90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAED27446A8900ABBA90 /* SpaceXAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -348,7 +665,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				308CAA702744640200ABBA90 /* PBXTargetDependency */,
+				308CAAB4274467A500ABBA90 /* PBXTargetDependency */,
+				308CAAC0274467D000ABBA90 /* PBXTargetDependency */,
+				308CAAEF27446A8900ABBA90 /* PBXTargetDependency */,
 			);
 			name = "SpaceX-Information";
 			productName = "SpaceX-Information";
@@ -431,6 +750,107 @@
 			productReference = 308CAA642744640200ABBA90 /* LogicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		308CAA8B274466CA00ABBA90 /* Repository */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAAA3274466CB00ABBA90 /* Build configuration list for PBXNativeTarget "Repository" */;
+			buildPhases = (
+				308CAA87274466CA00ABBA90 /* Headers */,
+				308CAA88274466CA00ABBA90 /* Sources */,
+				308CAA89274466CA00ABBA90 /* Frameworks */,
+				308CAA8A274466CA00ABBA90 /* Resources */,
+				308CAAAD274466DC00ABBA90 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAAAC274466DC00ABBA90 /* PBXTargetDependency */,
+			);
+			name = Repository;
+			productName = Repository;
+			productReference = 308CAA8C274466CA00ABBA90 /* Repository.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		308CAA93274466CB00ABBA90 /* RepositoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAAA6274466CB00ABBA90 /* Build configuration list for PBXNativeTarget "RepositoryTests" */;
+			buildPhases = (
+				308CAA90274466CB00ABBA90 /* Sources */,
+				308CAA91274466CB00ABBA90 /* Frameworks */,
+				308CAA92274466CB00ABBA90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAA97274466CB00ABBA90 /* PBXTargetDependency */,
+				308CAA99274466CB00ABBA90 /* PBXTargetDependency */,
+			);
+			name = RepositoryTests;
+			productName = RepositoryTests;
+			productReference = 308CAA94274466CB00ABBA90 /* RepositoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		308CAAB9274467D000ABBA90 /* Configuration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAAC3274467D000ABBA90 /* Build configuration list for PBXNativeTarget "Configuration" */;
+			buildPhases = (
+				308CAAB5274467D000ABBA90 /* Headers */,
+				308CAAB6274467D000ABBA90 /* Sources */,
+				308CAAB7274467D000ABBA90 /* Frameworks */,
+				308CAAB8274467D000ABBA90 /* Resources */,
+				308CAAD2274467E400ABBA90 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAAC9274467E400ABBA90 /* PBXTargetDependency */,
+				308CAACD274467E400ABBA90 /* PBXTargetDependency */,
+				308CAAD1274467E400ABBA90 /* PBXTargetDependency */,
+				308CAB0027446B6200ABBA90 /* PBXTargetDependency */,
+			);
+			name = Configuration;
+			productName = Configuration;
+			productReference = 308CAABA274467D000ABBA90 /* Configuration.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		308CAADA27446A8900ABBA90 /* SpaceXAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAAF227446A8900ABBA90 /* Build configuration list for PBXNativeTarget "SpaceXAPI" */;
+			buildPhases = (
+				308CAAD627446A8900ABBA90 /* Headers */,
+				308CAAD727446A8900ABBA90 /* Sources */,
+				308CAAD827446A8900ABBA90 /* Frameworks */,
+				308CAAD927446A8900ABBA90 /* Resources */,
+				308CAAFC27446B5600ABBA90 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAAFB27446B5600ABBA90 /* PBXTargetDependency */,
+			);
+			name = SpaceXAPI;
+			productName = SpaceXAPI;
+			productReference = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		308CAAE227446A8900ABBA90 /* SpaceXAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAAF527446A8900ABBA90 /* Build configuration list for PBXNativeTarget "SpaceXAPITests" */;
+			buildPhases = (
+				308CAADF27446A8900ABBA90 /* Sources */,
+				308CAAE027446A8900ABBA90 /* Frameworks */,
+				308CAAE127446A8900ABBA90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAAE627446A8900ABBA90 /* PBXTargetDependency */,
+				308CAAE827446A8900ABBA90 /* PBXTargetDependency */,
+			);
+			name = SpaceXAPITests;
+			productName = SpaceXAPITests;
+			productReference = 308CAAE327446A8900ABBA90 /* SpaceXAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -459,6 +879,26 @@
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 308CA9DF2744509300ABBA90;
 					};
+					308CAA8B274466CA00ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					308CAA93274466CB00ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 308CA9DF2744509300ABBA90;
+					};
+					308CAAB9274467D000ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					308CAADA27446A8900ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					308CAAE227446A8900ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 308CA9DF2744509300ABBA90;
+					};
 				};
 			};
 			buildConfigurationList = 308CA9DB2744509300ABBA90 /* Build configuration list for PBXProject "SpaceX-Information" */;
@@ -475,10 +915,15 @@
 			projectRoot = "";
 			targets = (
 				308CA9DF2744509300ABBA90 /* SpaceX-Information */,
+				308CAAB9274467D000ABBA90 /* Configuration */,
 				308CAA35274463D100ABBA90 /* Domain */,
 				308CAA3D274463D200ABBA90 /* DomainTests */,
 				308CAA5B2744640200ABBA90 /* Logic */,
 				308CAA632744640200ABBA90 /* LogicTests */,
+				308CAA8B274466CA00ABBA90 /* Repository */,
+				308CAA93274466CB00ABBA90 /* RepositoryTests */,
+				308CAADA27446A8900ABBA90 /* SpaceXAPI */,
+				308CAAE227446A8900ABBA90 /* SpaceXAPITests */,
 			);
 		};
 /* End PBXProject section */
@@ -516,6 +961,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		308CAA622744640200ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA8A274466CA00ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA92274466CB00ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAB8274467D000ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAD927446A8900ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAE127446A8900ABBA90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -570,6 +1050,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		308CAA88274466CA00ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAB02744671E00ABBA90 /* CompanyInformationRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA90274466CB00ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA9C274466CB00ABBA90 /* RepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAB6274467D000ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAD52744680700ABBA90 /* ViewModelFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAAD727446A8900ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAB0327446BAA00ABBA90 /* CompanyInformationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAADF27446A8900ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAAEB27446A8900ABBA90 /* SpaceXAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -593,15 +1113,75 @@
 			target = 308CA9DF2744509300ABBA90 /* SpaceX-Information */;
 			targetProxy = 308CAA682744640200ABBA90 /* PBXContainerItemProxy */;
 		};
-		308CAA702744640200ABBA90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 308CAA5B2744640200ABBA90 /* Logic */;
-			targetProxy = 308CAA6F2744640200ABBA90 /* PBXContainerItemProxy */;
-		};
 		308CAA852744667000ABBA90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 308CAA35274463D100ABBA90 /* Domain */;
 			targetProxy = 308CAA842744667000ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAA97274466CB00ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA8B274466CA00ABBA90 /* Repository */;
+			targetProxy = 308CAA96274466CB00ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAA99274466CB00ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CA9DF2744509300ABBA90 /* SpaceX-Information */;
+			targetProxy = 308CAA98274466CB00ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAAC274466DC00ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA35274463D100ABBA90 /* Domain */;
+			targetProxy = 308CAAAB274466DC00ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAB4274467A500ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA35274463D100ABBA90 /* Domain */;
+			targetProxy = 308CAAB3274467A500ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAC0274467D000ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAAB9274467D000ABBA90 /* Configuration */;
+			targetProxy = 308CAABF274467D000ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAC9274467E400ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA35274463D100ABBA90 /* Domain */;
+			targetProxy = 308CAAC8274467E400ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAACD274467E400ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA5B2744640200ABBA90 /* Logic */;
+			targetProxy = 308CAACC274467E400ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAD1274467E400ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA8B274466CA00ABBA90 /* Repository */;
+			targetProxy = 308CAAD0274467E400ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAE627446A8900ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAADA27446A8900ABBA90 /* SpaceXAPI */;
+			targetProxy = 308CAAE527446A8900ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAE827446A8900ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CA9DF2744509300ABBA90 /* SpaceX-Information */;
+			targetProxy = 308CAAE727446A8900ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAEF27446A8900ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAADA27446A8900ABBA90 /* SpaceXAPI */;
+			targetProxy = 308CAAEE27446A8900ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAAFB27446B5600ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA8B274466CA00ABBA90 /* Repository */;
+			targetProxy = 308CAAFA27446B5600ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAB0027446B6200ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAADA27446A8900ABBA90 /* SpaceXAPI */;
+			targetProxy = 308CAAFF27446B6200ABBA90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -958,6 +1538,263 @@
 			};
 			name = Release;
 		};
+		308CAAA4274466CB00ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Repository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Repository;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		308CAAA5274466CB00ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Repository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Repository;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		308CAAA7274466CB00ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = RepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.RepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
+			};
+			name = Debug;
+		};
+		308CAAA8274466CB00ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = RepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.RepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
+			};
+			name = Release;
+		};
+		308CAAC4274467D000ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Configuration/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Configuration;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		308CAAC5274467D000ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Configuration/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Configuration;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		308CAAF327446A8900ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SpaceXAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.SpaceXAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		308CAAF427446A8900ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SpaceXAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.SpaceXAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		308CAAF627446A8900ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = SpaceXAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.SpaceXAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
+			};
+			name = Debug;
+		};
+		308CAAF727446A8900ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = SpaceXAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.SpaceXAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1011,6 +1848,51 @@
 			buildConfigurations = (
 				308CAA772744640200ABBA90 /* Debug */,
 				308CAA782744640200ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAAA3274466CB00ABBA90 /* Build configuration list for PBXNativeTarget "Repository" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAAA4274466CB00ABBA90 /* Debug */,
+				308CAAA5274466CB00ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAAA6274466CB00ABBA90 /* Build configuration list for PBXNativeTarget "RepositoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAAA7274466CB00ABBA90 /* Debug */,
+				308CAAA8274466CB00ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAAC3274467D000ABBA90 /* Build configuration list for PBXNativeTarget "Configuration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAAC4274467D000ABBA90 /* Debug */,
+				308CAAC5274467D000ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAAF227446A8900ABBA90 /* Build configuration list for PBXNativeTarget "SpaceXAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAAF327446A8900ABBA90 /* Debug */,
+				308CAAF427446A8900ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAAF527446A8900ABBA90 /* Build configuration list for PBXNativeTarget "SpaceXAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAAF627446A8900ABBA90 /* Debug */,
+				308CAAF727446A8900ABBA90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
