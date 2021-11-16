@@ -18,23 +18,19 @@
 		308CAA0927445BC600ABBA90 /* InformationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA0827445BC600ABBA90 /* InformationNavigator.swift */; };
 		308CAA3F274463D200ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
 		308CAA46274463D200ABBA90 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA45274463D200ABBA90 /* DomainTests.swift */; };
-		308CAA48274463D200ABBA90 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAA38274463D100ABBA90 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		308CAA652744640200ABBA90 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
 		308CAA6C2744640200ABBA90 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA6B2744640200ABBA90 /* LogicTests.swift */; };
-		308CAA6E2744640200ABBA90 /* Logic.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAA5E2744640200ABBA90 /* Logic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		308CAA7D2744641F00ABBA90 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */; };
 		308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */; };
 		308CAA822744667000ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
 		308CAA832744667000ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAA95274466CB00ABBA90 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; };
 		308CAA9C274466CB00ABBA90 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA9B274466CB00ABBA90 /* RepositoryTests.swift */; };
-		308CAA9E274466CB00ABBA90 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAA8E274466CA00ABBA90 /* Repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		308CAAA9274466DC00ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
 		308CAAAA274466DC00ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAAB02744671E00ABBA90 /* CompanyInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAAF2744671E00ABBA90 /* CompanyInformationRepository.swift */; };
 		308CAAB1274467A500ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
 		308CAAB2274467A500ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		308CAABE274467D000ABBA90 /* Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAABC274467D000ABBA90 /* Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		308CAAC1274467D000ABBA90 /* Configuration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAABA274467D000ABBA90 /* Configuration.framework */; };
 		308CAAC2274467D000ABBA90 /* Configuration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAABA274467D000ABBA90 /* Configuration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAAC6274467E400ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
@@ -46,7 +42,6 @@
 		308CAAD52744680700ABBA90 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAD42744680700ABBA90 /* ViewModelFactory.swift */; };
 		308CAAE427446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
 		308CAAEB27446A8900ABBA90 /* SpaceXAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */; };
-		308CAAED27446A8900ABBA90 /* SpaceXAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAADD27446A8900ABBA90 /* SpaceXAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		308CAAF027446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
 		308CAAF127446A8900ABBA90 /* SpaceXAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAAF827446B5500ABBA90 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; };
@@ -261,13 +256,11 @@
 		308CAA0527445BA000ABBA90 /* UIImage+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Shared.swift"; sourceTree = "<group>"; };
 		308CAA0827445BC600ABBA90 /* InformationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationNavigator.swift; sourceTree = "<group>"; };
 		308CAA36274463D100ABBA90 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		308CAA38274463D100ABBA90 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		308CAA39274463D100ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAA3E274463D200ABBA90 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CAA45274463D200ABBA90 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		308CAA47274463D200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAA5C2744640200ABBA90 /* Logic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		308CAA5E2744640200ABBA90 /* Logic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logic.h; sourceTree = "<group>"; };
 		308CAA5F2744640200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAA642744640200ABBA90 /* LogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CAA6B2744640200ABBA90 /* LogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicTests.swift; sourceTree = "<group>"; };
@@ -275,18 +268,15 @@
 		308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
 		308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveCompanyInformationUseCase.swift; sourceTree = "<group>"; };
 		308CAA8C274466CA00ABBA90 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		308CAA8E274466CA00ABBA90 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		308CAA8F274466CA00ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAA94274466CB00ABBA90 /* RepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CAA9B274466CB00ABBA90 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		308CAA9D274466CB00ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAAAF2744671E00ABBA90 /* CompanyInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationRepository.swift; sourceTree = "<group>"; };
 		308CAABA274467D000ABBA90 /* Configuration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		308CAABC274467D000ABBA90 /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		308CAABD274467D000ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAAD42744680700ABBA90 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpaceXAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		308CAADD27446A8900ABBA90 /* SpaceXAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceXAPI.h; sourceTree = "<group>"; };
 		308CAADE27446A8900ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAAE327446A8900ABBA90 /* SpaceXAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXAPITests.swift; sourceTree = "<group>"; };
@@ -477,9 +467,8 @@
 		308CAA37274463D100ABBA90 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				308CAA7E274464FD00ABBA90 /* Information */,
-				308CAA38274463D100ABBA90 /* Domain.h */,
 				308CAA39274463D100ABBA90 /* Info.plist */,
+				308CAA7E274464FD00ABBA90 /* Information */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -496,7 +485,6 @@
 		308CAA5D2744640200ABBA90 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				308CAA5E2744640200ABBA90 /* Logic.h */,
 				308CAA5F2744640200ABBA90 /* Info.plist */,
 				308CAA792744640D00ABBA90 /* Information */,
 			);
@@ -538,9 +526,8 @@
 		308CAA8D274466CA00ABBA90 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				308CAAAE2744671200ABBA90 /* Information */,
-				308CAA8E274466CA00ABBA90 /* Repository.h */,
 				308CAA8F274466CA00ABBA90 /* Info.plist */,
+				308CAAAE2744671200ABBA90 /* Information */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -565,9 +552,8 @@
 		308CAABB274467D000ABBA90 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				308CAAD3274467ED00ABBA90 /* View Model Factory */,
-				308CAABC274467D000ABBA90 /* Configuration.h */,
 				308CAABD274467D000ABBA90 /* Info.plist */,
+				308CAAD3274467ED00ABBA90 /* View Model Factory */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -583,9 +569,8 @@
 		308CAADC27446A8900ABBA90 /* SpaceXAPI */ = {
 			isa = PBXGroup;
 			children = (
-				308CAB0127446B8000ABBA90 /* Information */,
-				308CAADD27446A8900ABBA90 /* SpaceXAPI.h */,
 				308CAADE27446A8900ABBA90 /* Info.plist */,
+				308CAB0127446B8000ABBA90 /* Information */,
 			);
 			path = SpaceXAPI;
 			sourceTree = "<group>";
@@ -614,7 +599,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308CAA48274463D200ABBA90 /* Domain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,7 +606,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308CAA6E2744640200ABBA90 /* Logic.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,7 +613,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308CAA9E274466CB00ABBA90 /* Repository.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,7 +620,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308CAABE274467D000ABBA90 /* Configuration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +627,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308CAAED27446A8900ABBA90 /* SpaceXAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
