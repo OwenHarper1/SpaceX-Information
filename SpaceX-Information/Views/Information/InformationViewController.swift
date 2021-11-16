@@ -37,22 +37,3 @@ class InformationViewController: UIViewController {
 		navigator?.presentFilter()
 	}
 }
-
-class InformationNavigator {
-	private let navigationController: UINavigationController
-	
-	init(navigationController: UINavigationController) {
-		self.navigationController = navigationController
-	}
-	
-	func presentFilter() {
-		let viewController = FilterViewController()
-		let filterNavigationController = UINavigationController(rootViewController: viewController)
-		navigationController.present(filterNavigationController, animated: true)
-	}
-}
-
-// todo: extract
-extension UIImage {
-	static let filterIcon = UIImage(systemName:"slider.horizontal.3")
-}

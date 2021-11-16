@@ -14,6 +14,8 @@
 		308CA9FD2744530F00ABBA90 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308CA9FB2744530F00ABBA90 /* InformationViewController.xib */; };
 		308CAA022744589200ABBA90 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA002744589200ABBA90 /* FilterViewController.swift */; };
 		308CAA032744589200ABBA90 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308CAA012744589200ABBA90 /* FilterViewController.xib */; };
+		308CAA0627445BA000ABBA90 /* UIImage+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA0527445BA000ABBA90 /* UIImage+Shared.swift */; };
+		308CAA0927445BC600ABBA90 /* InformationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA0827445BC600ABBA90 /* InformationNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		308CA9FB2744530F00ABBA90 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		308CAA002744589200ABBA90 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		308CAA012744589200ABBA90 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		308CAA0527445BA000ABBA90 /* UIImage+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Shared.swift"; sourceTree = "<group>"; };
+		308CAA0827445BC600ABBA90 /* InformationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				308CA9E32744509400ABBA90 /* AppDelegate.swift */,
 				308CA9E52744509400ABBA90 /* SceneDelegate.swift */,
 				308CA9F12744509600ABBA90 /* Info.plist */,
+				308CAA0727445BBB00ABBA90 /* Navigators */,
 				308CA9F9274452CD00ABBA90 /* Views */,
 				308CA9F8274452BF00ABBA90 /* Resources */,
 			);
@@ -71,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				308CA9EC2744509600ABBA90 /* Assets.xcassets */,
+				308CAA0527445BA000ABBA90 /* UIImage+Shared.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -100,6 +106,14 @@
 				308CAA012744589200ABBA90 /* FilterViewController.xib */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		308CAA0727445BBB00ABBA90 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA0827445BC600ABBA90 /* InformationNavigator.swift */,
+			);
+			path = Navigators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308CAA0927445BC600ABBA90 /* InformationNavigator.swift in Sources */,
 				308CA9E42744509400ABBA90 /* AppDelegate.swift in Sources */,
 				308CA9E62744509400ABBA90 /* SceneDelegate.swift in Sources */,
+				308CAA0627445BA000ABBA90 /* UIImage+Shared.swift in Sources */,
 				308CAA022744589200ABBA90 /* FilterViewController.swift in Sources */,
 				308CA9FC2744530F00ABBA90 /* InformationViewController.swift in Sources */,
 			);
