@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Logic
+import Domain
 
 class InformationViewController: UIViewController {
 
@@ -15,6 +17,8 @@ class InformationViewController: UIViewController {
         super.viewDidLoad()
 
 		decorateInterface()
+		
+		let viewModel = Logic.InformationViewModel(useCase: DefaultRetrieveCompanyInformationUseCase())
 		
 		guard let navigationController = navigationController else { return }
 		

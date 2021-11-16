@@ -16,7 +16,89 @@
 		308CAA032744589200ABBA90 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308CAA012744589200ABBA90 /* FilterViewController.xib */; };
 		308CAA0627445BA000ABBA90 /* UIImage+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA0527445BA000ABBA90 /* UIImage+Shared.swift */; };
 		308CAA0927445BC600ABBA90 /* InformationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA0827445BC600ABBA90 /* InformationNavigator.swift */; };
+		308CAA3F274463D200ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
+		308CAA46274463D200ABBA90 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA45274463D200ABBA90 /* DomainTests.swift */; };
+		308CAA48274463D200ABBA90 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAA38274463D100ABBA90 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		308CAA652744640200ABBA90 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
+		308CAA6C2744640200ABBA90 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA6B2744640200ABBA90 /* LogicTests.swift */; };
+		308CAA6E2744640200ABBA90 /* Logic.h in Headers */ = {isa = PBXBuildFile; fileRef = 308CAA5E2744640200ABBA90 /* Logic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		308CAA712744640200ABBA90 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
+		308CAA722744640200ABBA90 /* Logic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308CAA7D2744641F00ABBA90 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */; };
+		308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */; };
+		308CAA822744667000ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
+		308CAA832744667000ABBA90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		308CAA40274463D200ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA35274463D100ABBA90;
+			remoteInfo = Domain;
+		};
+		308CAA42274463D200ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CA9DF2744509300ABBA90;
+			remoteInfo = "SpaceX-Information";
+		};
+		308CAA662744640200ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA5B2744640200ABBA90;
+			remoteInfo = Logic;
+		};
+		308CAA682744640200ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CA9DF2744509300ABBA90;
+			remoteInfo = "SpaceX-Information";
+		};
+		308CAA6F2744640200ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA5B2744640200ABBA90;
+			remoteInfo = Logic;
+		};
+		308CAA842744667000ABBA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA35274463D100ABBA90;
+			remoteInfo = Domain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		308CAA4D274463D200ABBA90 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				308CAA722744640200ABBA90 /* Logic.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA862744667000ABBA90 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				308CAA832744667000ABBA90 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		308CA9E02744509400ABBA90 /* SpaceX-Information.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-Information.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +112,20 @@
 		308CAA012744589200ABBA90 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		308CAA0527445BA000ABBA90 /* UIImage+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Shared.swift"; sourceTree = "<group>"; };
 		308CAA0827445BC600ABBA90 /* InformationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationNavigator.swift; sourceTree = "<group>"; };
+		308CAA36274463D100ABBA90 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAA38274463D100ABBA90 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		308CAA39274463D100ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAA3E274463D200ABBA90 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAA45274463D200ABBA90 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		308CAA47274463D200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAA5C2744640200ABBA90 /* Logic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAA5E2744640200ABBA90 /* Logic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logic.h; sourceTree = "<group>"; };
+		308CAA5F2744640200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAA642744640200ABBA90 /* LogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CAA6B2744640200ABBA90 /* LogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicTests.swift; sourceTree = "<group>"; };
+		308CAA6D2744640200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
+		308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveCompanyInformationUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +133,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308CAA712744640200ABBA90 /* Logic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA33274463D100ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA3B274463D200ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA3F274463D200ABBA90 /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA592744640200ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA822744667000ABBA90 /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA612744640200ABBA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA652744640200ABBA90 /* Logic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +175,12 @@
 			isa = PBXGroup;
 			children = (
 				308CA9E22744509400ABBA90 /* SpaceX-Information */,
+				308CAA37274463D100ABBA90 /* Domain */,
+				308CAA44274463D200ABBA90 /* DomainTests */,
+				308CAA5D2744640200ABBA90 /* Logic */,
+				308CAA6A2744640200ABBA90 /* LogicTests */,
 				308CA9E12744509400ABBA90 /* Products */,
+				308CAA812744667000ABBA90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				308CA9E02744509400ABBA90 /* SpaceX-Information.app */,
+				308CAA36274463D100ABBA90 /* Domain.framework */,
+				308CAA3E274463D200ABBA90 /* DomainTests.xctest */,
+				308CAA5C2744640200ABBA90 /* Logic.framework */,
+				308CAA642744640200ABBA90 /* LogicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +253,87 @@
 			path = Navigators;
 			sourceTree = "<group>";
 		};
+		308CAA37274463D100ABBA90 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA7E274464FD00ABBA90 /* Information */,
+				308CAA38274463D100ABBA90 /* Domain.h */,
+				308CAA39274463D100ABBA90 /* Info.plist */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		308CAA44274463D200ABBA90 /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA45274463D200ABBA90 /* DomainTests.swift */,
+				308CAA47274463D200ABBA90 /* Info.plist */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		308CAA5D2744640200ABBA90 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA5E2744640200ABBA90 /* Logic.h */,
+				308CAA5F2744640200ABBA90 /* Info.plist */,
+				308CAA792744640D00ABBA90 /* Information */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		308CAA6A2744640200ABBA90 /* LogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA6B2744640200ABBA90 /* LogicTests.swift */,
+				308CAA6D2744640200ABBA90 /* Info.plist */,
+			);
+			path = LogicTests;
+			sourceTree = "<group>";
+		};
+		308CAA792744640D00ABBA90 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		308CAA7E274464FD00ABBA90 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		308CAA812744667000ABBA90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		308CAA31274463D100ABBA90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA48274463D200ABBA90 /* Domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA572744640200ABBA90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA6E2744640200ABBA90 /* Logic.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		308CA9DF2744509300ABBA90 /* SpaceX-Information */ = {
@@ -126,15 +343,93 @@
 				308CA9DC2744509300ABBA90 /* Sources */,
 				308CA9DD2744509300ABBA90 /* Frameworks */,
 				308CA9DE2744509300ABBA90 /* Resources */,
+				308CAA4D274463D200ABBA90 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				308CAA702744640200ABBA90 /* PBXTargetDependency */,
 			);
 			name = "SpaceX-Information";
 			productName = "SpaceX-Information";
 			productReference = 308CA9E02744509400ABBA90 /* SpaceX-Information.app */;
 			productType = "com.apple.product-type.application";
+		};
+		308CAA35274463D100ABBA90 /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAA52274463D200ABBA90 /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				308CAA31274463D100ABBA90 /* Headers */,
+				308CAA32274463D100ABBA90 /* Sources */,
+				308CAA33274463D100ABBA90 /* Frameworks */,
+				308CAA34274463D100ABBA90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Domain;
+			productName = Domain;
+			productReference = 308CAA36274463D100ABBA90 /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		308CAA3D274463D200ABBA90 /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAA53274463D200ABBA90 /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				308CAA3A274463D200ABBA90 /* Sources */,
+				308CAA3B274463D200ABBA90 /* Frameworks */,
+				308CAA3C274463D200ABBA90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAA41274463D200ABBA90 /* PBXTargetDependency */,
+				308CAA43274463D200ABBA90 /* PBXTargetDependency */,
+			);
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = 308CAA3E274463D200ABBA90 /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		308CAA5B2744640200ABBA90 /* Logic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAA732744640200ABBA90 /* Build configuration list for PBXNativeTarget "Logic" */;
+			buildPhases = (
+				308CAA572744640200ABBA90 /* Headers */,
+				308CAA582744640200ABBA90 /* Sources */,
+				308CAA592744640200ABBA90 /* Frameworks */,
+				308CAA5A2744640200ABBA90 /* Resources */,
+				308CAA862744667000ABBA90 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAA852744667000ABBA90 /* PBXTargetDependency */,
+			);
+			name = Logic;
+			productName = Logic;
+			productReference = 308CAA5C2744640200ABBA90 /* Logic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		308CAA632744640200ABBA90 /* LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308CAA762744640200ABBA90 /* Build configuration list for PBXNativeTarget "LogicTests" */;
+			buildPhases = (
+				308CAA602744640200ABBA90 /* Sources */,
+				308CAA612744640200ABBA90 /* Frameworks */,
+				308CAA622744640200ABBA90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308CAA672744640200ABBA90 /* PBXTargetDependency */,
+				308CAA692744640200ABBA90 /* PBXTargetDependency */,
+			);
+			name = LogicTests;
+			productName = LogicTests;
+			productReference = 308CAA642744640200ABBA90 /* LogicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -147,6 +442,22 @@
 				TargetAttributes = {
 					308CA9DF2744509300ABBA90 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					308CAA35274463D100ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					308CAA3D274463D200ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 308CA9DF2744509300ABBA90;
+					};
+					308CAA5B2744640200ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					308CAA632744640200ABBA90 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 308CA9DF2744509300ABBA90;
 					};
 				};
 			};
@@ -164,6 +475,10 @@
 			projectRoot = "";
 			targets = (
 				308CA9DF2744509300ABBA90 /* SpaceX-Information */,
+				308CAA35274463D100ABBA90 /* Domain */,
+				308CAA3D274463D200ABBA90 /* DomainTests */,
+				308CAA5B2744640200ABBA90 /* Logic */,
+				308CAA632744640200ABBA90 /* LogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -176,6 +491,34 @@
 				308CA9ED2744509600ABBA90 /* Assets.xcassets in Resources */,
 				308CAA032744589200ABBA90 /* FilterViewController.xib in Resources */,
 				308CA9FD2744530F00ABBA90 /* InformationViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA34274463D100ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA3C274463D200ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA5A2744640200ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA622744640200ABBA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +538,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		308CAA32274463D100ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA3A274463D200ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA46274463D200ABBA90 /* DomainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA582744640200ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA7D2744641F00ABBA90 /* InformationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308CAA602744640200ABBA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308CAA6C2744640200ABBA90 /* LogicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		308CAA41274463D200ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA35274463D100ABBA90 /* Domain */;
+			targetProxy = 308CAA40274463D200ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAA43274463D200ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CA9DF2744509300ABBA90 /* SpaceX-Information */;
+			targetProxy = 308CAA42274463D200ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAA672744640200ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA5B2744640200ABBA90 /* Logic */;
+			targetProxy = 308CAA662744640200ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAA692744640200ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CA9DF2744509300ABBA90 /* SpaceX-Information */;
+			targetProxy = 308CAA682744640200ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAA702744640200ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA5B2744640200ABBA90 /* Logic */;
+			targetProxy = 308CAA6F2744640200ABBA90 /* PBXContainerItemProxy */;
+		};
+		308CAA852744667000ABBA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA35274463D100ABBA90 /* Domain */;
+			targetProxy = 308CAA842744667000ABBA90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		308CA9F22744509600ABBA90 /* Debug */ = {
@@ -317,6 +725,7 @@
 		308CA9F52744509600ABBA90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +745,7 @@
 		308CA9F62744509600ABBA90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -349,6 +759,202 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		308CAA4E274463D200ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		308CAA4F274463D200ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		308CAA50274463D200ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = DomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
+			};
+			name = Debug;
+		};
+		308CAA51274463D200ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = DomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
+			};
+			name = Release;
+		};
+		308CAA742744640200ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Logic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Logic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		308CAA752744640200ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Logic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Logic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		308CAA772744640200ABBA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = LogicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.LogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
+			};
+			name = Debug;
+		};
+		308CAA782744640200ABBA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
+				INFOPLIST_FILE = LogicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.LogicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
 			};
 			name = Release;
 		};
@@ -369,6 +975,42 @@
 			buildConfigurations = (
 				308CA9F52744509600ABBA90 /* Debug */,
 				308CA9F62744509600ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAA52274463D200ABBA90 /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAA4E274463D200ABBA90 /* Debug */,
+				308CAA4F274463D200ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAA53274463D200ABBA90 /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAA50274463D200ABBA90 /* Debug */,
+				308CAA51274463D200ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAA732744640200ABBA90 /* Build configuration list for PBXNativeTarget "Logic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAA742744640200ABBA90 /* Debug */,
+				308CAA752744640200ABBA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308CAA762744640200ABBA90 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308CAA772744640200ABBA90 /* Debug */,
+				308CAA782744640200ABBA90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
