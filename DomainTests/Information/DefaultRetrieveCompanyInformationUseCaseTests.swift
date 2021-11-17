@@ -31,7 +31,7 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 		wait(for: [expectation], timeout: 1)
 		XCTAssertNotNil(useCaseResult)
 		XCTAssertTrue(useCaseResult!.isSuccess)
-		// todo: add equatable test
+		XCTAssertEqual(try useCaseResult?.get(), .mock())
 	}
 	
 	func test_shouldReturnError_givenRepositoryReturnsError() {
@@ -48,6 +48,6 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 		wait(for: [expectation], timeout: 1)
 		XCTAssertNotNil(useCaseResult)
 		XCTAssertTrue(useCaseResult!.isFailure)
-		// todo: add equatable test
+		// todo: add equatable test when using custom error types
 	}
 }

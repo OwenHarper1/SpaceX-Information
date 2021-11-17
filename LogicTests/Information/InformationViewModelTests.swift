@@ -25,7 +25,7 @@ class InformationViewModelTests: XCTestCase {
 		
 		viewModel.load()
 		
-		XCTAssertNotNil(delegate.information) // todo: change to equatable
+		XCTAssertEqual(delegate.information, .mock())
 		XCTAssertNil(delegate.error)
 		XCTAssertFalse(delegate.error is MockError)
 	}

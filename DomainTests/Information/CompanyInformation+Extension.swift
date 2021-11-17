@@ -22,9 +22,12 @@ extension CompanyInformation {
 	}
 }
 
-// todo: extract
-extension Date {
-	static func startOfYear2021() -> Date {
-		return Date(timeIntervalSinceReferenceDate: 631152000)
+extension CompanyInformation: Equatable {
+	public static func == (lhs: CompanyInformation, rhs: CompanyInformation) -> Bool {
+		return lhs.companyName == rhs.companyName &&
+			lhs.founderName == rhs.founderName &&
+			lhs.foundingYear == rhs.foundingYear &&
+			lhs.totalLaunchSites == rhs.totalLaunchSites &&
+			lhs.unitedStatesDollarValuation == rhs.unitedStatesDollarValuation
 	}
 }

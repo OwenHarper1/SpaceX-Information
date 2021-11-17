@@ -58,14 +58,3 @@ class CompanyInformationRepositoryTests: XCTestCase {
 		XCTAssertTrue(repositoryResult!.isFailure)
 	}
 }
-
-// todo: extract
-extension CompanyInformation: Equatable {
-	public static func == (lhs: CompanyInformation, rhs: CompanyInformation) -> Bool {
-		return lhs.companyName == rhs.companyName &&
-			lhs.founderName == rhs.founderName &&
-			lhs.foundingYear == rhs.foundingYear &&
-			lhs.totalLaunchSites == rhs.totalLaunchSites &&
-			lhs.unitedStatesDollarValuation == rhs.unitedStatesDollarValuation
-	}
-}
