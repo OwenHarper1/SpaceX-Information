@@ -26,34 +26,17 @@ class InformationViewModelTests: XCTestCase {
 		viewModel.load()
 		
 		XCTAssertNotNil(delegate.information) // todo: change to equatable
+		XCTAssertNil(delegate.error)
+		XCTAssertFalse(delegate.error is MockError)
 	}
 	
 	func test_shouldReturnErorr_givenUseCaseReturnsError() {
+		useCase.result = .failure(MockError())
 		
-	}
-}
-
-// todo: extract
-class MockInformationViewModelDelegate: InformationViewModelDelegate {
-	var information: CompanyInformation!
-	
-	func retrieved(_ information: CompanyInformation) {
-		self.information = information
-	}
-}
-
-// todo: extract
-class MockRetrieveCompanyInformationUseCase: RetrieveCompanyInformationUseCase {
-	var result: Result<CompanyInformation, Error>!
-	
-	func execute(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
-		completion(result)
-	}
-}
-
-// todo: extract
-extension CompanyInformation {
-	static func mock() -> Self {
-		return .init()
+		viewModel.load()
+		
+		XCTAssertNil(delegate.information)
+		XCTAssertNotNil(delegate.error)
+		XCTAssertTrue(delegate.error is MockError)
 	}
 }

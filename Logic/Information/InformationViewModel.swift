@@ -9,6 +9,7 @@ import Domain
 
 public protocol InformationViewModelDelegate {
 	func retrieved(_ information: CompanyInformation)
+	func retrieved(_ error: Error)
 }
 
 public class InformationViewModel {
@@ -21,9 +22,9 @@ public class InformationViewModel {
 	}
 	
 	func load() {
-		useCase.execute { result in
-			guard case .success(let information) = result else { return }
-			self.delegate.retrieved(information)
+		useCase.execute {
+			$0.handle(success: self.delegate.retrieved,
+					  failure: self.delegate.retrieved)
 		}
 	}
 }
