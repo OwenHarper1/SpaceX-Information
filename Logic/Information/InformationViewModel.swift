@@ -8,7 +8,7 @@
 import Domain
 
 public protocol InformationViewModelDelegate {
-	func retrieved(_ information: CompanyInformation)
+	func retrievedInformation()
 	func retrieved(_ error: DomainError)
 }
 
@@ -16,15 +16,22 @@ public class InformationViewModel {
 	private let useCase: RetrieveCompanyInformationUseCase
 	private let delegate: InformationViewModelDelegate
 	
+	private(set) public var companyInformation: CompanyInformation?
+	
 	public init(useCase: RetrieveCompanyInformationUseCase, delegate: InformationViewModelDelegate) {
 		self.useCase = useCase
 		self.delegate = delegate
 	}
 	
 	public func load() {
-		useCase.execute {
-			$0.handle(success: self.delegate.retrieved,
+		self.useCase.execute {
+			$0.handle(success: self.handleInformationRetrieved,
 					  failure: self.delegate.retrieved)
 		}
+	}
+	
+	private func handleInformationRetrieved(_ information: CompanyInformation) {
+		delegate.retrievedInformation()
+		self.companyInformation = information
 	}
 }

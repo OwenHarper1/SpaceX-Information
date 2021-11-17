@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController" customModule="SpaceX_Information" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="7gf-Hj-5M4" id="SEx-eD-dvV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +19,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InformationViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k74-4e-dyI">
-                    <rect key="frame" x="108" y="437.5" width="198" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-Hj-5M4">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ERX-Wi-Vot">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="k74-4e-dyI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IcX-JN-uRb"/>
-                <constraint firstItem="k74-4e-dyI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vRx-zh-tQx"/>
+                <constraint firstAttribute="bottom" secondItem="7gf-Hj-5M4" secondAttribute="bottom" id="DvU-yO-AJW"/>
+                <constraint firstItem="7gf-Hj-5M4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E6F-6G-9vG"/>
+                <constraint firstItem="7gf-Hj-5M4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZR6-XA-gQA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7gf-Hj-5M4" secondAttribute="trailing" id="tjV-TQ-UD0"/>
             </constraints>
             <point key="canvasLocation" x="97" y="90"/>
         </view>
