@@ -6,5 +6,6 @@
 //
 
 public struct CompanyInformation {
+	public init() {}
 	// todo: implement
 }

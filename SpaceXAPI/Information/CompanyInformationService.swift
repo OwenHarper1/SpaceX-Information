@@ -11,9 +11,9 @@ import Repository
 public class CompanyInformationService: Service, Repository.CompanyInformationService {
 	public override init() {}
 	
-	public func retrieveInformation() {
+	public func retrieve(completion: @escaping (Result<CompanyInformationResponse, Error>) -> ()) {
 		// todo: implement
 	}
 }
 
-public class Service {}
+public class Service {} // todo: see if there's any practical benefit - if not, bin
