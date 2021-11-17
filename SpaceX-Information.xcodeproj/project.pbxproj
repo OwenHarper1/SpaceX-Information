@@ -42,8 +42,6 @@
 		308CAAD52744680700ABBA90 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAD42744680700ABBA90 /* ViewModelFactory.swift */; };
 		308CAAE427446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
 		308CAAEB27446A8900ABBA90 /* SpaceXAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */; };
-		308CAAF027446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
-		308CAAF127446A8900ABBA90 /* SpaceXAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAAF827446B5500ABBA90 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; };
 		308CAAF927446B5600ABBA90 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAAFD27446B6200ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
@@ -157,13 +155,6 @@
 			remoteGlobalIDString = 308CA9DF2744509300ABBA90;
 			remoteInfo = "SpaceX-Information";
 		};
-		308CAAEE27446A8900ABBA90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 308CAADA27446A8900ABBA90;
-			remoteInfo = SpaceXAPI;
-		};
 		308CAAFA27446B5600ABBA90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
@@ -189,7 +180,6 @@
 			files = (
 				308CAAB2274467A500ABBA90 /* Domain.framework in Embed Frameworks */,
 				308CAAC2274467D000ABBA90 /* Configuration.framework in Embed Frameworks */,
-				308CAAF127446A8900ABBA90 /* SpaceXAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +281,6 @@
 			files = (
 				308CAAB1274467A500ABBA90 /* Domain.framework in Frameworks */,
 				308CAAC1274467D000ABBA90 /* Configuration.framework in Frameworks */,
-				308CAAF027446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,7 +636,6 @@
 			dependencies = (
 				308CAAB4274467A500ABBA90 /* PBXTargetDependency */,
 				308CAAC0274467D000ABBA90 /* PBXTargetDependency */,
-				308CAAEF27446A8900ABBA90 /* PBXTargetDependency */,
 			);
 			name = "SpaceX-Information";
 			productName = "SpaceX-Information";
@@ -1147,11 +1135,6 @@
 			isa = PBXTargetDependency;
 			target = 308CA9DF2744509300ABBA90 /* SpaceX-Information */;
 			targetProxy = 308CAAE727446A8900ABBA90 /* PBXContainerItemProxy */;
-		};
-		308CAAEF27446A8900ABBA90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 308CAADA27446A8900ABBA90 /* SpaceXAPI */;
-			targetProxy = 308CAAEE27446A8900ABBA90 /* PBXContainerItemProxy */;
 		};
 		308CAAFB27446B5600ABBA90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

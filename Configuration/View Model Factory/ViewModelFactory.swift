@@ -11,12 +11,24 @@ import Repository
 import SpaceXAPI
 
 public class ViewModelFactory {
-	// todo: make lazy to reduce memory usage
-	public static func makeInformationViewModel() -> InformationViewModel {
-		let service = CompanyInformationService()
-		let repository = CompanyInformationRepository(service: service)
-		let useCase = DefaultRetrieveCompanyInformationUseCase(repository: repository)
-		let viewModel = InformationViewModel(useCase: useCase)
+	public static let shared = ViewModelFactory()
+	
+	// MARK: Services -
+	
+	private lazy var companyInformationService: Repository.CompanyInformationService = SpaceXAPI.CompanyInformationService()
+	
+	// MARK: Repositories -
+	
+	private lazy var companyInformationRepository: Domain.CompanyInformationRepository = Repository.CompanyInformationRepository(service: companyInformationService)
+	
+	// MARK: Use Cases -
+	
+	private lazy var retrieveCompanyInformationUseCase: RetrieveCompanyInformationUseCase = DefaultRetrieveCompanyInformationUseCase(repository: companyInformationRepository)
+	
+	// MARK: View Models -
+	
+	public func makeInformationViewModel() -> InformationViewModel {
+		let viewModel = InformationViewModel(useCase: retrieveCompanyInformationUseCase)
 		return viewModel
 	}
 }

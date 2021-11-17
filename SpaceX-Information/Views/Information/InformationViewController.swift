@@ -6,9 +6,6 @@
 //
 
 import UIKit
-//import Logic
-//import Domain
-//import Repository
 import Configuration
 
 class InformationViewController: UIViewController {
@@ -20,7 +17,7 @@ class InformationViewController: UIViewController {
 
 		decorateInterface()
 		
-		let viewModel = ViewModelFactory.makeInformationViewModel()
+		let viewModel = ViewModelFactory.shared.makeInformationViewModel()
 		
 		guard let navigationController = navigationController else { return }
 		

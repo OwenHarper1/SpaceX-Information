@@ -8,10 +8,12 @@
 import Repository
 
 // todo: make inherit from base service which will have api key etc
-public class CompanyInformationService: Repository.CompanyInformationService {
-	public init() {}
+public class CompanyInformationService: Service, Repository.CompanyInformationService {
+	public override init() {}
 	
 	public func retrieveInformation() {
 		// todo: implement
 	}
 }
+
+public class Service {}
