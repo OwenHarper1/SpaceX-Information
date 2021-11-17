@@ -7,9 +7,11 @@
 
 import UIKit
 import Configuration
+import Logic
+import Domain
 
 class InformationViewController: UIViewController {
-
+	private lazy var viewModel = ViewModelFactory.shared.makeInformationViewModel(with: self)
 	private var navigator: InformationNavigator?
 	
     override func viewDidLoad() {
@@ -17,7 +19,7 @@ class InformationViewController: UIViewController {
 
 		decorateInterface()
 		
-//		let viewModel = ViewModelFactory.shared.makeInformationViewModel() // todo: fix
+		viewModel.load()
 		
 		guard let navigationController = navigationController else { return }
 		
@@ -38,5 +40,19 @@ class InformationViewController: UIViewController {
 	
 	@objc private func presentFilterView() {
 		navigator?.presentFilter()
+	}
+}
+
+extension InformationViewController: InformationViewModelDelegate {
+	func retrieved(_ information: CompanyInformation) {
+		// todo: handle
+		print("retrieved information")
+		print(information)
+	}
+	
+	func retrieved(_ error: Error) {
+		// todo: handle
+		print("retrieved information error")
+		print("error")
 	}
 }

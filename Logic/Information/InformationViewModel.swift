@@ -21,7 +21,7 @@ public class InformationViewModel {
 		self.delegate = delegate
 	}
 	
-	func load() {
+	public func load() {
 		useCase.execute {
 			$0.handle(success: self.delegate.retrieved,
 					  failure: self.delegate.retrieved)

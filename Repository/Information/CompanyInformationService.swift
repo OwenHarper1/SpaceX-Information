@@ -6,5 +6,5 @@
 //
 
 public protocol CompanyInformationService {
-	func retrieve(completion: @escaping (Result<CompanyInformationResponse, Error>) -> ())
+	func retrieve(completion: @escaping (Result<CompanyInformationResponse, ServiceError>) -> ())
 }

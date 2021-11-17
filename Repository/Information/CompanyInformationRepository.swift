@@ -20,7 +20,7 @@ public class CompanyInformationRepository: Domain.CompanyInformationRepository {
 			case .success(let information):
 				completion(.success(CompanyInformation(companyName: information.name,
 													   founderName: information.founder,
-													   foundingYear: .from(years: information.founded)!, // todo: remove bang, possibly make param optional
+													   foundingYear: .from(years: information.founded)!, // todo: remove bang, move date handling down to the service layer and parse using the code currently in the .from method
 													   totalLaunchSites: information.launchSites,
 													   unitedStatesDollarValuation: information.valuation)))
 				break // todo: add mapping
