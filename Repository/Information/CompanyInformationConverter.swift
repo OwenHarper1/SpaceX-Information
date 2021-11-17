@@ -12,6 +12,7 @@ class CompanyInformationConverter {
 		return CompanyInformation(companyName: companyInformationResponse.name,
 								  founderName: companyInformationResponse.founder,
 								  foundingYear: .from(years: companyInformationResponse.founded),
+								  employeeCount: companyInformationResponse.employees,
 								  totalLaunchSites: companyInformationResponse.launchSites,
 								  unitedStatesDollarValuation: companyInformationResponse.valuation)
 	}

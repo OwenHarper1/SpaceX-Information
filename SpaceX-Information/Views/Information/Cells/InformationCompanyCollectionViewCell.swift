@@ -16,44 +16,44 @@ class InformationCompanyCollectionViewCell: UICollectionViewCell {
 	}
 	
 	private func makeAttributedString(from companyInformation: CompanyInformation) -> NSAttributedString {
-		let majorFontSize: CGFloat = 20
-		let minorFontSize: CGFloat = 17
-		let majorFontWeight: UIFont.Weight = .semibold
-		let minorFontWeight: UIFont.Weight = .light
-//		T##[NSAttributedString.Key : Any]?
-		var initialString = NSMutableAttributedString(string: companyInformation.companyName, attributes: [
-			.font: UIFont.systemFont(ofSize: majorFontSize, weight: majorFontWeight),
-			.foregroundColor: UIColor.tintColor
-		])
+		let foundedDate: String?
 		
-		var foundedByPrelude = NSAttributedString(string: " was founded by ", attributes: [
-			.font: UIFont.systemFont(ofSize: minorFontSize, weight: minorFontWeight)
-		])
-		
-		var foundedByText = NSAttributedString(string: companyInformation.founderName, attributes: [
-			.font: UIFont.systemFont(ofSize: majorFontSize, weight: majorFontWeight),
-			.foregroundColor: UIColor.tintColor
-			
-		])
-		
-		var foundedInText: NSAttributedString?
-		
-		if let foundingDate = companyInformation.foundingYear, let foundingYear = foundingDate.toYear() {
-			foundedInText = NSAttributedString(string: " in \(foundingYear)", attributes: [
-				.font: UIFont.systemFont(ofSize: minorFontSize, weight: minorFontWeight)
-			])
+		if let year = companyInformation.foundingYear?.toYear() {
+			foundedDate = " in \(year)"
+		} else {
+			foundedDate = nil
 		}
 		
-		
-		
-		initialString.append(foundedByPrelude)
-		initialString.append(foundedByText)
-		
-		if let foundedInText = foundedInText {
-			initialString.append(foundedInText)
-		}
-		
-		
-		return initialString
+		return AttributedStringBuilder()
+			.text(companyInformation.companyName, with: .majorStyling)
+			.text(" was founded by ", with: .minorStyling)
+			.text(companyInformation.founderName, with: .majorStyling)
+			.optionalText(foundedDate, with: .minorStyling)
+			.fullStop(with: .minorStyling)
+			.newLine(count: 2)
+			.text("It now has ", with: .minorStyling)
+			.int(companyInformation.employeeCount, with: .majorStyling)
+			.text(" employees, ", with: .minorStyling)
+			.int(companyInformation.totalLaunchSites, with: .majorStyling)
+			.text(" launch sites, and is valued at ", with: .minorStyling)
+			.currency(companyInformation.unitedStatesDollarValuation, symbol: "$", with: .currencyStyling)
+			.build()
 	}
+}
+
+fileprivate extension Array where Element == AttributedStringBuilder.Property {
+	static let majorStyling: [AttributedStringBuilder.Property] = [
+		.font(.systemFont(ofSize: 18, weight: .semibold)),
+		.colour(.tintColor)
+	]
+	
+	static let minorStyling: [AttributedStringBuilder.Property] = [
+		.font(.systemFont(ofSize: 16, weight: .regular)),
+		.colour(.secondaryLabel)
+	]
+	
+	static let currencyStyling: [AttributedStringBuilder.Property] = [
+		.font(.systemFont(ofSize: 16, weight: .medium)),
+		.colour(.systemGreen)
+	]
 }
