@@ -19,7 +19,6 @@
 		308CAA3F274463D200ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
 		308CAA46274463D200ABBA90 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA45274463D200ABBA90 /* DomainTests.swift */; };
 		308CAA652744640200ABBA90 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
-		308CAA6C2744640200ABBA90 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA6B2744640200ABBA90 /* LogicTests.swift */; };
 		308CAA7D2744641F00ABBA90 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */; };
 		308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */; };
 		308CAA822744667000ABBA90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA36274463D100ABBA90 /* Domain.framework */; };
@@ -47,6 +46,9 @@
 		308CAAFD27446B6200ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
 		308CAAFE27446B6200ABBA90 /* SpaceXAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAB0327446BAA00ABBA90 /* CompanyInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0227446BAA00ABBA90 /* CompanyInformationService.swift */; };
+		308CAB0627447F1700ABBA90 /* InformationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0527447F1700ABBA90 /* InformationViewModelTests.swift */; };
+		308CAB0827447FC800ABBA90 /* CompanyInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0727447FC800ABBA90 /* CompanyInformationRepository.swift */; };
+		308CAB0A27447FE300ABBA90 /* CompanyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0927447FE300ABBA90 /* CompanyInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,7 +255,6 @@
 		308CAA5C2744640200ABBA90 /* Logic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CAA5F2744640200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAA642744640200ABBA90 /* LogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		308CAA6B2744640200ABBA90 /* LogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicTests.swift; sourceTree = "<group>"; };
 		308CAA6D2744640200ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAA7C2744641F00ABBA90 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
 		308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveCompanyInformationUseCase.swift; sourceTree = "<group>"; };
@@ -272,6 +273,9 @@
 		308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXAPITests.swift; sourceTree = "<group>"; };
 		308CAAEC27446A8900ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAB0227446BAA00ABBA90 /* CompanyInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationService.swift; sourceTree = "<group>"; };
+		308CAB0527447F1700ABBA90 /* InformationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModelTests.swift; sourceTree = "<group>"; };
+		308CAB0727447FC800ABBA90 /* CompanyInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationRepository.swift; sourceTree = "<group>"; };
+		308CAB0927447FE300ABBA90 /* CompanyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,8 +487,8 @@
 		308CAA6A2744640200ABBA90 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				308CAA6B2744640200ABBA90 /* LogicTests.swift */,
 				308CAA6D2744640200ABBA90 /* Info.plist */,
+				308CAB0427447EF800ABBA90 /* Information */,
 			);
 			path = LogicTests;
 			sourceTree = "<group>";
@@ -501,6 +505,8 @@
 			isa = PBXGroup;
 			children = (
 				308CAA7F2744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift */,
+				308CAB0727447FC800ABBA90 /* CompanyInformationRepository.swift */,
+				308CAB0927447FE300ABBA90 /* CompanyInformation.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -577,6 +583,14 @@
 			isa = PBXGroup;
 			children = (
 				308CAB0227446BAA00ABBA90 /* CompanyInformationService.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		308CAB0427447EF800ABBA90 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				308CAB0527447F1700ABBA90 /* InformationViewModelTests.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -845,6 +859,7 @@
 					};
 					308CAA632744640200ABBA90 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 308CA9DF2744509300ABBA90;
 					};
 					308CAA8B274466CA00ABBA90 = {
@@ -990,6 +1005,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308CAB0A27447FE300ABBA90 /* CompanyInformation.swift in Sources */,
+				308CAB0827447FC800ABBA90 /* CompanyInformationRepository.swift in Sources */,
 				308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1014,7 +1031,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308CAA6C2744640200ABBA90 /* LogicTests.swift in Sources */,
+				308CAB0627447F1700ABBA90 /* InformationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1465,6 +1482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
 				INFOPLIST_FILE = LogicTests/Info.plist;
@@ -1475,6 +1493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.LogicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX-Information.app/SpaceX-Information";
@@ -1485,6 +1504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z8R2Z8U5R;
 				INFOPLIST_FILE = LogicTests/Info.plist;

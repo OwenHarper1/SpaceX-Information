@@ -17,7 +17,7 @@ class InformationViewController: UIViewController {
 
 		decorateInterface()
 		
-		let viewModel = ViewModelFactory.shared.makeInformationViewModel()
+//		let viewModel = ViewModelFactory.shared.makeInformationViewModel() // todo: fix
 		
 		guard let navigationController = navigationController else { return }
 		

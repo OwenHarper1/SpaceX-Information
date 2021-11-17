@@ -5,15 +5,8 @@
 //  Created by Owen Harper on 16/11/2021.
 //
 
-// todo: mock in tests
 public protocol RetrieveCompanyInformationUseCase {
-	func execute() // todo: properly implement
-}
-
-// todo: mock in tests
-// todo: extract
-public protocol CompanyInformationRepository {
-	func retrieve() // todo: change method signature
+	func execute(completion: @escaping (Result<CompanyInformation, Error>) -> ())
 }
 
 public class DefaultRetrieveCompanyInformationUseCase: RetrieveCompanyInformationUseCase {
@@ -23,7 +16,7 @@ public class DefaultRetrieveCompanyInformationUseCase: RetrieveCompanyInformatio
 		self.repository = repository
 	}
 	
-	public func execute() {
+	public func execute(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
 		// todo: implement
 	}
 }
