@@ -86,6 +86,7 @@
 		308CAB45274577CA00ABBA90 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB41274577B000ABBA90 /* Date+Extension.swift */; };
 		308CAB46274577CA00ABBA90 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB41274577B000ABBA90 /* Date+Extension.swift */; };
 		308CAB47274577CB00ABBA90 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB41274577B000ABBA90 /* Date+Extension.swift */; };
+		308CAB492745787500ABBA90 /* CompanyInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB482745787500ABBA90 /* CompanyInformationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -326,6 +327,7 @@
 		308CAB3A2745771200ABBA90 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		308CAB3F2745777800ABBA90 /* CompanyInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationResponse.swift; sourceTree = "<group>"; };
 		308CAB41274577B000ABBA90 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		308CAB482745787500ABBA90 /* CompanyInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +595,7 @@
 			children = (
 				308CAAAF2744671E00ABBA90 /* CompanyInformationRepository.swift */,
 				308CAB3F2745777800ABBA90 /* CompanyInformationResponse.swift */,
+				308CAB482745787500ABBA90 /* CompanyInformationService.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -1165,6 +1168,7 @@
 				308CAB46274577CA00ABBA90 /* Date+Extension.swift in Sources */,
 				308CAB10274485FA00ABBA90 /* Result+Extension.swift in Sources */,
 				308CAAB02744671E00ABBA90 /* CompanyInformationRepository.swift in Sources */,
+				308CAB492745787500ABBA90 /* CompanyInformationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

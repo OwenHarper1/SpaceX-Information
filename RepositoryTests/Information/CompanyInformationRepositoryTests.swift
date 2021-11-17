@@ -18,7 +18,6 @@ class CompanyInformationRepositoryTests: XCTestCase {
 		repository = .init(service: service)
 	}
 	
-	// todo: add mapping
 	func test_shouldMapInformation_andReturnInformation_givenServiceReturnsInformation() {
 		service.result = .success(.mock(
 			name: "Tesla",

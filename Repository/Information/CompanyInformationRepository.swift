@@ -7,11 +7,6 @@
 
 import Domain
 
-// todo: extract
-public protocol CompanyInformationService {
-	func retrieve(completion: @escaping (Result<CompanyInformationResponse, Error>) -> ())
-}
-
 public class CompanyInformationRepository: Domain.CompanyInformationRepository {
 	private let service: CompanyInformationService
 	
