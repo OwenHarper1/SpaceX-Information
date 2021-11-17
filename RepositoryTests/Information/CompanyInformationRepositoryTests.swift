@@ -52,7 +52,19 @@ class CompanyInformationRepositoryTests: XCTestCase {
 	*/
 	
 	func test_shouldReturnError_givenServiceReturnsError() {
+		service.result = .failure(MockError())
 		
+		let expectation = XCTestExpectation(description: "Result should return")
+		var repositoryResult: Result<CompanyInformation, Error>?
+		
+		repository.retrieve { result in
+			repositoryResult = result
+			expectation.fulfill()
+		}
+		
+		wait(for: [expectation], timeout: 1)
+		XCTAssertNotNil(repositoryResult)
+		XCTAssertTrue(repositoryResult!.isFailure)
 	}
 }
 

@@ -26,6 +26,7 @@ public class CompanyInformationRepository: Domain.CompanyInformationRepository {
 				completion(.success(CompanyInformation()))
 				break // todo: add mapping
 			case .failure(let error):
+				completion(.failure(error))
 				break // todo: implement
 			}
 		}
