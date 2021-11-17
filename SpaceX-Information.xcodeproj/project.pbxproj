@@ -11,6 +11,7 @@
 		304E7E40274591BB007999AD /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E3E274591BB007999AD /* ServiceError.swift */; };
 		304E7E41274591BB007999AD /* ErrorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E3F274591BB007999AD /* ErrorConverter.swift */; };
 		304E7E44274591E1007999AD /* ErrorConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E43274591E1007999AD /* ErrorConverterTests.swift */; };
+		304E7E46274592A0007999AD /* CompanyInformationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E45274592A0007999AD /* CompanyInformationConverter.swift */; };
 		308CA9E42744509400ABBA90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CA9E32744509400ABBA90 /* AppDelegate.swift */; };
 		308CA9E62744509400ABBA90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CA9E52744509400ABBA90 /* SceneDelegate.swift */; };
 		308CA9ED2744509600ABBA90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308CA9EC2744509600ABBA90 /* Assets.xcassets */; };
@@ -282,6 +283,7 @@
 		304E7E3E274591BB007999AD /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		304E7E3F274591BB007999AD /* ErrorConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorConverter.swift; sourceTree = "<group>"; };
 		304E7E43274591E1007999AD /* ErrorConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorConverterTests.swift; sourceTree = "<group>"; };
+		304E7E45274592A0007999AD /* CompanyInformationConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationConverter.swift; sourceTree = "<group>"; };
 		308CA9E02744509400ABBA90 /* SpaceX-Information.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-Information.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CA9E32744509400ABBA90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308CA9E52744509400ABBA90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -632,6 +634,7 @@
 				308CAAAF2744671E00ABBA90 /* CompanyInformationRepository.swift */,
 				308CAB3F2745777800ABBA90 /* CompanyInformationResponse.swift */,
 				308CAB482745787500ABBA90 /* CompanyInformationService.swift */,
+				304E7E45274592A0007999AD /* CompanyInformationConverter.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -1204,6 +1207,7 @@
 				304E7E40274591BB007999AD /* ServiceError.swift in Sources */,
 				308CAB402745777800ABBA90 /* CompanyInformationResponse.swift in Sources */,
 				308CAB46274577CA00ABBA90 /* Date+Extension.swift in Sources */,
+				304E7E46274592A0007999AD /* CompanyInformationConverter.swift in Sources */,
 				308CAB10274485FA00ABBA90 /* Result+Extension.swift in Sources */,
 				308CAAB02744671E00ABBA90 /* CompanyInformationRepository.swift in Sources */,
 				304E7E41274591BB007999AD /* ErrorConverter.swift in Sources */,

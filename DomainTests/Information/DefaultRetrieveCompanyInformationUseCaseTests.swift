@@ -49,6 +49,5 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 		XCTAssertNotNil(useCaseResult)
 		XCTAssertTrue(useCaseResult!.isFailure)
 		XCTAssertEqual(useCaseResult, .failure(.noInternetConnection))
-		// todo: add equatable test when using custom error types
 	}
 }
