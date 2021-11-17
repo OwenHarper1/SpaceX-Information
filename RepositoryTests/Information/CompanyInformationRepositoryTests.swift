@@ -20,7 +20,13 @@ class CompanyInformationRepositoryTests: XCTestCase {
 	
 	// todo: add mapping
 	func test_shouldMapInformation_andReturnInformation_givenServiceReturnsInformation() {
-		service.result = .success(.mock())
+		service.result = .success(.mock(
+			name: "Tesla",
+			founder: "Also Elon Musk",
+			founded: 2021,
+			launchSites: 1,
+			valuation: 30000000000
+		))
 		
 		let expectation = XCTestExpectation(description: "Result should return")
 		var repositoryResult: Result<CompanyInformation, Error>?
@@ -33,7 +39,7 @@ class CompanyInformationRepositoryTests: XCTestCase {
 		wait(for: [expectation], timeout: 1)
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isSuccess)
-		// todo: add equatable
+		XCTAssertEqual(try repositoryResult?.get(), .mock())
 	}
 	
 	func test_shouldReturnError_givenServiceReturnsError() {
@@ -50,5 +56,16 @@ class CompanyInformationRepositoryTests: XCTestCase {
 		wait(for: [expectation], timeout: 1)
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isFailure)
+	}
+}
+
+// todo: extract
+extension CompanyInformation: Equatable {
+	public static func == (lhs: CompanyInformation, rhs: CompanyInformation) -> Bool {
+		return lhs.companyName == rhs.companyName &&
+			lhs.founderName == rhs.founderName &&
+			lhs.foundingYear == rhs.foundingYear &&
+			lhs.totalLaunchSites == rhs.totalLaunchSites &&
+			lhs.unitedStatesDollarValuation == rhs.unitedStatesDollarValuation
 	}
 }

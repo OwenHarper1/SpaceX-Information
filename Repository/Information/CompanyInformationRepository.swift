@@ -23,13 +23,27 @@ public class CompanyInformationRepository: Domain.CompanyInformationRepository {
 		service.retrieve { result in
 			switch result {
 			case .success(let information):
-				completion(.success(CompanyInformation()))
+				completion(.success(CompanyInformation(companyName: information.name,
+													   founderName: information.founder,
+													   foundingYear: .from(years: information.founded)!, // todo: remove bang, possibly make param optional
+													   totalLaunchSites: information.launchSites,
+													   unitedStatesDollarValuation: information.valuation)))
 				break // todo: add mapping
 			case .failure(let error):
 				completion(.failure(error))
 				break // todo: implement
 			}
 		}
+	}
+}
+
+// todo: extract
+
+extension Date {
+	static func from(years: Int) -> Date? {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy"
+		return dateFormatter.date(from: String(years))
 	}
 }
 

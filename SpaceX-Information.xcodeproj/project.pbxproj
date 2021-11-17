@@ -54,13 +54,13 @@
 		308CAB11274485FA00ABBA90 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0C274485E700ABBA90 /* Result+Extension.swift */; };
 		308CAB12274485FD00ABBA90 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0C274485E700ABBA90 /* Result+Extension.swift */; };
 		308CAB142744863200ABBA90 /* MockInformationViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB132744863200ABBA90 /* MockInformationViewModelDelegate.swift */; };
-		308CAB1A274486A400ABBA90 /* CompanyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB19274486A400ABBA90 /* CompanyInformation.swift */; };
+		308CAB1A274486A400ABBA90 /* CompanyInformation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB19274486A400ABBA90 /* CompanyInformation+Extension.swift */; };
 		308CAB1C274486C900ABBA90 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB1B274486C900ABBA90 /* MockError.swift */; };
 		308CAB1D274486D800ABBA90 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB1B274486C900ABBA90 /* MockError.swift */; };
 		308CAB1E274486D900ABBA90 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB1B274486C900ABBA90 /* MockError.swift */; };
 		308CAB1F274486DA00ABBA90 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB1B274486C900ABBA90 /* MockError.swift */; };
 		308CAB20274486EE00ABBA90 /* MockRetrieveCompanyInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */; };
-		308CAB212744870700ABBA90 /* CompanyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB19274486A400ABBA90 /* CompanyInformation.swift */; };
+		308CAB212744870700ABBA90 /* CompanyInformation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB19274486A400ABBA90 /* CompanyInformation+Extension.swift */; };
 		308CAB23274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB22274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift */; };
 		308CAB2627448BAF00ABBA90 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB2527448BAF00ABBA90 /* Result+Extension.swift */; };
 		308CAB2827448BCE00ABBA90 /* MockCompanyInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB2727448BCE00ABBA90 /* MockCompanyInformationRepository.swift */; };
@@ -74,6 +74,7 @@
 		308CAB35274492E500ABBA90 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB32274492DA00ABBA90 /* URL+Extension.swift */; };
 		308CAB36274492E600ABBA90 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB32274492DA00ABBA90 /* URL+Extension.swift */; };
 		308CAB38274492F000ABBA90 /* MockCompanyInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB37274492F000ABBA90 /* MockCompanyInformationService.swift */; };
+		308CAB39274575AB00ABBA90 /* CompanyInformation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB19274486A400ABBA90 /* CompanyInformation+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -302,7 +303,7 @@
 		308CAB0C274485E700ABBA90 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
 		308CAB132744863200ABBA90 /* MockInformationViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInformationViewModelDelegate.swift; sourceTree = "<group>"; };
 		308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRetrieveCompanyInformationUseCase.swift; sourceTree = "<group>"; };
-		308CAB19274486A400ABBA90 /* CompanyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformation.swift; sourceTree = "<group>"; };
+		308CAB19274486A400ABBA90 /* CompanyInformation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyInformation+Extension.swift"; sourceTree = "<group>"; };
 		308CAB1B274486C900ABBA90 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		308CAB22274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRetrieveCompanyInformationUseCaseTests.swift; sourceTree = "<group>"; };
 		308CAB2527448BAF00ABBA90 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
@@ -584,8 +585,8 @@
 		308CAABB274467D000ABBA90 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				308CAB0B274485DC00ABBA90 /* Extensions */,
 				308CAABD274467D000ABBA90 /* Info.plist */,
+				308CAB0B274485DC00ABBA90 /* Extensions */,
 				308CAAD3274467ED00ABBA90 /* View Model Factory */,
 			);
 			path = Configuration;
@@ -646,7 +647,7 @@
 		308CAB182744867C00ABBA90 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				308CAB19274486A400ABBA90 /* CompanyInformation.swift */,
+				308CAB19274486A400ABBA90 /* CompanyInformation+Extension.swift */,
 				308CAB22274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift */,
 				308CAB2727448BCE00ABBA90 /* MockCompanyInformationRepository.swift */,
 			);
@@ -1104,7 +1105,7 @@
 			files = (
 				308CAB2627448BAF00ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB23274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift in Sources */,
-				308CAB1A274486A400ABBA90 /* CompanyInformation.swift in Sources */,
+				308CAB1A274486A400ABBA90 /* CompanyInformation+Extension.swift in Sources */,
 				308CAB1C274486C900ABBA90 /* MockError.swift in Sources */,
 				308CAB2827448BCE00ABBA90 /* MockCompanyInformationRepository.swift in Sources */,
 				308CAB33274492DA00ABBA90 /* URL+Extension.swift in Sources */,
@@ -1125,7 +1126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				308CAB2927448BE000ABBA90 /* Result+Extension.swift in Sources */,
-				308CAB212744870700ABBA90 /* CompanyInformation.swift in Sources */,
+				308CAB212744870700ABBA90 /* CompanyInformation+Extension.swift in Sources */,
 				308CAB20274486EE00ABBA90 /* MockRetrieveCompanyInformationUseCase.swift in Sources */,
 				308CAB142744863200ABBA90 /* MockInformationViewModelDelegate.swift in Sources */,
 				308CAB1D274486D800ABBA90 /* MockError.swift in Sources */,
@@ -1151,6 +1152,7 @@
 				308CAB31274492AE00ABBA90 /* CompanyInformationResponse+Extension.swift in Sources */,
 				308CAB38274492F000ABBA90 /* MockCompanyInformationService.swift in Sources */,
 				308CAB1E274486D900ABBA90 /* MockError.swift in Sources */,
+				308CAB39274575AB00ABBA90 /* CompanyInformation+Extension.swift in Sources */,
 				308CAB35274492E500ABBA90 /* URL+Extension.swift in Sources */,
 				308CAB2E27448C3300ABBA90 /* CompanyInformationRepositoryTests.swift in Sources */,
 			);
