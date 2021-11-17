@@ -8,9 +8,9 @@
 @testable import Domain
 
 class MockRetrieveCompanyInformationUseCase: RetrieveCompanyInformationUseCase {
-	var result: Result<CompanyInformation, Error>!
+	var result: Result<CompanyInformation, DomainError>!
 	
-	func execute(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
+	func execute(completion: @escaping (Result<CompanyInformation, DomainError>) -> ()) {
 		completion(result)
 	}
 }

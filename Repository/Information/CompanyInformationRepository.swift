@@ -14,19 +14,20 @@ public class CompanyInformationRepository: Domain.CompanyInformationRepository {
 		self.service = service
 	}
 	
-	public func retrieve(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
+	// todo: refactor result handling
+	// todo: extract mapping
+	public func retrieve(completion: @escaping (Result<CompanyInformation, DomainError>) -> ()) {
 		service.retrieve { result in
 			switch result {
 			case .success(let information):
 				completion(.success(CompanyInformation(companyName: information.name,
 													   founderName: information.founder,
-													   foundingYear: .from(years: information.founded)!, // todo: remove bang, move date handling down to the service layer and parse using the code currently in the .from method
+													   foundingYear: .from(years: information.founded),
 													   totalLaunchSites: information.launchSites,
 													   unitedStatesDollarValuation: information.valuation)))
-				break // todo: add mapping
 			case .failure(let error):
-				completion(.failure(error))
-				break // todo: implement
+				let newError = ErrorConverter.convert(error)
+				completion(.failure(newError))
 			}
 		}
 	}

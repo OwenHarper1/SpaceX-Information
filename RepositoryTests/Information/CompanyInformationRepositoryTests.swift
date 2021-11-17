@@ -28,7 +28,7 @@ class CompanyInformationRepositoryTests: XCTestCase {
 		))
 		
 		let expectation = XCTestExpectation(description: "Result should return")
-		var repositoryResult: Result<CompanyInformation, Error>?
+		var repositoryResult: Result<CompanyInformation, DomainError>?
 		
 		repository.retrieve { result in
 			repositoryResult = result
@@ -42,10 +42,10 @@ class CompanyInformationRepositoryTests: XCTestCase {
 	}
 	
 	func test_shouldReturnError_givenServiceReturnsError() {
-		service.result = .failure(MockError())
+		service.result = .failure(.decoding(error: MockError()))
 		
 		let expectation = XCTestExpectation(description: "Result should return")
-		var repositoryResult: Result<CompanyInformation, Error>?
+		var repositoryResult: Result<CompanyInformation, DomainError>?
 		
 		repository.retrieve { result in
 			repositoryResult = result
@@ -55,5 +55,21 @@ class CompanyInformationRepositoryTests: XCTestCase {
 		wait(for: [expectation], timeout: 1)
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isFailure)
+	}
+}
+
+// todo: extract
+extension ServiceError: Equatable {
+	public static func == (lhs: ServiceError, rhs: ServiceError) -> Bool {
+		switch (lhs, rhs) {
+		case (.remoteError(let leftErrorCode, let leftData), .remoteError(let rightErrorCode, let rightData)):
+			return leftErrorCode == rightErrorCode &&
+				leftData == rightData
+		case (.unconnected, .unconnected): return true
+		case (.invalidURL, .invalidURL): return true
+		case (.decoding, .decoding): return true
+		case (.unknown, .unknown): return true
+		default: return false
+		}
 	}
 }

@@ -31,12 +31,12 @@ class InformationViewModelTests: XCTestCase {
 	}
 	
 	func test_shouldReturnError_givenUseCaseReturnsError() {
-		useCase.result = .failure(MockError())
+		useCase.result = .failure(.noInternetConnection)
 		
 		viewModel.load()
 		
 		XCTAssertNil(delegate.information)
 		XCTAssertNotNil(delegate.error)
-		XCTAssertTrue(delegate.error is MockError)
+		XCTAssertEqual(delegate.error, .noInternetConnection)
 	}
 }

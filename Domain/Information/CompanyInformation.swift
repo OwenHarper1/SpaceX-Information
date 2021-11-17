@@ -10,11 +10,11 @@ import Foundation
 public struct CompanyInformation {
 	let companyName: String
 	let founderName: String
-	let foundingYear: Date
+	let foundingYear: Date?
 	let totalLaunchSites: Int
 	let unitedStatesDollarValuation: Int
 	
-	public init(companyName: String, founderName: String, foundingYear: Date, totalLaunchSites: Int, unitedStatesDollarValuation: Int) {
+	public init(companyName: String, founderName: String, foundingYear: Date?, totalLaunchSites: Int, unitedStatesDollarValuation: Int) {
 		self.companyName = companyName
 		self.founderName = founderName
 		self.foundingYear = foundingYear

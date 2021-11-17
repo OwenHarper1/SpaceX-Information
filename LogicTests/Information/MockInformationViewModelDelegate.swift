@@ -10,13 +10,13 @@
 
 class MockInformationViewModelDelegate: InformationViewModelDelegate {
 	var information: CompanyInformation!
-	var error: Error!
+	var error: DomainError!
 	
 	func retrieved(_ information: CompanyInformation) {
 		self.information = information
 	}
 	
-	func retrieved(_ error: Error) {
+	func retrieved(_ error: DomainError) {
 		self.error = error
 	}
 }

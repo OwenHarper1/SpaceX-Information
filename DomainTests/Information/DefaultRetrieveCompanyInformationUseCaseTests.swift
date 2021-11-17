@@ -21,7 +21,7 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 		repository.result = .success(.mock())
 		
 		let expectation = XCTestExpectation(description: "Result should return")
-		var useCaseResult: Result<CompanyInformation, Error>?
+		var useCaseResult: Result<CompanyInformation, DomainError>?
 		
 		useCase.execute { result in
 			useCaseResult = result
@@ -35,10 +35,10 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 	}
 	
 	func test_shouldReturnError_givenRepositoryReturnsError() {
-		repository.result = .failure(MockError())
+		repository.result = .failure(.noInternetConnection)
 		
 		let expectation = XCTestExpectation(description: "Result should return")
-		var useCaseResult: Result<CompanyInformation, Error>?
+		var useCaseResult: Result<CompanyInformation, DomainError>?
 		
 		useCase.execute { result in
 			useCaseResult = result
@@ -48,6 +48,7 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 		wait(for: [expectation], timeout: 1)
 		XCTAssertNotNil(useCaseResult)
 		XCTAssertTrue(useCaseResult!.isFailure)
+		XCTAssertEqual(useCaseResult, .failure(.noInternetConnection))
 		// todo: add equatable test when using custom error types
 	}
 }

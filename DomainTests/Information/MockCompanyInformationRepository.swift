@@ -8,9 +8,9 @@
 @testable import Domain
 
 class MockCompanyInformationRepository: CompanyInformationRepository {
-	var result: Result<CompanyInformation, Error>!
+	var result: Result<CompanyInformation, DomainError>!
 	
-	func retrieve(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
+	func retrieve(completion: @escaping (Result<CompanyInformation, DomainError>) -> ()) {
 		completion(result)
 	}
 }

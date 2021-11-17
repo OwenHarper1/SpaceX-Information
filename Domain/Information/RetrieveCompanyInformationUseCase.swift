@@ -6,7 +6,7 @@
 //
 
 public protocol RetrieveCompanyInformationUseCase {
-	func execute(completion: @escaping (Result<CompanyInformation, Error>) -> ())
+	func execute(completion: @escaping (Result<CompanyInformation, DomainError>) -> ())
 }
 
 public class DefaultRetrieveCompanyInformationUseCase: RetrieveCompanyInformationUseCase {
@@ -16,7 +16,7 @@ public class DefaultRetrieveCompanyInformationUseCase: RetrieveCompanyInformatio
 		self.repository = repository
 	}
 	
-	public func execute(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
+	public func execute(completion: @escaping (Result<CompanyInformation, DomainError>) -> ()) {
 		repository.retrieve(completion: completion)
 	}
 }

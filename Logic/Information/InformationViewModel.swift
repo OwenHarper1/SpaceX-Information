@@ -9,7 +9,7 @@ import Domain
 
 public protocol InformationViewModelDelegate {
 	func retrieved(_ information: CompanyInformation)
-	func retrieved(_ error: Error)
+	func retrieved(_ error: DomainError)
 }
 
 public class InformationViewModel {

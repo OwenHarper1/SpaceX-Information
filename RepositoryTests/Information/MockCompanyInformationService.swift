@@ -8,9 +8,9 @@
 @testable import Repository
 
 class MockCompanyInformationService: CompanyInformationService {
-	var result: Result<CompanyInformationResponse, Error>!
+	var result: Result<CompanyInformationResponse, ServiceError>!
 	
-	func retrieve(completion: @escaping (Result<CompanyInformationResponse, Error>) -> ()) {
+	func retrieve(completion: @escaping (Result<CompanyInformationResponse, ServiceError>) -> ()) {
 		completion(result)
 	}
 }

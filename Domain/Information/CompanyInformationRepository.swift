@@ -6,5 +6,5 @@
 //
 
 public protocol CompanyInformationRepository {
-	func retrieve(completion: @escaping (Result<CompanyInformation, Error>) -> ())
+	func retrieve(completion: @escaping (Result<CompanyInformation, DomainError>) -> ())
 }

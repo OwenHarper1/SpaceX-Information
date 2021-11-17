@@ -50,7 +50,7 @@ extension InformationViewController: InformationViewModelDelegate {
 		print(information)
 	}
 	
-	func retrieved(_ error: Error) {
+	func retrieved(_ error: DomainError) {
 		// todo: handle
 		print("retrieved information error")
 		print("error")

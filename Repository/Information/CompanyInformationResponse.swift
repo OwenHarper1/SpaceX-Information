@@ -7,6 +7,8 @@
 
 import Foundation
 
+// todo: rename properties
+
 public struct CompanyInformationResponse: Decodable {
 	let headquarters: Headquarters
 	let links: Links
