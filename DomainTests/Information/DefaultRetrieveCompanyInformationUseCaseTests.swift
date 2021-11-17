@@ -35,7 +35,20 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 	}
 	
 	func test_shouldReturnError_givenRepositoryReturnsError() {
+		repository.result = .failure(MockError())
 		
+		let expectation = XCTestExpectation(description: "Result should return")
+		var useCaseResult: Result<CompanyInformation, Error>?
+		
+		useCase.execute { result in
+			useCaseResult = result
+			expectation.fulfill()
+		}
+		
+		wait(for: [expectation], timeout: 1)
+		XCTAssertNotNil(useCaseResult)
+		XCTAssertTrue(useCaseResult!.isFailure)
+		// todo: add equatable test
 	}
 }
 
