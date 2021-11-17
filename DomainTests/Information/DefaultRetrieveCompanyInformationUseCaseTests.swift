@@ -51,24 +51,3 @@ class DefaultRetrieveCompanyInformationUseCaseTests: XCTestCase {
 		// todo: add equatable test
 	}
 }
-
-// todo: extract
-class MockCompanyInformationRepository: CompanyInformationRepository {
-	var result: Result<CompanyInformation, Error>!
-	
-	func retrieve(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
-		completion(result)
-	}
-}
-
-// todo: extract
-extension Result {
-	var isSuccess: Bool {
-		guard case .success = self else { return false }
-		return true
-	}
-	
-	var isFailure: Bool {
-		return !isSuccess
-	}
-}
