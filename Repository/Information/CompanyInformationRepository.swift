@@ -19,7 +19,7 @@ public class CompanyInformationRepository: Domain.CompanyInformationRepository {
 		self.service = service
 	}
 	
-	public func retrieve() {
+	public func retrieve(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
 		// todo: implement
 	}
 }

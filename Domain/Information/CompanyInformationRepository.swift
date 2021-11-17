@@ -6,5 +6,5 @@
 //
 
 public protocol CompanyInformationRepository {
-	func retrieve() // todo: change method signature
+	func retrieve(completion: @escaping (Result<CompanyInformation, Error>) -> ())
 }

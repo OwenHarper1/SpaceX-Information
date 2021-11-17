@@ -1,6 +1,6 @@
 //
 //  MockRetrieveCompanyInformationUseCase.swift
-//  DomainTests
+//  LogicTests
 //
 //  Created by Owen Harper on 17/11/2021.
 //

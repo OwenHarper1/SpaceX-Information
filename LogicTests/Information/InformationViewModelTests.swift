@@ -30,7 +30,7 @@ class InformationViewModelTests: XCTestCase {
 		XCTAssertFalse(delegate.error is MockError)
 	}
 	
-	func test_shouldReturnErorr_givenUseCaseReturnsError() {
+	func test_shouldReturnError_givenUseCaseReturnsError() {
 		useCase.result = .failure(MockError())
 		
 		viewModel.load()

@@ -55,7 +55,6 @@
 		308CAB11274485FA00ABBA90 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0C274485E700ABBA90 /* Result+Extension.swift */; };
 		308CAB12274485FD00ABBA90 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB0C274485E700ABBA90 /* Result+Extension.swift */; };
 		308CAB142744863200ABBA90 /* MockInformationViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB132744863200ABBA90 /* MockInformationViewModelDelegate.swift */; };
-		308CAB172744867600ABBA90 /* MockRetrieveCompanyInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */; };
 		308CAB1A274486A400ABBA90 /* CompanyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB19274486A400ABBA90 /* CompanyInformation.swift */; };
 		308CAB1C274486C900ABBA90 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB1B274486C900ABBA90 /* MockError.swift */; };
 		308CAB1D274486D800ABBA90 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB1B274486C900ABBA90 /* MockError.swift */; };
@@ -63,6 +62,7 @@
 		308CAB1F274486DA00ABBA90 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB1B274486C900ABBA90 /* MockError.swift */; };
 		308CAB20274486EE00ABBA90 /* MockRetrieveCompanyInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */; };
 		308CAB212744870700ABBA90 /* CompanyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB19274486A400ABBA90 /* CompanyInformation.swift */; };
+		308CAB23274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB22274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +294,7 @@
 		308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRetrieveCompanyInformationUseCase.swift; sourceTree = "<group>"; };
 		308CAB19274486A400ABBA90 /* CompanyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformation.swift; sourceTree = "<group>"; };
 		308CAB1B274486C900ABBA90 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		308CAB22274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRetrieveCompanyInformationUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,6 +613,7 @@
 			children = (
 				308CAB0527447F1700ABBA90 /* InformationViewModelTests.swift */,
 				308CAB132744863200ABBA90 /* MockInformationViewModelDelegate.swift */,
+				308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -627,8 +629,8 @@
 		308CAB182744867C00ABBA90 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */,
 				308CAB19274486A400ABBA90 /* CompanyInformation.swift */,
+				308CAB22274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -1055,9 +1057,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308CAB23274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift in Sources */,
 				308CAB1A274486A400ABBA90 /* CompanyInformation.swift in Sources */,
 				308CAB1C274486C900ABBA90 /* MockError.swift in Sources */,
-				308CAB172744867600ABBA90 /* MockRetrieveCompanyInformationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,6 @@ public class DefaultRetrieveCompanyInformationUseCase: RetrieveCompanyInformatio
 	}
 	
 	public func execute(completion: @escaping (Result<CompanyInformation, Error>) -> ()) {
-		// todo: implement
+		repository.retrieve(completion: completion)
 	}
 }
