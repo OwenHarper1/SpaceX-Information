@@ -34,7 +34,7 @@ class InformationCompanyCollectionViewCell: UICollectionViewCell {
 	
 	private func formatFoundingYear(from date: Date?) -> String? {
 		guard let date = date, let formattedYear = date.toYear() else { return nil }
-		return "in \(formattedYear)"
+		return " in \(formattedYear)"
 	}
 }
 
