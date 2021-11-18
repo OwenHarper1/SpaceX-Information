@@ -57,7 +57,7 @@ public class BaseService {
 		
 		print("--- Retrieved Network Error ---")
 		print("Error occurred on \(url.absoluteString)")
-		print(serviceError)
+		print("Type: \(serviceError.logFriendlyName)")
 		print(serviceError.logFriendlyMessage)
 
 		#endif
@@ -65,6 +65,16 @@ public class BaseService {
 }
 
 fileprivate extension ServiceError {
+	var logFriendlyName: String {
+		switch self {
+		case .remoteError: return "Remote 🔇"
+		case .unconnected: return "Unconnected ❌"
+		case .invalidURL: return "Invalid URL 💻"
+		case .decoding: return "Parsing 🛠"
+		case .unknown: return "Unknown 🚨"
+		}
+	}
+	
 	var logFriendlyMessage: String {
 		switch self {
 		case .remoteError(let errorCode, let data):

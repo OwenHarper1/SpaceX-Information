@@ -24,6 +24,7 @@ public struct CompanyInformationResponse: Decodable {
 	let valuation: Int
 	let summary: String
 	let id: String
+	let foo: Int
 	
 	struct Address: Decodable {
 		let street: String
@@ -68,5 +69,6 @@ public struct CompanyInformationResponse: Decodable {
 		case valuation
 		case summary
 		case id
+		case foo
 	}
 }
