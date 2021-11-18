@@ -57,7 +57,6 @@
 		308CAACF274467E400ABBA90 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAAD52744680700ABBA90 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAD42744680700ABBA90 /* ViewModelFactory.swift */; };
 		308CAAE427446A8900ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
-		308CAAEB27446A8900ABBA90 /* SpaceXAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */; };
 		308CAAF827446B5500ABBA90 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; };
 		308CAAF927446B5600ABBA90 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA8C274466CA00ABBA90 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308CAAFD27446B6200ABBA90 /* SpaceXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */; };
@@ -344,7 +343,6 @@
 		308CAADB27446A8900ABBA90 /* SpaceXAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpaceXAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CAADE27446A8900ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAAE327446A8900ABBA90 /* SpaceXAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXAPITests.swift; sourceTree = "<group>"; };
 		308CAAEC27446A8900ABBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308CAB0227446BAA00ABBA90 /* CompanyInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationService.swift; sourceTree = "<group>"; };
 		308CAB0527447F1700ABBA90 /* InformationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModelTests.swift; sourceTree = "<group>"; };
@@ -734,7 +732,6 @@
 		308CAAE927446A8900ABBA90 /* SpaceXAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				308CAAEA27446A8900ABBA90 /* SpaceXAPITests.swift */,
 				308CAAEC27446A8900ABBA90 /* Info.plist */,
 			);
 			path = SpaceXAPITests;
@@ -1339,7 +1336,6 @@
 				308CAB2B27448BE100ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB36274492E600ABBA90 /* URL+Extension.swift in Sources */,
 				308CAB1F274486DA00ABBA90 /* MockError.swift in Sources */,
-				308CAAEB27446A8900ABBA90 /* SpaceXAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,6 +51,6 @@ fileprivate extension Array where Element == AttributedStringBuilder.Property {
 	
 	static let currencyStyling: [AttributedStringBuilder.Property] = [
 		.font(.systemFont(ofSize: 16, weight: .medium)),
-		.colour(.systemGreen)
+		.colour(.systemRed)
 	]
 }
