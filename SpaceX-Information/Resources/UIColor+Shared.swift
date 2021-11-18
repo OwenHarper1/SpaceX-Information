@@ -1,5 +1,5 @@
 //
-//  UIColor+Extension.swift
+//  UIColor+Shared.swift
 //  SpaceX-Information
 //
 //  Created by Owen Harper on 18/11/2021.

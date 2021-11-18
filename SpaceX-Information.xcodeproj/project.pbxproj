@@ -22,7 +22,7 @@
 		304E7E582745CECB007999AD /* InformationCollectionViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E572745CECB007999AD /* InformationCollectionViewCellFactory.swift */; };
 		304E7E5A2745CEE4007999AD /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */; };
 		304E7E5C2745CEFD007999AD /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */; };
-		304E7E5E2745CF0A007999AD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5D2745CF0A007999AD /* UIColor+Extension.swift */; };
+		304E7E5E2745CF0A007999AD /* UIColor+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5D2745CF0A007999AD /* UIColor+Shared.swift */; };
 		304E7E602745D12C007999AD /* UICollectionView+CellRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */; };
 		304E7E622745D2ED007999AD /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E612745D2ED007999AD /* ServiceError.swift */; };
 		304E7E652745D355007999AD /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E642745D355007999AD /* BaseService.swift */; };
@@ -309,7 +309,7 @@
 		304E7E572745CECB007999AD /* InformationCollectionViewCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCollectionViewCellFactory.swift; sourceTree = "<group>"; };
 		304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
-		304E7E5D2745CF0A007999AD /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		304E7E5D2745CF0A007999AD /* UIColor+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Shared.swift"; sourceTree = "<group>"; };
 		304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+CellRegistration.swift"; sourceTree = "<group>"; };
 		304E7E612745D2ED007999AD /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		304E7E642745D355007999AD /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
@@ -567,7 +567,7 @@
 			children = (
 				308CA9EC2744509600ABBA90 /* Assets.xcassets */,
 				308CAA0527445BA000ABBA90 /* UIImage+Shared.swift */,
-				304E7E5D2745CF0A007999AD /* UIColor+Extension.swift */,
+				304E7E5D2745CF0A007999AD /* UIColor+Shared.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1210,7 +1210,7 @@
 				304E7E5A2745CEE4007999AD /* UICollectionView+Extension.swift in Sources */,
 				304E7E4E2745CE42007999AD /* AttributedStringBuilder.swift in Sources */,
 				308CAA0927445BC600ABBA90 /* InformationNavigator.swift in Sources */,
-				304E7E5E2745CF0A007999AD /* UIColor+Extension.swift in Sources */,
+				304E7E5E2745CF0A007999AD /* UIColor+Shared.swift in Sources */,
 				304E7E672745DD20007999AD /* AlertBuilder.swift in Sources */,
 				308CA9E42744509400ABBA90 /* AppDelegate.swift in Sources */,
 				308CA9E62744509400ABBA90 /* SceneDelegate.swift in Sources */,
