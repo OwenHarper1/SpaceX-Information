@@ -24,7 +24,8 @@ class CompanyInformationRepositoryTests: XCTestCase {
 			founder: "Also Elon Musk",
 			founded: 2021,
 			launchSites: 1,
-			valuation: 30000000000
+			valuation: 30000000000,
+			summary: "Make rockets go zoom"
 		))
 		
 		let expectation = XCTestExpectation(description: "Result should return")
@@ -58,18 +59,3 @@ class CompanyInformationRepositoryTests: XCTestCase {
 	}
 }
 
-// todo: extract
-extension ServiceError: Equatable {
-	public static func == (lhs: ServiceError, rhs: ServiceError) -> Bool {
-		switch (lhs, rhs) {
-		case (.remoteError(let leftErrorCode, let leftData), .remoteError(let rightErrorCode, let rightData)):
-			return leftErrorCode == rightErrorCode &&
-				leftData == rightData
-		case (.unconnected, .unconnected): return true
-		case (.invalidURL, .invalidURL): return true
-		case (.decoding, .decoding): return true
-		case (.unknown, .unknown): return true
-		default: return false
-		}
-	}
-}
