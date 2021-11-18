@@ -15,18 +15,18 @@ public class BaseService {
 	func retrieve<T: Decodable>(from url: URL, decodingInto decodable: T.Type, with decoder: JSONDecoder? = nil, completion: @escaping (Result<T, ServiceError>) -> ()) {
 		let task = URLSession.shared.dataTask(with: url) { responseData, urlResponse, responseError in
 			if let responseData = responseData {
-				self.handleDataResponse(responseData, decoder, completion)
+				self.handleDataResponse(url, responseData, decoder, completion)
 			} else if let httpResponse = urlResponse as? HTTPURLResponse {
-				self.handleURLResponse(httpResponse, responseData, completion)
+				self.handleURLResponse(url, httpResponse, responseData, completion)
 			} else if let responseError = responseError {
-				self.handleErrorResponse(responseError, completion)
+				self.handleErrorResponse(url, responseError, completion)
 			}
 		}
 		
 		task.resume()
 	}
 	
-	private func handleDataResponse<T: Decodable>(_ responseData: Data, _ decoder: JSONDecoder?, _ completion: @escaping (Result<T, ServiceError>) -> ()) {
+	private func handleDataResponse<T: Decodable>(_ url: URL, _ responseData: Data, _ decoder: JSONDecoder?, _ completion: @escaping (Result<T, ServiceError>) -> ()) {
 		let decoder = decoder ?? Self.Decoder
 		
 		do {
@@ -34,28 +34,61 @@ public class BaseService {
 			completion(.success(decodedResponse))
 		} catch {
 			let serviceError: ServiceError = .decoding(error: error)
-			self.log(serviceError)
+			self.log(serviceError, url: url)
 			completion(.failure(serviceError))
 		}
 	}
 	
-	private func handleURLResponse<T: Decodable>(_ httpResponse: HTTPURLResponse, _ responseData: Data?, _ completion: @escaping (Result<T, ServiceError>) -> ()) {
+	private func handleURLResponse<T: Decodable>(_ url: URL, _ httpResponse: HTTPURLResponse, _ responseData: Data?, _ completion: @escaping (Result<T, ServiceError>) -> ()) {
 		let error = ServiceError.remoteError(errorCode: httpResponse.statusCode, data: responseData)
-		self.log(error)
+		self.log(error, url: url)
 		completion(.failure(error))
 	}
 	
-	private func handleErrorResponse<T: Decodable>(_ responseError: Error, _ completion: @escaping (Result<T, ServiceError>) -> ()) {
+	private func handleErrorResponse<T: Decodable>(_ url: URL, _ responseError: Error, _ completion: @escaping (Result<T, ServiceError>) -> ()) {
 		let isConnectionError = (responseError as NSError).code == URLError.notConnectedToInternet.rawValue
 		let error: ServiceError = isConnectionError ? .unconnected : .unknown(error: responseError)
-		self.log(error)
+		self.log(error, url: url)
 		completion(.failure(error))
 	}
 	
-	private func log(_ serviceError: ServiceError) {
+	private func log(_ serviceError: ServiceError, url: URL) {
 		#if DEBUG
+		
+		print("--- Retrieved Network Error ---")
+		print("Error occurred on \(url.absoluteString)")
 		print(serviceError)
-		// todo: implement
+		print(serviceError.logFriendlyMessage)
+
 		#endif
+	}
+}
+
+fileprivate extension ServiceError {
+	var logFriendlyMessage: String {
+		switch self {
+		case .remoteError(let errorCode, let data):
+			return
+				"""
+				Remote returned code \(errorCode). Data dump:
+				\(data ?? Data())
+				"""
+		case .unconnected:
+			return "System returned unconnected - advise user to check connection"
+		case .invalidURL:
+			return "Failed to create URL - check URL is constructed correctly"
+		case .decoding(let error):
+			return
+				"""
+				Failed to decode remote response. Decoding error:
+				\(error)
+				"""
+		case .unknown(let error):
+			return
+				"""
+				Unknown error occured. Unknown error:
+				\(error)
+				"""
+		}
 	}
 }
