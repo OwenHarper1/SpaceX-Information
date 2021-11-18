@@ -14,6 +14,7 @@ class CompanyInformationConverter {
 								  foundingYear: .from(years: companyInformationResponse.founded),
 								  employeeCount: companyInformationResponse.employees,
 								  totalLaunchSites: companyInformationResponse.launchSites,
-								  unitedStatesDollarValuation: companyInformationResponse.valuation)
+								  unitedStatesDollarValuation: companyInformationResponse.valuation,
+								  companySummary: companyInformationResponse.summary)
 	}
 }

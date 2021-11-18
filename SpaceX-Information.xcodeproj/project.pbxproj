@@ -23,6 +23,7 @@
 		304E7E5A2745CEE4007999AD /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */; };
 		304E7E5C2745CEFD007999AD /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */; };
 		304E7E5E2745CF0A007999AD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5D2745CF0A007999AD /* UIColor+Extension.swift */; };
+		304E7E602745D12C007999AD /* UICollectionView+CellRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */; };
 		308CA9E42744509400ABBA90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CA9E32744509400ABBA90 /* AppDelegate.swift */; };
 		308CA9E62744509400ABBA90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CA9E52744509400ABBA90 /* SceneDelegate.swift */; };
 		308CA9ED2744509600ABBA90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308CA9EC2744509600ABBA90 /* Assets.xcassets */; };
@@ -306,6 +307,7 @@
 		304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		304E7E5D2745CF0A007999AD /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+CellRegistration.swift"; sourceTree = "<group>"; };
 		308CA9E02744509400ABBA90 /* SpaceX-Information.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-Information.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308CA9E32744509400ABBA90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308CA9E52744509400ABBA90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				304E7E552745CEB9007999AD /* CellFactory.swift */,
 				304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */,
 				304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */,
+				304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1193,6 +1196,7 @@
 				304E7E5E2745CF0A007999AD /* UIColor+Extension.swift in Sources */,
 				308CA9E42744509400ABBA90 /* AppDelegate.swift in Sources */,
 				308CA9E62744509400ABBA90 /* SceneDelegate.swift in Sources */,
+				304E7E602745D12C007999AD /* UICollectionView+CellRegistration.swift in Sources */,
 				304E7E562745CEB9007999AD /* CellFactory.swift in Sources */,
 				308CAA0627445BA000ABBA90 /* UIImage+Shared.swift in Sources */,
 				304E7E522745CE83007999AD /* Date+Formatting.swift in Sources */,

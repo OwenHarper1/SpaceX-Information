@@ -14,13 +14,15 @@ extension CompanyInformation {
 					 foundingYear: Date = .startOfYear2021(),
 					 employeeCount: Int = 9500,
 					 totalLaunchSites: Int = 1,
-					 unitedStatesDollarValuation: Int = 30_000_000_000) -> Self {
+					 unitedStatesDollarValuation: Int = 30_000_000_000,
+					 companySummary: String = "Make rockets go zoom") -> Self {
 		return .init(companyName: companyName,
 					 founderName: founderName,
 					 foundingYear: foundingYear,
 					 employeeCount: employeeCount,
 					 totalLaunchSites: totalLaunchSites,
-					 unitedStatesDollarValuation: unitedStatesDollarValuation)
+					 unitedStatesDollarValuation: unitedStatesDollarValuation,
+					 companySummary: companySummary)
 	}
 }
 
@@ -31,6 +33,7 @@ extension CompanyInformation: Equatable {
 			lhs.foundingYear == rhs.foundingYear &&
 			lhs.employeeCount == rhs.employeeCount &&
 			lhs.totalLaunchSites == rhs.totalLaunchSites &&
-			lhs.unitedStatesDollarValuation == rhs.unitedStatesDollarValuation
+			lhs.unitedStatesDollarValuation == rhs.unitedStatesDollarValuation &&
+			lhs.companySummary == rhs.companySummary
 	}
 }

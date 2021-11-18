@@ -14,13 +14,15 @@ public struct CompanyInformation {
 	public let employeeCount: Int
 	public let totalLaunchSites: Int
 	public let unitedStatesDollarValuation: Int
+	public let companySummary: String
 	
-	public init(companyName: String, founderName: String, foundingYear: Date?, employeeCount: Int, totalLaunchSites: Int, unitedStatesDollarValuation: Int) {
+	public init(companyName: String, founderName: String, foundingYear: Date?, employeeCount: Int, totalLaunchSites: Int, unitedStatesDollarValuation: Int, companySummary: String) {
 		self.companyName = companyName
 		self.founderName = founderName
 		self.foundingYear = foundingYear
 		self.employeeCount = employeeCount
 		self.totalLaunchSites = totalLaunchSites
 		self.unitedStatesDollarValuation = unitedStatesDollarValuation
+		self.companySummary = companySummary
 	}
 }

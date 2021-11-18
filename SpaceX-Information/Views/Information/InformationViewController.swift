@@ -63,10 +63,7 @@ class InformationViewController: UIViewController {
 
 extension InformationViewController: InformationViewModelDelegate {
 	func retrievedInformation() {
-		print("retrieved information")
-		DispatchQueue.main.async { // todo: maybe extract this out to an .asyncReload method
-			self.collectionView.reloadSections(IndexSet(integer: 0))
-		}
+		collectionView.forceReloadSections(IndexSet(integer: 0))
 	}
 	
 	func retrieved(_ error: DomainError) {

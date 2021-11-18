@@ -39,7 +39,7 @@ class InformationCollectionViewCellFactory: CellFactory {
 		}
 		
 		cell.configure(from: companyInformation)
-		// todo: add setup
+		
 		return cell
 	}
 }

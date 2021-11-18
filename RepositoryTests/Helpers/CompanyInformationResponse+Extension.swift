@@ -9,7 +9,7 @@
 import Foundation
 
 extension CompanyInformationResponse {
-	static func mock(headquarters: Headquarters = .mock(),
+	static func mock(address: Address = .mock(),
 					 links: Links = .mock(),
 					 name: String = "SpaceX",
 					 founder: String = "Elon Musk",
@@ -25,9 +25,9 @@ extension CompanyInformationResponse {
 					 valuation: Int = 74000000000,
 					 summary: String = "SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.",
 					 id: String = "5eb75edc42fea42237d7f3ed") -> Self {
-		return .init(headquarters: headquarters,
+		return .init(name: name,
+					 address: address,
 					 links: links,
-					 name: name,
 					 founder: founder,
 					 founded: founded,
 					 employees: employees,
@@ -44,11 +44,11 @@ extension CompanyInformationResponse {
 	}
 }
 
-extension CompanyInformationResponse.Headquarters {
-	static func mock(address: String = "Rocket Road",
+extension CompanyInformationResponse.Address {
+	static func mock(street: String = "Rocket Road",
 					 city: String = "Hawthorne",
 					 state: String = "California") -> Self {
-		return .init(address: address,
+		return .init(street: street,
 					 city: city,
 					 state: state)
 	}

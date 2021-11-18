@@ -7,12 +7,11 @@
 
 import Foundation
 
-// todo: rename properties
-
 public struct CompanyInformationResponse: Decodable {
-	let headquarters: Headquarters
+	let name: String
+	let address: Address
 	let links: Links
-	let name, founder: String
+	let founder: String
 	let founded: Int
 	let employees: Int
 	let vehicles: Int
@@ -26,10 +25,16 @@ public struct CompanyInformationResponse: Decodable {
 	let summary: String
 	let id: String
 	
-	struct Headquarters: Decodable {
-		let address: String
+	struct Address: Decodable {
+		let street: String
 		let city: String
 		let state: String
+		
+		enum CodingKeys: String, CodingKey {
+			case street = "address"
+			case city
+			case state
+		}
 	}
 	
 	struct Links: Decodable {
@@ -47,7 +52,7 @@ public struct CompanyInformationResponse: Decodable {
 	}
 	
 	enum CodingKeys: String, CodingKey {
-		case headquarters
+		case address = "headquarters"
 		case links
 		case name
 		case founder
