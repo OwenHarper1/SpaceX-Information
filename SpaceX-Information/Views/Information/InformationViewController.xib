@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController" customModule="SpaceX_Information" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="MBp-tY-e72" id="5Hs-FA-3TA"/>
                 <outlet property="collectionView" destination="7gf-Hj-5M4" id="SEx-eD-dvV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,6 +30,9 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MBp-tY-e72">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -36,6 +40,8 @@
                 <constraint firstAttribute="bottom" secondItem="7gf-Hj-5M4" secondAttribute="bottom" id="DvU-yO-AJW"/>
                 <constraint firstItem="7gf-Hj-5M4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E6F-6G-9vG"/>
                 <constraint firstItem="7gf-Hj-5M4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZR6-XA-gQA"/>
+                <constraint firstItem="MBp-tY-e72" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eze-SF-rX8"/>
+                <constraint firstItem="MBp-tY-e72" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ock-gH-1Or"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7gf-Hj-5M4" secondAttribute="trailing" id="tjV-TQ-UD0"/>
             </constraints>
             <point key="canvasLocation" x="97" y="90"/>
