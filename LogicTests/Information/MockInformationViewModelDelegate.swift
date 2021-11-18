@@ -9,11 +9,11 @@
 @testable import Domain
 
 class MockInformationViewModelDelegate: InformationViewModelDelegate {
-	var information: CompanyInformation!
+	var didRetrieveInformation: Bool!
 	var error: DomainError!
 	
-	func retrieved(_ information: CompanyInformation) {
-		self.information = information
+	func retrievedInformation() {
+		didRetrieveInformation = true
 	}
 	
 	func retrieved(_ error: DomainError) {

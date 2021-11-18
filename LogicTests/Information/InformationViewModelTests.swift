@@ -25,9 +25,9 @@ class InformationViewModelTests: XCTestCase {
 		
 		viewModel.load()
 		
-		XCTAssertEqual(delegate.information, .mock())
+		XCTAssertEqual(viewModel.companyInformation, .mock())
+		XCTAssertTrue(delegate.didRetrieveInformation)
 		XCTAssertNil(delegate.error)
-		XCTAssertFalse(delegate.error is MockError)
 	}
 	
 	func test_shouldReturnError_givenUseCaseReturnsError() {
@@ -35,8 +35,8 @@ class InformationViewModelTests: XCTestCase {
 		
 		viewModel.load()
 		
-		XCTAssertNil(delegate.information)
-		XCTAssertNotNil(delegate.error)
+		XCTAssertNil(viewModel.companyInformation)
+		XCTAssertNil(delegate.didRetrieveInformation)
 		XCTAssertEqual(delegate.error, .noInternetConnection)
 	}
 }
