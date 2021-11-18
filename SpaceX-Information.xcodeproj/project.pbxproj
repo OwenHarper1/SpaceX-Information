@@ -20,7 +20,6 @@
 		304E7E542745CEA1007999AD /* InformationCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E532745CEA1007999AD /* InformationCollectionViewDataSource.swift */; };
 		304E7E562745CEB9007999AD /* CellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E552745CEB9007999AD /* CellFactory.swift */; };
 		304E7E582745CECB007999AD /* InformationCollectionViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E572745CECB007999AD /* InformationCollectionViewCellFactory.swift */; };
-		304E7E5A2745CEE4007999AD /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */; };
 		304E7E5C2745CEFD007999AD /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */; };
 		304E7E5E2745CF0A007999AD /* UIColor+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5D2745CF0A007999AD /* UIColor+Shared.swift */; };
 		304E7E602745D12C007999AD /* UICollectionView+CellRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */; };
@@ -307,7 +306,6 @@
 		304E7E532745CEA1007999AD /* InformationCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		304E7E552745CEB9007999AD /* CellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFactory.swift; sourceTree = "<group>"; };
 		304E7E572745CECB007999AD /* InformationCollectionViewCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCollectionViewCellFactory.swift; sourceTree = "<group>"; };
-		304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		304E7E5D2745CF0A007999AD /* UIColor+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Shared.swift"; sourceTree = "<group>"; };
 		304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+CellRegistration.swift"; sourceTree = "<group>"; };
@@ -498,7 +496,6 @@
 				304E7E4F2745CE6E007999AD /* Int+Extension.swift */,
 				304E7E512745CE83007999AD /* Date+Formatting.swift */,
 				304E7E552745CEB9007999AD /* CellFactory.swift */,
-				304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */,
 				304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */,
 				304E7E5F2745D12C007999AD /* UICollectionView+CellRegistration.swift */,
 				304E7E662745DD20007999AD /* AlertBuilder.swift */,
@@ -1207,7 +1204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304E7E5A2745CEE4007999AD /* UICollectionView+Extension.swift in Sources */,
 				304E7E4E2745CE42007999AD /* AttributedStringBuilder.swift in Sources */,
 				308CAA0927445BC600ABBA90 /* InformationNavigator.swift in Sources */,
 				304E7E5E2745CF0A007999AD /* UIColor+Shared.swift in Sources */,
