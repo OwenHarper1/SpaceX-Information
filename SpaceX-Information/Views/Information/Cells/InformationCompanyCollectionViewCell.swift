@@ -16,19 +16,11 @@ class InformationCompanyCollectionViewCell: UICollectionViewCell {
 	}
 	
 	private func makeAttributedString(from companyInformation: CompanyInformation) -> NSAttributedString {
-		let foundedDate: String?
-		
-		if let year = companyInformation.foundingYear?.toYear() {
-			foundedDate = " in \(year)"
-		} else {
-			foundedDate = nil
-		}
-		
 		return AttributedStringBuilder()
 			.text(companyInformation.companyName, with: .majorStyling)
 			.text(" was founded by ", with: .minorStyling)
 			.text(companyInformation.founderName, with: .majorStyling)
-			.optionalText(foundedDate, with: .minorStyling)
+			.optionalText(formatFoundingYear(from: companyInformation.foundingYear), with: .minorStyling)
 			.fullStop(with: .minorStyling)
 			.newLine(count: 2)
 			.text("It now has ", with: .minorStyling)
@@ -38,6 +30,11 @@ class InformationCompanyCollectionViewCell: UICollectionViewCell {
 			.text(" launch sites, and is valued at ", with: .minorStyling)
 			.currency(companyInformation.unitedStatesDollarValuation, symbol: "$", with: .currencyStyling)
 			.build()
+	}
+	
+	private func formatFoundingYear(from date: Date?) -> String? {
+		guard let date = date, let formattedYear = date.toYear() else { return nil }
+		return "in \(formattedYear)"
 	}
 }
 
