@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Logic
 
 class InformationCollectionViewCellFactory: CellFactory {
-	typealias Section = InformationCollectionViewDataSource.Section
+	typealias Section = InformationViewController.Section
 	
 	private let collectionView: UICollectionView
 	private let viewModel: InformationViewModel

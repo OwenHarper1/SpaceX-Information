@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Logic
 
 class InformationCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+	typealias Section = InformationViewController.Section
+	
 	private let cellFactory: InformationCollectionViewCellFactory
 	private let viewModel: InformationViewModel
 	
@@ -30,10 +33,6 @@ class InformationCollectionViewDataSource: NSObject, UICollectionViewDataSource 
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		cellFactory.makeCell(at: indexPath)
-	}
-	
-	enum Section: Int, CaseIterable {
-		case companyInformation
+		return cellFactory.makeCell(at: indexPath)
 	}
 }

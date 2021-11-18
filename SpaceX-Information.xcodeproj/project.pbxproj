@@ -16,7 +16,7 @@
 		304E7E4B27459A68007999AD /* InformationCompanyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304E7E4927459A68007999AD /* InformationCompanyCollectionViewCell.xib */; };
 		304E7E4E2745CE42007999AD /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E4D2745CE42007999AD /* AttributedStringBuilder.swift */; };
 		304E7E502745CE6E007999AD /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E4F2745CE6E007999AD /* Int+Extension.swift */; };
-		304E7E522745CE83007999AD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E512745CE83007999AD /* Date+Extension.swift */; };
+		304E7E522745CE83007999AD /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E512745CE83007999AD /* Date+Formatting.swift */; };
 		304E7E542745CEA1007999AD /* InformationCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E532745CEA1007999AD /* InformationCollectionViewDataSource.swift */; };
 		304E7E562745CEB9007999AD /* CellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E552745CEB9007999AD /* CellFactory.swift */; };
 		304E7E582745CECB007999AD /* InformationCollectionViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E7E572745CECB007999AD /* InformationCollectionViewCellFactory.swift */; };
@@ -299,7 +299,7 @@
 		304E7E4927459A68007999AD /* InformationCompanyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCompanyCollectionViewCell.xib; sourceTree = "<group>"; };
 		304E7E4D2745CE42007999AD /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
 		304E7E4F2745CE6E007999AD /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
-		304E7E512745CE83007999AD /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		304E7E512745CE83007999AD /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
 		304E7E532745CEA1007999AD /* InformationCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		304E7E552745CEB9007999AD /* CellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFactory.swift; sourceTree = "<group>"; };
 		304E7E572745CECB007999AD /* InformationCollectionViewCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCollectionViewCellFactory.swift; sourceTree = "<group>"; };
@@ -488,7 +488,7 @@
 			children = (
 				304E7E4D2745CE42007999AD /* AttributedStringBuilder.swift */,
 				304E7E4F2745CE6E007999AD /* Int+Extension.swift */,
-				304E7E512745CE83007999AD /* Date+Extension.swift */,
+				304E7E512745CE83007999AD /* Date+Formatting.swift */,
 				304E7E552745CEB9007999AD /* CellFactory.swift */,
 				304E7E592745CEE4007999AD /* UICollectionView+Extension.swift */,
 				304E7E5B2745CEFD007999AD /* NSObject+Extension.swift */,
@@ -1195,7 +1195,7 @@
 				308CA9E62744509400ABBA90 /* SceneDelegate.swift in Sources */,
 				304E7E562745CEB9007999AD /* CellFactory.swift in Sources */,
 				308CAA0627445BA000ABBA90 /* UIImage+Shared.swift in Sources */,
-				304E7E522745CE83007999AD /* Date+Extension.swift in Sources */,
+				304E7E522745CE83007999AD /* Date+Formatting.swift in Sources */,
 				304E7E502745CE6E007999AD /* Int+Extension.swift in Sources */,
 				308CAA022744589200ABBA90 /* FilterViewController.swift in Sources */,
 				308CAB43274577C800ABBA90 /* Date+Extension.swift in Sources */,

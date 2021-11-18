@@ -53,11 +53,15 @@ class InformationViewController: UIViewController {
 	@objc private func presentFilterView() {
 		navigator?.presentFilter()
 	}
+	
+	// MARK: Section -
+	
+	enum Section: Int, CaseIterable {
+		case companyInformation
+	}
 }
 
 extension InformationViewController: InformationViewModelDelegate {
-	typealias Section = InformationCollectionViewDataSource.Section // todo: maybe move the original declaration into the vc
-	
 	func retrievedInformation() {
 		print("retrieved information")
 		DispatchQueue.main.async { // todo: maybe extract this out to an .asyncReload method
