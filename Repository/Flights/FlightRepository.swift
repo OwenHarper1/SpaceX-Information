@@ -10,11 +10,11 @@ import Foundation
 
 public class FlightRepository: Domain.FlightRepository {
 	private let flightService: FlightService
-	private let rocketService: RocketService
+	private let rocketRepository: RocketRepository
 	
-	init(flightService: FlightService, rocketService: RocketService) {
+	init(flightService: FlightService, rocketRepository: RocketRepository) {
 		self.flightService = flightService
-		self.rocketService = rocketService
+		self.rocketRepository = rocketRepository
 	}
 	
 	public func retrieve(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
@@ -24,45 +24,78 @@ public class FlightRepository: Domain.FlightRepository {
 				.mapError(ErrorConverter.convert)
 			
 			switch mappedResult {
-			case .success(let flightsResponses):
-				let rocketIDs = flightsResponses.docs.map { $0.rocket }
+			case .success(let flightsResponse):
+				let rocketIDs = flightsResponse.docs.map { $0.rocket }
 				
-				let dispatchGroup = DispatchGroup()
-				
-				var rocketResponses = [RocketResponse]()
-				
-				rocketIDs.forEach { rocketID in
-					dispatchGroup.enter()
-					
-					// todo: replace with guard case success
-					self.rocketService.retrieve(id: rocketID) { result in
-						switch result {
-						case .success(let rocketResponse):
-							rocketResponses.append(rocketResponse)
-							dispatchGroup.leave()
-						case .failure(let rocketError):
-							dispatchGroup.leave()
-							break // todo: implement
+				self.rocketRepository.retrieve(for: rocketIDs) { rocketResult in
+					guard case .success(let rockets) = rocketResult else {
+						// todo: return with all entries as nil rocket
+						let mappedFlights = flightsResponse.docs.map { flightResponse -> Flight in
+							
+							
+							return FlightConverter.convert(flightResponse, nil)
+							
 						}
+						completion(.success(mappedFlights))
+						return
 					}
-				}
-				
-				dispatchGroup.notify(queue: .global(qos: .userInitiated)) {
-					let mappedFlights = flightsResponses.docs.map { flightResponse -> Flight in
-						let flight = rocketResponses.first { rocketResponse in
-							rocketResponse.id == flightResponse.rocket
-						}
+					
+					let mappedFlights = flightsResponse.docs.map { flightResponse -> Flight in
+						let rocket = rockets.first { rocketResponse in
+								  rocketResponse.id == flightResponse.rocket
+							  }
 						
-						return FlightConverter.convert(flightResponse, flight)
+						return FlightConverter.convert(flightResponse, rocket)
+						
 					}
-					
 					completion(.success(mappedFlights))
 				}
-
-				break // todo: implement
+				
+				
 			case .failure(let error):
 				completion(.failure(error))
 			}
+		}
+	}
+}
+
+// todo: extract
+class RocketRepository {
+	private let service: RocketService
+	
+	public init(service: RocketService) {
+		self.service = service
+	}
+	
+	public func retrieve(for ids: [String], completion: @escaping (Result<[Rocket], DomainError>) -> ()) {
+		let dispatchGroup = DispatchGroup()
+		
+		var rocketResponses = [RocketResponse]()
+		
+		// todo: tidy
+		
+		ids.forEach { rocketID in
+			dispatchGroup.enter()
+			
+			self.service.retrieve(id: rocketID) { result in
+				guard case .success(let rocketResponse) = result else {
+					dispatchGroup.leave()
+					return
+				}
+				
+				rocketResponses.append(rocketResponse)
+				dispatchGroup.leave()
+			}
+		}
+		
+		dispatchGroup.notify(queue: .global(qos: .userInitiated)) {
+			guard !rocketResponses.isEmpty else {
+				completion(.failure(.remoteError))
+				return
+			}
+			
+			let mapped = rocketResponses.compactMap(RocketConverter.convert)
+			completion(.success(mapped))
 		}
 	}
 }

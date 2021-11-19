@@ -8,16 +8,19 @@
 @testable import Domain
 
 extension Rocket {
-	static func mock(name: String = "Falcon 9 Test Launch",
+	static func mock(id: String = "Rocket1",
+					 name: String = "Falcon 9 Test Launch",
 					 type: String = "Falcon 9") -> Self {
-		return .init(name: name,
+		return .init(id: id,
+					 name: name,
 					 type: type)
 	}
 }
 
 extension Rocket: Equatable {
 	public static func == (lhs: Rocket, rhs: Rocket) -> Bool {
-		return lhs.name == rhs.name &&
+		return lhs.id == rhs.id &&
+			lhs.name == rhs.name &&
 			lhs.type == rhs.type
 	}
 }

@@ -13,11 +13,13 @@ class FlightRepositoryTests: XCTestCase {
 	var repository: Repository.FlightRepository!
 	var flightService: MockFlightService!
 	var rocketService: MockRocketService!
+	var rocketRepository: RocketRepository!
 	
 	override func setUp() {
 		flightService = .init()
 		rocketService = .init()
-		repository = .init(flightService: flightService, rocketService: rocketService)
+		rocketRepository = .init(service: rocketService)
+		repository = .init(flightService: flightService, rocketRepository: rocketRepository)
 	}
 	
 	func test_shouldRetrieveFlightAndRocket_givenBothServicesReturnSuccess() {

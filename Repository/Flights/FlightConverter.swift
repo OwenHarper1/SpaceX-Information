@@ -8,10 +8,10 @@
 import Domain
 
 class FlightConverter {
-	static func convert(_ flightResponse: FlightResponse, _ rocketResponse: RocketResponse?) -> Flight {
+	static func convert(_ flightResponse: FlightResponse, _ rocket: Rocket?) -> Flight {
 		return .init(name: flightResponse.name,
 					 launchDateTime: flightResponse.dateUTC,
-					 rocket: RocketConverter.convert(rocketResponse),
+					 rocket: rocket,
 					 launchDidSucceed: flightResponse.success,
 					 missionPatchLowResolution: flightResponse.links.patch.small,
 					 missionPatchHighResolution: flightResponse.links.patch.large)

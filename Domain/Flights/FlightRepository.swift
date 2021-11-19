@@ -32,10 +32,12 @@ public struct Flight {
 
 // todo: extract
 public struct Rocket {
-	let name: String
-	let type: String
+	public let id: String
+	public let name: String
+	public let type: String
 	
-	public init(name: String, type: String) {
+	public init(id: String, name: String, type: String) {
+		self.id = id
 		self.name = name
 		self.type = type
 	}

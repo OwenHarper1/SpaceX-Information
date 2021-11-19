@@ -10,7 +10,8 @@ import Domain
 class RocketConverter {
 	static func convert(_ rocketResponse: RocketResponse?) -> Rocket? {
 		guard let rocketResponse = rocketResponse else { return nil }
-		return .init(name: rocketResponse.name,
+		return .init(id: rocketResponse.id,
+					 name: rocketResponse.name,
 					 type: rocketResponse.type)
 	}
 }
