@@ -126,6 +126,8 @@
 		309183CB2748346A00CB1949 /* Rocket+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C52748341A00CB1949 /* Rocket+Extension.swift */; };
 		309183CD2748349100CB1949 /* FlightConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183CC2748349100CB1949 /* FlightConverter.swift */; };
 		309183CF274834A200CB1949 /* RocketConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183CE274834A200CB1949 /* RocketConverter.swift */; };
+		309183D227483B5E00CB1949 /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D027483B3500CB1949 /* RocketRepository.swift */; };
+		309183D427483B6800CB1949 /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D327483B6800CB1949 /* RocketRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -402,6 +404,8 @@
 		309183C52748341A00CB1949 /* Rocket+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Extension.swift"; sourceTree = "<group>"; };
 		309183CC2748349100CB1949 /* FlightConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightConverter.swift; sourceTree = "<group>"; };
 		309183CE274834A200CB1949 /* RocketConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketConverter.swift; sourceTree = "<group>"; };
+		309183D027483B3500CB1949 /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
+		309183D327483B6800CB1949 /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -867,6 +871,7 @@
 			isa = PBXGroup;
 			children = (
 				309183A6274714F900CB1949 /* FlightRepository.swift */,
+				309183D327483B6800CB1949 /* RocketRepository.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 				309183AF2747221F00CB1949 /* RocketService.swift */,
 				309183B12747222E00CB1949 /* RocketResponse.swift */,
 				309183CE274834A200CB1949 /* RocketConverter.swift */,
+				309183D027483B3500CB1949 /* RocketRepository.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -1339,6 +1345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				308CAB44274577C900ABBA90 /* Date+Extension.swift in Sources */,
+				309183D427483B6800CB1949 /* RocketRepository.swift in Sources */,
 				308CAB0E274485F800ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB0A27447FE300ABBA90 /* CompanyInformation.swift in Sources */,
 				309183A7274714F900CB1949 /* FlightRepository.swift in Sources */,
@@ -1406,6 +1413,7 @@
 				304E7E41274591BB007999AD /* ErrorConverter.swift in Sources */,
 				309183A4274714D400CB1949 /* FlightRepository.swift in Sources */,
 				309183B02747221F00CB1949 /* RocketService.swift in Sources */,
+				309183D227483B5E00CB1949 /* RocketRepository.swift in Sources */,
 				309183AB274721C500CB1949 /* PaginationContainer.swift in Sources */,
 				308CAB492745787500ABBA90 /* CompanyInformationService.swift in Sources */,
 				309183B22747222E00CB1949 /* RocketResponse.swift in Sources */,
