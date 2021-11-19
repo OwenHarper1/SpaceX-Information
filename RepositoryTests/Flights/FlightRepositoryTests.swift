@@ -57,7 +57,23 @@ class FlightRepositoryTests: XCTestCase {
 	}
 	
 	func test_shouldReturnFlightWithoutRocket_givenFlightServiceReturnsSuccess_andRocketServiceReturnsError() {
+		flightService.result = .success(.mock(docs: [
+			FlightResponse.mock()
+		]))
+		rocketService.result = .failure(.unconnected)
 		
+		let expectation = expectation(description: "Result should return")
+		var repositoryResult: Result<[Flight], DomainError>?
+		
+		repository.retrieve { result in
+			repositoryResult = result
+			expectation.fulfill()
+		}
+		
+		wait(for: [expectation], timeout: 1)
+		XCTAssertNotNil(repositoryResult)
+		XCTAssertTrue(repositoryResult!.isSuccess)
+		XCTAssertEqual(try repositoryResult?.get(), [.mock(rocket: nil)])
 	}
 }
 
@@ -65,7 +81,7 @@ class FlightRepositoryTests: XCTestCase {
 extension Flight {
 	static func mock(name: String = "Falcon 9 Mega Mega Heavy",
 					 launchDateTime: Date = Date(timeIntervalSince1970: 1143239400),
-					 rocket: Rocket = .mock(),
+					 rocket: Rocket? = .mock(),
 					 launchDidSucceed: Bool = false,
 					 missionPatchLowResolution: URL? = .mock(),
 					 missionPatchHighResolution: URL? = .mock()) -> Self {
