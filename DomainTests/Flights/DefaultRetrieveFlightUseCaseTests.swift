@@ -51,11 +51,3 @@ class DefaultRetrieveFlightUseCaseTests: XCTestCase {
 		XCTAssertEqual(useCaseResult, .failure(.noInternetConnection))
 	}
 }
-
-class MockFlightRepository: FlightRepository {
-	var result: Result<[Flight], DomainError>!
-	
-	func retrieve(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
-		completion(result)
-	}
-}

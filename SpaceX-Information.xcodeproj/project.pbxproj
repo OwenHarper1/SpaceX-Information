@@ -130,6 +130,7 @@
 		309183D427483B6800CB1949 /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D327483B6800CB1949 /* RocketRepository.swift */; };
 		309183D72748406D00CB1949 /* RetrieveFlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */; };
 		309183D9274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */; };
+		309183DB2748426F00CB1949 /* MockFlightRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183DA2748426F00CB1949 /* MockFlightRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -410,6 +411,7 @@
 		309183D327483B6800CB1949 /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
 		309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveFlightUseCase.swift; sourceTree = "<group>"; };
 		309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRetrieveFlightUseCaseTests.swift; sourceTree = "<group>"; };
+		309183DA2748426F00CB1949 /* MockFlightRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -914,6 +916,7 @@
 			children = (
 				309183C2274833FC00CB1949 /* Flight+Extension.swift */,
 				309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */,
+				309183DA2748426F00CB1949 /* MockFlightRepository.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -1384,6 +1387,7 @@
 				308CAB2827448BCE00ABBA90 /* MockCompanyInformationRepository.swift in Sources */,
 				308CAB33274492DA00ABBA90 /* URL+Extension.swift in Sources */,
 				309183C3274833FC00CB1949 /* Flight+Extension.swift in Sources */,
+				309183DB2748426F00CB1949 /* MockFlightRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
