@@ -112,6 +112,9 @@
 		309183AD274721D700CB1949 /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183AC274721D700CB1949 /* FlightResponse.swift */; };
 		309183B02747221F00CB1949 /* RocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183AF2747221F00CB1949 /* RocketService.swift */; };
 		309183B22747222E00CB1949 /* RocketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B12747222E00CB1949 /* RocketResponse.swift */; };
+		309183B5274722D300CB1949 /* FlightRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B4274722D300CB1949 /* FlightRepositoryTests.swift */; };
+		309183B8274723B700CB1949 /* MockRocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B7274723B600CB1949 /* MockRocketService.swift */; };
+		309183BA274723D600CB1949 /* MockFlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B9274723D600CB1949 /* MockFlightService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -378,6 +381,9 @@
 		309183AC274721D700CB1949 /* FlightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightResponse.swift; sourceTree = "<group>"; };
 		309183AF2747221F00CB1949 /* RocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketService.swift; sourceTree = "<group>"; };
 		309183B12747222E00CB1949 /* RocketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketResponse.swift; sourceTree = "<group>"; };
+		309183B4274722D300CB1949 /* FlightRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepositoryTests.swift; sourceTree = "<group>"; };
+		309183B7274723B600CB1949 /* MockRocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketService.swift; sourceTree = "<group>"; };
+		309183B9274723D600CB1949 /* MockFlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -703,6 +709,8 @@
 				304E7E42274591E1007999AD /* Shared */,
 				308CAB2F274492A300ABBA90 /* Helpers */,
 				308CAB2C27448C2900ABBA90 /* Information */,
+				309183B3274722C500CB1949 /* Flights */,
+				309183B6274723AB00CB1949 /* Rockets */,
 				308CAA9D274466CB00ABBA90 /* Info.plist */,
 			);
 			path = RepositoryTests;
@@ -844,6 +852,23 @@
 			children = (
 				309183AF2747221F00CB1949 /* RocketService.swift */,
 				309183B12747222E00CB1949 /* RocketResponse.swift */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
+		309183B3274722C500CB1949 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				309183B4274722D300CB1949 /* FlightRepositoryTests.swift */,
+				309183B9274723D600CB1949 /* MockFlightService.swift */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		309183B6274723AB00CB1949 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				309183B7274723B600CB1949 /* MockRocketService.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -1346,10 +1371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309183B5274722D300CB1949 /* FlightRepositoryTests.swift in Sources */,
 				304E7E622745D2ED007999AD /* ServiceError.swift in Sources */,
 				308CAB2A27448BE100ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB31274492AE00ABBA90 /* CompanyInformationResponse+Extension.swift in Sources */,
+				309183BA274723D600CB1949 /* MockFlightService.swift in Sources */,
 				308CAB38274492F000ABBA90 /* MockCompanyInformationService.swift in Sources */,
+				309183B8274723B700CB1949 /* MockRocketService.swift in Sources */,
 				308CAB1E274486D900ABBA90 /* MockError.swift in Sources */,
 				308CAB39274575AB00ABBA90 /* CompanyInformation+Extension.swift in Sources */,
 				304E7E44274591E1007999AD /* ErrorConverterTests.swift in Sources */,

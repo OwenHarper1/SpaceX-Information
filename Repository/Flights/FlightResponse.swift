@@ -10,7 +10,7 @@ import Foundation
 public struct FlightResponse: Decodable {
 	let fairings: Fairings
 	let links: Links
-	let staticFireDateUTC: String
+	let staticFireDateUTC: Date
 	let staticFireDateUnix: Int
 	let net: Bool
 	let window: Int
@@ -25,7 +25,7 @@ public struct FlightResponse: Decodable {
 	let launchpad: String
 	let flightNumber: Int
 	let name: String
-	let dateUTC: String
+	let dateUTC: Date
 	let dateUnix: Int
 	let dateLocal: Date
 	let datePrecision: String

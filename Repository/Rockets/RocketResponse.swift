@@ -5,6 +5,8 @@
 //  Created by Owen Harper on 19/11/2021.
 //
 
+import Foundation
+
 public struct RocketResponse: Decodable {
 	let height: Measurement
 	let diameter: Measurement
@@ -22,11 +24,11 @@ public struct RocketResponse: Decodable {
 	let boosters: Int
 	let costPerLaunch: Int
 	let successRatePct: Int
-	let firstFlight: String
+	let firstFlight: Date
 	let country: String
 	let company: String
-	let wikipedia: String
-	let welcomeDescription: String
+	let wikipedia: URL
+	let description: String
 	let id: String
 	
 	struct Engines: Decodable {
@@ -166,7 +168,7 @@ public struct RocketResponse: Decodable {
 		case country
 		case company
 		case wikipedia
-		case welcomeDescription = "description"
+		case description = "description"
 		case id
 	}
 }

@@ -6,7 +6,7 @@
 //
 
 public struct PaginationContainer<T: Decodable>: Decodable {
-	let docs: [T]
+	let docs: T
 	let totalDocs: Int
 	let limit: Int
 	let totalPages: Int
