@@ -128,6 +128,8 @@
 		309183CF274834A200CB1949 /* RocketConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183CE274834A200CB1949 /* RocketConverter.swift */; };
 		309183D227483B5E00CB1949 /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D027483B3500CB1949 /* RocketRepository.swift */; };
 		309183D427483B6800CB1949 /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D327483B6800CB1949 /* RocketRepository.swift */; };
+		309183D72748406D00CB1949 /* RetrieveFlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */; };
+		309183D9274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,6 +408,8 @@
 		309183CE274834A200CB1949 /* RocketConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketConverter.swift; sourceTree = "<group>"; };
 		309183D027483B3500CB1949 /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
 		309183D327483B6800CB1949 /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
+		309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveFlightUseCase.swift; sourceTree = "<group>"; };
+		309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRetrieveFlightUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,6 +660,7 @@
 				304E7E3A274591A8007999AD /* Shared */,
 				308CAA7E274464FD00ABBA90 /* Information */,
 				309183A5274714E400CB1949 /* Flights */,
+				309183D52748404800CB1949 /* Rockets */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -870,8 +875,8 @@
 		309183A5274714E400CB1949 /* Flights */ = {
 			isa = PBXGroup;
 			children = (
+				309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */,
 				309183A6274714F900CB1949 /* FlightRepository.swift */,
-				309183D327483B6800CB1949 /* RocketRepository.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -908,6 +913,7 @@
 			isa = PBXGroup;
 			children = (
 				309183C2274833FC00CB1949 /* Flight+Extension.swift */,
+				309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -916,6 +922,14 @@
 			isa = PBXGroup;
 			children = (
 				309183C52748341A00CB1949 /* Rocket+Extension.swift */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
+		309183D52748404800CB1949 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				309183D327483B6800CB1949 /* RocketRepository.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -1350,6 +1364,7 @@
 				308CAB0A27447FE300ABBA90 /* CompanyInformation.swift in Sources */,
 				309183A7274714F900CB1949 /* FlightRepository.swift in Sources */,
 				308CAB0827447FC800ABBA90 /* CompanyInformationRepository.swift in Sources */,
+				309183D72748406D00CB1949 /* RetrieveFlightUseCase.swift in Sources */,
 				304E7E3C274591A8007999AD /* DomainError.swift in Sources */,
 				308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */,
 			);
@@ -1360,6 +1375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				308CAB2627448BAF00ABBA90 /* Result+Extension.swift in Sources */,
+				309183D9274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift in Sources */,
 				308CAB23274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift in Sources */,
 				308CAB1A274486A400ABBA90 /* CompanyInformation+Extension.swift in Sources */,
 				309183C62748341A00CB1949 /* Rocket+Extension.swift in Sources */,

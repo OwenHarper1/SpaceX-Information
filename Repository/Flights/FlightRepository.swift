@@ -37,3 +37,4 @@ public class FlightRepository: Domain.FlightRepository {
 		}
 	}
 }
+
