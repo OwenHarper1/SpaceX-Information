@@ -18,7 +18,7 @@ public struct Flight {
 	public var daysToLaunch: Int {
 		let calendar = Calendar.current
 		
-		let difference = calendar.dateComponents([.day], from: launchDateTime, to: Date())
+		let difference = calendar.dateComponents([.day], from: Date(), to: launchDateTime)
 		
 		return difference.day ?? 0
 	}

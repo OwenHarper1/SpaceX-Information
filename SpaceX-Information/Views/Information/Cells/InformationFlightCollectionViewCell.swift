@@ -7,6 +7,7 @@
 
 import UIKit
 import Domain
+import Kingfisher
 
 class InformationFlightCollectionViewCell: UICollectionViewCell {
 	@IBOutlet private weak var missionLabel: UILabel!
@@ -23,6 +24,8 @@ class InformationFlightCollectionViewCell: UICollectionViewCell {
 	@IBOutlet private weak var successImage: UIImageView!
 	
 	func configure(from flight: Flight) {
+		patchImage.kf.setImage(with: flight.missionPatchLowResolution)
+		
 		missionValueLabel.text = flight.name
 		dateValueLabel.text = flight.launchDateTime.toReadableFormat(.yearMonthDay)
 		
@@ -33,10 +36,10 @@ class InformationFlightCollectionViewCell: UICollectionViewCell {
 			rocketValueLabel.text = "\(rocket.name) / \(rocket.type)"
 		}
 		
+		daysValueLabel.text = (flight.daysToLaunch).withCommas()
+		
 		successImage.tintColor = flight.launchDidSucceed ? .systemGreen : .systemRed
 		successImage.image = flight.launchDidSucceed ? .success : .failure
-		
-		daysValueLabel.text = (-flight.daysToLaunch).withCommas()
 	}
 }
 
