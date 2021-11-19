@@ -30,15 +30,10 @@ public class FlightRepository: Domain.FlightRepository {
 				self.rocketRepository.retrieve(for: rocketIDs) { rocketResult in
 					let rockets = try? rocketResult.get()
 
-					let mappedFlights = flightsResponse.docs.map { flightResponse -> Flight in
-						let rocket = rockets?.first { $0.id == flightResponse.rocket }
-						return FlightConverter.convert(flightResponse, rocket)
-					}
+					let mappedFlights = flightsResponse.docs.map { FlightConverter.convert($0, rockets ?? []) }
 					
 					completion(.success(mappedFlights))
 				}
-				
-				
 			case .failure(let error):
 				completion(.failure(error))
 			}

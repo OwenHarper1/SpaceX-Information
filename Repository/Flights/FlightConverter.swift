@@ -8,6 +8,11 @@
 import Domain
 
 class FlightConverter {
+	static func convert(_ flightResponse: FlightResponse, _ rockets: [Rocket]) -> Flight {
+		let rocket = rockets.first { $0.id == flightResponse.rocket }
+		return convert(flightResponse, rocket)
+	}
+	
 	static func convert(_ flightResponse: FlightResponse, _ rocket: Rocket?) -> Flight {
 		return .init(name: flightResponse.name,
 					 launchDateTime: flightResponse.dateUTC,
