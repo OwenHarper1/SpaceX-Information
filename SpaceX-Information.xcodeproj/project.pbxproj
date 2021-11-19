@@ -132,6 +132,7 @@
 		309183D9274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */; };
 		309183DB2748426F00CB1949 /* MockFlightRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183DA2748426F00CB1949 /* MockFlightRepository.swift */; };
 		309183DD274847DE00CB1949 /* MockRetrieveFlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183DC274847DE00CB1949 /* MockRetrieveFlightUseCase.swift */; };
+		309183DF2748482A00CB1949 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183DE2748482A00CB1949 /* Flight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -414,6 +415,7 @@
 		309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRetrieveFlightUseCaseTests.swift; sourceTree = "<group>"; };
 		309183DA2748426F00CB1949 /* MockFlightRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightRepository.swift; sourceTree = "<group>"; };
 		309183DC274847DE00CB1949 /* MockRetrieveFlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRetrieveFlightUseCase.swift; sourceTree = "<group>"; };
+		309183DE2748482A00CB1949 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -882,6 +884,7 @@
 			children = (
 				309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */,
 				309183A6274714F900CB1949 /* FlightRepository.swift */,
+				309183DE2748482A00CB1949 /* Flight.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -1367,6 +1370,7 @@
 				308CAB44274577C900ABBA90 /* Date+Extension.swift in Sources */,
 				309183D427483B6800CB1949 /* RocketRepository.swift in Sources */,
 				308CAB0E274485F800ABBA90 /* Result+Extension.swift in Sources */,
+				309183DF2748482A00CB1949 /* Flight.swift in Sources */,
 				308CAB0A27447FE300ABBA90 /* CompanyInformation.swift in Sources */,
 				309183A7274714F900CB1949 /* FlightRepository.swift in Sources */,
 				308CAB0827447FC800ABBA90 /* CompanyInformationRepository.swift in Sources */,
