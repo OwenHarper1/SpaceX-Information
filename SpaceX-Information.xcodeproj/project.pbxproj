@@ -115,6 +115,9 @@
 		309183B5274722D300CB1949 /* FlightRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B4274722D300CB1949 /* FlightRepositoryTests.swift */; };
 		309183B8274723B700CB1949 /* MockRocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B7274723B600CB1949 /* MockRocketService.swift */; };
 		309183BA274723D600CB1949 /* MockFlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B9274723D600CB1949 /* MockFlightService.swift */; };
+		309183BC274736D100CB1949 /* RocketResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183BB274736D100CB1949 /* RocketResponse+Extension.swift */; };
+		309183BE274736F400CB1949 /* FlightResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183BD274736F400CB1949 /* FlightResponse+Extension.swift */; };
+		309183C02747370F00CB1949 /* PaginationContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183BF2747370F00CB1949 /* PaginationContainer+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,6 +387,9 @@
 		309183B4274722D300CB1949 /* FlightRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepositoryTests.swift; sourceTree = "<group>"; };
 		309183B7274723B600CB1949 /* MockRocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketService.swift; sourceTree = "<group>"; };
 		309183B9274723D600CB1949 /* MockFlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightService.swift; sourceTree = "<group>"; };
+		309183BB274736D100CB1949 /* RocketResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketResponse+Extension.swift"; sourceTree = "<group>"; };
+		309183BD274736F400CB1949 /* FlightResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightResponse+Extension.swift"; sourceTree = "<group>"; };
+		309183BF2747370F00CB1949 /* PaginationContainer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaginationContainer+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -825,6 +831,9 @@
 			children = (
 				308CAB30274492AE00ABBA90 /* CompanyInformationResponse+Extension.swift */,
 				304E7E612745D2ED007999AD /* ServiceError.swift */,
+				309183BB274736D100CB1949 /* RocketResponse+Extension.swift */,
+				309183BD274736F400CB1949 /* FlightResponse+Extension.swift */,
+				309183BF2747370F00CB1949 /* PaginationContainer+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1372,6 +1381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				309183B5274722D300CB1949 /* FlightRepositoryTests.swift in Sources */,
+				309183C02747370F00CB1949 /* PaginationContainer+Extension.swift in Sources */,
+				309183BE274736F400CB1949 /* FlightResponse+Extension.swift in Sources */,
 				304E7E622745D2ED007999AD /* ServiceError.swift in Sources */,
 				308CAB2A27448BE100ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB31274492AE00ABBA90 /* CompanyInformationResponse+Extension.swift in Sources */,
@@ -1379,6 +1390,7 @@
 				308CAB38274492F000ABBA90 /* MockCompanyInformationService.swift in Sources */,
 				309183B8274723B700CB1949 /* MockRocketService.swift in Sources */,
 				308CAB1E274486D900ABBA90 /* MockError.swift in Sources */,
+				309183BC274736D100CB1949 /* RocketResponse+Extension.swift in Sources */,
 				308CAB39274575AB00ABBA90 /* CompanyInformation+Extension.swift in Sources */,
 				304E7E44274591E1007999AD /* ErrorConverterTests.swift in Sources */,
 				308CAB3D2745771D00ABBA90 /* Date+Extension.swift in Sources */,
