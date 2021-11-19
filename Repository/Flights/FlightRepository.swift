@@ -63,22 +63,3 @@ public class FlightRepository: Domain.FlightRepository {
 		}
 	}
 }
-
-class FlightConverter {
-	static func convert(_ flightResponse: FlightResponse, _ rocketResponse: RocketResponse?) -> Flight {
-		return .init(name: flightResponse.name,
-					 launchDateTime: flightResponse.dateUTC,
-					 rocket: RocketConverter.convert(rocketResponse),
-					 launchDidSucceed: flightResponse.success,
-					 missionPatchLowResolution: flightResponse.links.patch.small,
-					 missionPatchHighResolution: flightResponse.links.patch.large)
-	}
-}
-
-class RocketConverter {
-	static func convert(_ rocketResponse: RocketResponse?) -> Rocket? {
-		guard let rocketResponse = rocketResponse else { return nil }
-		return .init(name: rocketResponse.name,
-					 type: rocketResponse.type)
-	}
-}

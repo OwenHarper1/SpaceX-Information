@@ -124,6 +124,8 @@
 		309183C82748346000CB1949 /* Flight+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C2274833FC00CB1949 /* Flight+Extension.swift */; };
 		309183CA2748346A00CB1949 /* Rocket+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C52748341A00CB1949 /* Rocket+Extension.swift */; };
 		309183CB2748346A00CB1949 /* Rocket+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C52748341A00CB1949 /* Rocket+Extension.swift */; };
+		309183CD2748349100CB1949 /* FlightConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183CC2748349100CB1949 /* FlightConverter.swift */; };
+		309183CF274834A200CB1949 /* RocketConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183CE274834A200CB1949 /* RocketConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -398,6 +400,8 @@
 		309183BF2747370F00CB1949 /* PaginationContainer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaginationContainer+Extension.swift"; sourceTree = "<group>"; };
 		309183C2274833FC00CB1949 /* Flight+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+Extension.swift"; sourceTree = "<group>"; };
 		309183C52748341A00CB1949 /* Rocket+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Extension.swift"; sourceTree = "<group>"; };
+		309183CC2748349100CB1949 /* FlightConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightConverter.swift; sourceTree = "<group>"; };
+		309183CE274834A200CB1949 /* RocketConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -854,6 +858,7 @@
 				309183A3274714D400CB1949 /* FlightRepository.swift */,
 				309183A8274721B300CB1949 /* FlightService.swift */,
 				309183AC274721D700CB1949 /* FlightResponse.swift */,
+				309183CC2748349100CB1949 /* FlightConverter.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -871,6 +876,7 @@
 			children = (
 				309183AF2747221F00CB1949 /* RocketService.swift */,
 				309183B12747222E00CB1949 /* RocketResponse.swift */,
+				309183CE274834A200CB1949 /* RocketConverter.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -1389,6 +1395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309183CF274834A200CB1949 /* RocketConverter.swift in Sources */,
 				309183AD274721D700CB1949 /* FlightResponse.swift in Sources */,
 				304E7E40274591BB007999AD /* ServiceError.swift in Sources */,
 				308CAB402745777800ABBA90 /* CompanyInformationResponse.swift in Sources */,
@@ -1403,6 +1410,7 @@
 				308CAB492745787500ABBA90 /* CompanyInformationService.swift in Sources */,
 				309183B22747222E00CB1949 /* RocketResponse.swift in Sources */,
 				309183A9274721B300CB1949 /* FlightService.swift in Sources */,
+				309183CD2748349100CB1949 /* FlightConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
