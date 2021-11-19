@@ -19,7 +19,11 @@ public class FlightRepository: Domain.FlightRepository {
 	
 	public func retrieve(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
 		flightService.retrieve { result in
-			switch result {
+			
+			let mappedResult = result
+				.mapError(ErrorConverter.convert)
+			
+			switch mappedResult {
 			case .success(let flightsResponses):
 				let rocketIDs = flightsResponses.docs.map { $0.rocket }
 				
@@ -57,8 +61,7 @@ public class FlightRepository: Domain.FlightRepository {
 
 				break // todo: implement
 			case .failure(let error):
-				let mappedError = ErrorConverter.convert(error)
-				completion(.failure(mappedError))
+				completion(.failure(error))
 			}
 		}
 	}
