@@ -30,7 +30,7 @@ extension RocketResponse {
 					 company: String = "Comcast",
 					 wikipedia: URL = .mock(),
 					 description: String = "SpaceX's first rocket",
-					 id: String = "Falcon9ID") -> Self {
+					 id: String = "Rocket1") -> Self {
 		return .init(height: height,
 					 diameter: diameter,
 					 mass: mass,
