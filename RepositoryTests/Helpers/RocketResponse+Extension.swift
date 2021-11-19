@@ -77,7 +77,7 @@ extension RocketResponse.FirstStage {
 					 thrustVacuum: RocketResponse.Thrust = .mock(),
 					 reusable: Bool = true,
 					 engines: Int = 4,
-					 fuelAmountTons: Int = 10000,
+					 fuelAmountTons: Double = 10000,
 					 burnTimeSEC: Int = 20) -> Self {
 		return .init(thrustSeaLevel: thrustSeaLevel,
 					 thrustVacuum: thrustVacuum,
@@ -93,7 +93,7 @@ extension RocketResponse.SecondStage {
 					 payloads: Payloads = .mock(),
 					 reusable: Bool = false,
 					 engines: Int = 2,
-					 fuelAmountTons: Int = 2000,
+					 fuelAmountTons: Double = 2000,
 					 burnTimeSEC: Int = 40) -> Self {
 		return .init(thrust: thrust,
 					 payloads: payloads,
