@@ -105,6 +105,13 @@
 		308CAB46274577CA00ABBA90 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB41274577B000ABBA90 /* Date+Extension.swift */; };
 		308CAB47274577CB00ABBA90 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB41274577B000ABBA90 /* Date+Extension.swift */; };
 		308CAB492745787500ABBA90 /* CompanyInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CAB482745787500ABBA90 /* CompanyInformationService.swift */; };
+		309183A4274714D400CB1949 /* FlightRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183A3274714D400CB1949 /* FlightRepository.swift */; };
+		309183A7274714F900CB1949 /* FlightRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183A6274714F900CB1949 /* FlightRepository.swift */; };
+		309183A9274721B300CB1949 /* FlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183A8274721B300CB1949 /* FlightService.swift */; };
+		309183AB274721C500CB1949 /* PaginationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183AA274721C500CB1949 /* PaginationContainer.swift */; };
+		309183AD274721D700CB1949 /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183AC274721D700CB1949 /* FlightResponse.swift */; };
+		309183B02747221F00CB1949 /* RocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183AF2747221F00CB1949 /* RocketService.swift */; };
+		309183B22747222E00CB1949 /* RocketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183B12747222E00CB1949 /* RocketResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -364,6 +371,13 @@
 		308CAB3F2745777800ABBA90 /* CompanyInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationResponse.swift; sourceTree = "<group>"; };
 		308CAB41274577B000ABBA90 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		308CAB482745787500ABBA90 /* CompanyInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationService.swift; sourceTree = "<group>"; };
+		309183A3274714D400CB1949 /* FlightRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepository.swift; sourceTree = "<group>"; };
+		309183A6274714F900CB1949 /* FlightRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepository.swift; sourceTree = "<group>"; };
+		309183A8274721B300CB1949 /* FlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightService.swift; sourceTree = "<group>"; };
+		309183AA274721C500CB1949 /* PaginationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationContainer.swift; sourceTree = "<group>"; };
+		309183AC274721D700CB1949 /* FlightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightResponse.swift; sourceTree = "<group>"; };
+		309183AF2747221F00CB1949 /* RocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketService.swift; sourceTree = "<group>"; };
+		309183B12747222E00CB1949 /* RocketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,6 +480,7 @@
 			children = (
 				304E7E3E274591BB007999AD /* ServiceError.swift */,
 				304E7E3F274591BB007999AD /* ErrorConverter.swift */,
+				309183AA274721C500CB1949 /* PaginationContainer.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -609,9 +624,10 @@
 		308CAA37274463D100ABBA90 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				304E7E3A274591A8007999AD /* Shared */,
 				308CAA39274463D100ABBA90 /* Info.plist */,
+				304E7E3A274591A8007999AD /* Shared */,
 				308CAA7E274464FD00ABBA90 /* Information */,
+				309183A5274714E400CB1949 /* Flights */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -672,9 +688,11 @@
 		308CAA8D274466CA00ABBA90 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				304E7E3D274591BB007999AD /* Shared */,
 				308CAA8F274466CA00ABBA90 /* Info.plist */,
+				304E7E3D274591BB007999AD /* Shared */,
 				308CAAAE2744671200ABBA90 /* Information */,
+				309183A2274714AD00CB1949 /* Flights */,
+				309183AE2747220600CB1949 /* Rockets */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -801,6 +819,33 @@
 				304E7E612745D2ED007999AD /* ServiceError.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		309183A2274714AD00CB1949 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				309183A3274714D400CB1949 /* FlightRepository.swift */,
+				309183A8274721B300CB1949 /* FlightService.swift */,
+				309183AC274721D700CB1949 /* FlightResponse.swift */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		309183A5274714E400CB1949 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				309183A6274714F900CB1949 /* FlightRepository.swift */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		309183AE2747220600CB1949 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				309183AF2747221F00CB1949 /* RocketService.swift */,
+				309183B12747222E00CB1949 /* RocketResponse.swift */,
+			);
+			path = Rockets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1230,6 +1275,7 @@
 				308CAB44274577C900ABBA90 /* Date+Extension.swift in Sources */,
 				308CAB0E274485F800ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB0A27447FE300ABBA90 /* CompanyInformation.swift in Sources */,
+				309183A7274714F900CB1949 /* FlightRepository.swift in Sources */,
 				308CAB0827447FC800ABBA90 /* CompanyInformationRepository.swift in Sources */,
 				304E7E3C274591A8007999AD /* DomainError.swift in Sources */,
 				308CAA802744650B00ABBA90 /* RetrieveCompanyInformationUseCase.swift in Sources */,
@@ -1279,6 +1325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309183AD274721D700CB1949 /* FlightResponse.swift in Sources */,
 				304E7E40274591BB007999AD /* ServiceError.swift in Sources */,
 				308CAB402745777800ABBA90 /* CompanyInformationResponse.swift in Sources */,
 				308CAB46274577CA00ABBA90 /* Date+Extension.swift in Sources */,
@@ -1286,7 +1333,12 @@
 				308CAB10274485FA00ABBA90 /* Result+Extension.swift in Sources */,
 				308CAAB02744671E00ABBA90 /* CompanyInformationRepository.swift in Sources */,
 				304E7E41274591BB007999AD /* ErrorConverter.swift in Sources */,
+				309183A4274714D400CB1949 /* FlightRepository.swift in Sources */,
+				309183B02747221F00CB1949 /* RocketService.swift in Sources */,
+				309183AB274721C500CB1949 /* PaginationContainer.swift in Sources */,
 				308CAB492745787500ABBA90 /* CompanyInformationService.swift in Sources */,
+				309183B22747222E00CB1949 /* RocketResponse.swift in Sources */,
+				309183A9274721B300CB1949 /* FlightService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,7 +40,7 @@ class InformationViewController: UIViewController {
 		decorateInterface()
 		setUpCollectionView()
 		
-		viewModel.load()
+		viewModel.loadCompanyInformation()
 		state = .loading
 		
 		guard let navigationController = navigationController else { return }
@@ -103,7 +103,7 @@ extension InformationViewController: InformationViewModelDelegate {
 				.action(style: .cancel)
 				.action(style: .tryAgain) {
 					self.state = .loading
-					self.viewModel.load()
+					self.viewModel.loadCompanyInformation()
 				}
 				.build()
 			

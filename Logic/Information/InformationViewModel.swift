@@ -13,18 +13,18 @@ public protocol InformationViewModelDelegate {
 }
 
 public class InformationViewModel {
-	private let useCase: RetrieveCompanyInformationUseCase
+	private let companyInformationUseCase: RetrieveCompanyInformationUseCase
 	private let delegate: InformationViewModelDelegate
 	
 	private(set) public var companyInformation: CompanyInformation?
 	
-	public init(useCase: RetrieveCompanyInformationUseCase, delegate: InformationViewModelDelegate) {
-		self.useCase = useCase
+	public init(companyInformationUseCase: RetrieveCompanyInformationUseCase, delegate: InformationViewModelDelegate) {
+		self.companyInformationUseCase = companyInformationUseCase
 		self.delegate = delegate
 	}
 	
-	public func load() {
-		self.useCase.execute {
+	public func loadCompanyInformation() {
+		companyInformationUseCase.execute {
 			$0.handle(success: self.handleInformationRetrieved,
 					  failure: self.delegate.retrieved)
 		}
@@ -33,5 +33,9 @@ public class InformationViewModel {
 	private func handleInformationRetrieved(_ information: CompanyInformation) {
 		delegate.retrievedInformation()
 		self.companyInformation = information
+	}
+	
+	public func loadFlightInformation() {
+		// todo: implement
 	}
 }

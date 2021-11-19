@@ -28,7 +28,7 @@ public class ViewModelFactory {
 	// MARK: View Models -
 	
 	public func makeInformationViewModel(with delegate: InformationViewModelDelegate) -> InformationViewModel {
-		let viewModel = InformationViewModel(useCase: retrieveCompanyInformationUseCase, delegate: delegate)
+		let viewModel = InformationViewModel(companyInformationUseCase: retrieveCompanyInformationUseCase, delegate: delegate)
 		return viewModel
 	}
 }

@@ -17,13 +17,13 @@ class InformationViewModelTests: XCTestCase {
 	override func setUp() {
 		useCase = .init()
 		delegate = .init()
-		viewModel = InformationViewModel(useCase: useCase, delegate: delegate)
+		viewModel = InformationViewModel(companyInformationUseCase: useCase, delegate: delegate)
 	}
 	
 	func test_shouldReturnCompanyInformation_givenUseCaseReturnsCompanyInformation() {
 		useCase.result = .success(.mock())
 		
-		viewModel.load()
+		viewModel.loadCompanyInformation()
 		
 		XCTAssertEqual(viewModel.companyInformation, .mock())
 		XCTAssertTrue(delegate.didRetrieveInformation)
@@ -33,7 +33,7 @@ class InformationViewModelTests: XCTestCase {
 	func test_shouldReturnError_givenUseCaseReturnsError() {
 		useCase.result = .failure(.noInternetConnection)
 		
-		viewModel.load()
+		viewModel.loadCompanyInformation()
 		
 		XCTAssertNil(viewModel.companyInformation)
 		XCTAssertNil(delegate.didRetrieveInformation)
