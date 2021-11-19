@@ -93,7 +93,7 @@ extension InformationViewController: InformationViewModelDelegate {
 		}
 	}
 	
-	func retrieved(_ error: DomainError) {
+	func retrieved(informationError error: DomainError) {
 		DispatchQueue.main.async {
 			self.state = .loaded
 			
@@ -109,6 +109,14 @@ extension InformationViewController: InformationViewModelDelegate {
 			
 			self.present(alert, animated: true)
 		}
+	}
+	
+	func retrievedFlights() {
+		// todo: implement
+	}
+	
+	func retrieved(flightError error: DomainError) {
+		// todo: implement 
 	}
 	
 	private func generateContextualMessage(for error: DomainError) -> String {

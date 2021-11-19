@@ -8,7 +8,7 @@
 import Domain
 import Foundation
 
-class RocketRepository: Domain.RocketRepository {
+public class RocketRepository: Domain.RocketRepository {
 	private let service: RocketService
 	
 	public init(service: RocketService) {

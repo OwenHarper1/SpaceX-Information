@@ -12,7 +12,7 @@ public class FlightRepository: Domain.FlightRepository {
 	private let flightService: FlightService
 	private let rocketRepository: Domain.RocketRepository
 	
-	init(flightService: FlightService, rocketRepository: Domain.RocketRepository) {
+	public init(flightService: FlightService, rocketRepository: Domain.RocketRepository) {
 		self.flightService = flightService
 		self.rocketRepository = rocketRepository
 	}
