@@ -131,6 +131,7 @@
 		309183D72748406D00CB1949 /* RetrieveFlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */; };
 		309183D9274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */; };
 		309183DB2748426F00CB1949 /* MockFlightRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183DA2748426F00CB1949 /* MockFlightRepository.swift */; };
+		309183DD274847DE00CB1949 /* MockRetrieveFlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183DC274847DE00CB1949 /* MockRetrieveFlightUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -412,6 +413,7 @@
 		309183D62748406D00CB1949 /* RetrieveFlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveFlightUseCase.swift; sourceTree = "<group>"; };
 		309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRetrieveFlightUseCaseTests.swift; sourceTree = "<group>"; };
 		309183DA2748426F00CB1949 /* MockFlightRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightRepository.swift; sourceTree = "<group>"; };
+		309183DC274847DE00CB1949 /* MockRetrieveFlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRetrieveFlightUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -808,6 +810,7 @@
 				308CAB0527447F1700ABBA90 /* InformationViewModelTests.swift */,
 				308CAB132744863200ABBA90 /* MockInformationViewModelDelegate.swift */,
 				308CAB152744866500ABBA90 /* MockRetrieveCompanyInformationUseCase.swift */,
+				309183DC274847DE00CB1949 /* MockRetrieveFlightUseCase.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -1409,6 +1412,7 @@
 				308CAB2927448BE000ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB212744870700ABBA90 /* CompanyInformation+Extension.swift in Sources */,
 				309183CB2748346A00CB1949 /* Rocket+Extension.swift in Sources */,
+				309183DD274847DE00CB1949 /* MockRetrieveFlightUseCase.swift in Sources */,
 				308CAB20274486EE00ABBA90 /* MockRetrieveCompanyInformationUseCase.swift in Sources */,
 				308CAB142744863200ABBA90 /* MockInformationViewModelDelegate.swift in Sources */,
 				308CAB1D274486D800ABBA90 /* MockError.swift in Sources */,

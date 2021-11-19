@@ -64,12 +64,3 @@ class InformationViewModelTests: XCTestCase {
 		XCTAssertEqual(delegate.flightError, .noInternetConnection)
 	}
 }
-
-// todo: extract
-class MockRetrieveFlightUseCase: RetrieveFlightUseCase {
-	var result: Result<[Flight], DomainError>!
-	
-	func execute(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
-		completion(result)
-	}
-}
