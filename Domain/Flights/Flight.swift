@@ -8,13 +8,20 @@
 import Foundation
 
 public struct Flight {
-	let name: String
-	let launchDateTime: Date
-	let rocket: Rocket?
-//	let daysToLaunch: Int // todo: make calculated property
-	let launchDidSucceed: Bool
-	let missionPatchLowResolution: URL?
-	let missionPatchHighResolution: URL?
+	public let name: String
+	public let launchDateTime: Date
+	public let rocket: Rocket?
+	public let launchDidSucceed: Bool
+	public let missionPatchLowResolution: URL?
+	public let missionPatchHighResolution: URL?
+	
+	public var daysToLaunch: Int {
+		let calendar = Calendar.current
+		
+		let difference = calendar.dateComponents([.day], from: launchDateTime, to: Date())
+		
+		return difference.day ?? 0
+	}
 	
 	public init(name: String, launchDateTime: Date, rocket: Rocket?, launchDidSucceed: Bool, missionPatchLowResolution: URL?, missionPatchHighResolution: URL?) {
 		self.name = name

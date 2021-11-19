@@ -76,11 +76,14 @@ class InformationViewController: UIViewController {
 	
 	enum Section: Int, CaseIterable {
 		case companyInformation
+		case flights
+		
+		var indexSet: IndexSet { IndexSet(integer: rawValue) }
 	}
 	
 	// MARK: State -
 	
-	enum State {
+	enum State: Int {
 		case loading
 		case loaded
 	}
@@ -89,7 +92,7 @@ class InformationViewController: UIViewController {
 extension InformationViewController: InformationViewModelDelegate {
 	func retrievedInformation() {
 		DispatchQueue.main.async {
-			self.collectionView.reloadSections(IndexSet(integer: 0))
+			self.collectionView.reloadSections(Section.companyInformation.indexSet)
 			self.state = .loaded
 		}
 	}
@@ -100,7 +103,7 @@ extension InformationViewController: InformationViewModelDelegate {
 			
 			let alert = AlertBuilder()
 				.title(.ohNo)
-				.message(.custom(self.generateContextualMessage(for: error)))
+				.message(.custom(self.generateContextualMessage(for: error, problemArea: "company information")))
 				.action(style: .cancel)
 				.action(style: .tryAgain) {
 					self.state = .loading
@@ -113,18 +116,31 @@ extension InformationViewController: InformationViewModelDelegate {
 	}
 	
 	func retrievedFlights() {
-		// todo: implement
-		print("retrieved flights")
+		DispatchQueue.main.async {
+			self.collectionView.reloadSections(Section.flights.indexSet)
+			self.state = .loaded
+		}
 	}
 	
 	func retrieved(flightError error: DomainError) {
-		print("retrieved flights error")
-		// todo: implement
+		DispatchQueue.main.async {
+			let alert = AlertBuilder()
+				.title(.ohNo)
+				.message(.custom(self.generateContextualMessage(for: error, problemArea: "flights")))
+				.action(style: .cancel)
+				.action(style: .tryAgain) {
+					self.state = .loading
+					self.viewModel.loadCompanyInformation()
+				}
+				.build()
+			
+			self.present(alert, animated: true)
+		}
 	}
 	
-	private func generateContextualMessage(for error: DomainError) -> String {
+	private func generateContextualMessage(for error: DomainError, problemArea: String) -> String {
 		switch error {
-		case .remoteError, .unrecoverableError: return "Oh no! There seems to be a problem loading this resource ❌. Please try later!"
+		case .remoteError, .unrecoverableError: return "Oh no! There seems to be a problem loading \(problemArea) ❌. Please try later!"
 		case .noInternetConnection: return "Oh no! It appears you're not currently connected to the internet 🤔. Please check your connection and try again!"
 		}
 	}

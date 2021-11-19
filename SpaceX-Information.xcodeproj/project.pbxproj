@@ -136,6 +136,8 @@
 		309183E12748484C00CB1949 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183E02748484C00CB1949 /* Rocket.swift */; };
 		309183E52748488800CB1949 /* FlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183E42748488800CB1949 /* FlightService.swift */; };
 		309183E7274849E900CB1949 /* RocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183E6274849E900CB1949 /* RocketService.swift */; };
+		309183EA27484FFD00CB1949 /* InformationFlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183E827484FFD00CB1949 /* InformationFlightCollectionViewCell.swift */; };
+		309183EB27484FFD00CB1949 /* InformationFlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309183E927484FFD00CB1949 /* InformationFlightCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -422,6 +424,8 @@
 		309183E02748484C00CB1949 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		309183E42748488800CB1949 /* FlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightService.swift; sourceTree = "<group>"; };
 		309183E6274849E900CB1949 /* RocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketService.swift; sourceTree = "<group>"; };
+		309183E827484FFD00CB1949 /* InformationFlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationFlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		309183E927484FFD00CB1949 /* InformationFlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationFlightCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,6 +546,8 @@
 			children = (
 				304E7E4827459A68007999AD /* InformationCompanyCollectionViewCell.swift */,
 				304E7E4927459A68007999AD /* InformationCompanyCollectionViewCell.xib */,
+				309183E827484FFD00CB1949 /* InformationFlightCollectionViewCell.swift */,
+				309183E927484FFD00CB1949 /* InformationFlightCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1292,6 +1298,7 @@
 				308CA9ED2744509600ABBA90 /* Assets.xcassets in Resources */,
 				304E7E4B27459A68007999AD /* InformationCompanyCollectionViewCell.xib in Resources */,
 				308CAA032744589200ABBA90 /* FilterViewController.xib in Resources */,
+				309183EB27484FFD00CB1949 /* InformationFlightCollectionViewCell.xib in Resources */,
 				308CA9FD2744530F00ABBA90 /* InformationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1377,6 +1384,7 @@
 				308CAA0627445BA000ABBA90 /* UIImage+Shared.swift in Sources */,
 				304E7E522745CE83007999AD /* Date+Formatting.swift in Sources */,
 				304E7E502745CE6E007999AD /* Int+Extension.swift in Sources */,
+				309183EA27484FFD00CB1949 /* InformationFlightCollectionViewCell.swift in Sources */,
 				308CAA022744589200ABBA90 /* FilterViewController.swift in Sources */,
 				308CAB43274577C800ABBA90 /* Date+Extension.swift in Sources */,
 				308CA9FC2744530F00ABBA90 /* InformationViewController.swift in Sources */,
