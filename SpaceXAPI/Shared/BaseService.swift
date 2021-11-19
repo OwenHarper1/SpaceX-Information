@@ -12,8 +12,11 @@ public class BaseService {
 	static internal let URLBase = "https://api.spacexdata.com/v4"
 	static internal let Decoder = JSONDecoder()
 	
-	func retrieve<T: Decodable>(from url: URL, decodingInto decodable: T.Type, with decoder: JSONDecoder? = nil, completion: @escaping (Result<T, ServiceError>) -> ()) {
-		let task = URLSession.shared.dataTask(with: url) { responseData, urlResponse, responseError in
+	func retrieve<T: Decodable>(from url: URL, httpMethod: HTTPMethod, decodingInto decodable: T.Type, with decoder: JSONDecoder? = nil, completion: @escaping (Result<T, ServiceError>) -> ()) {
+		var request = URLRequest(url: url)
+		request.httpMethod = httpMethod.method // todo: tidy
+		
+		let task = URLSession.shared.dataTask(with: request) { responseData, urlResponse, responseError in
 			if let responseData = responseData {
 				self.handleDataResponse(url, responseData, decoder, completion)
 			} else if let httpResponse = urlResponse as? HTTPURLResponse {
@@ -61,6 +64,18 @@ public class BaseService {
 		print(serviceError.logFriendlyMessage)
 
 		#endif
+	}
+	
+	enum HTTPMethod {
+		case get
+		case post
+		
+		var method: String {
+			switch self {
+			case .get: return "GET"
+			case .post: return "POST"
+			}
+		}
 	}
 }
 

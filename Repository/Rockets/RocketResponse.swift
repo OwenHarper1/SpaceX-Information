@@ -79,7 +79,7 @@ public struct RocketResponse: Decodable {
 		let thrustVacuum: Thrust
 		let reusable: Bool
 		let engines: Int
-		let fuelAmountTons: Int
+		let fuelAmountTons: Double
 		let burnTimeSEC: Int
 		
 		enum CodingKeys: String, CodingKey {
@@ -97,7 +97,7 @@ public struct RocketResponse: Decodable {
 		let payloads: Payloads
 		let reusable: Bool
 		let engines: Int
-		let fuelAmountTons: Int
+		let fuelAmountTons: Double
 		let burnTimeSEC: Int
 		
 		struct Payloads: Decodable {
@@ -132,7 +132,7 @@ public struct RocketResponse: Decodable {
 	
 	struct LandingLegs: Decodable {
 		let number: Int
-		let material: String
+		let material: String?
 	}
 	
 	struct Mass: Decodable {

@@ -16,8 +16,8 @@ public class ViewModelFactory {
 	// MARK: Services -
 	
 	private lazy var companyInformationService: Repository.CompanyInformationService = SpaceXAPI.CompanyInformationService()
-	private lazy var flightService: Repository.FlightService = FooFlightService()
-	private lazy var rocketService: Repository.RocketService = FooRocketService()
+	private lazy var flightService: Repository.FlightService = SpaceXAPI.FlightService()
+	private lazy var rocketService: Repository.RocketService = SpaceXAPI.RocketService()
 	
 	// MARK: Repositories -
 	
@@ -38,22 +38,4 @@ public class ViewModelFactory {
 											 delegate: delegate)
 		return viewModel
 	}
-}
-
-// todo: delete
-class FooFlightService: FlightService {
-	func retrieve(completion: @escaping (Result<PaginationContainer<[FlightResponse]>, ServiceError>) -> ()) {
-		
-	}
-	
-	
-}
-
-// todo: delete
-class FooRocketService: RocketService {
-	func retrieve(id: String, completion: @escaping (Result<RocketResponse, ServiceError>) -> ()) {
-		
-	}
-	
-	
 }

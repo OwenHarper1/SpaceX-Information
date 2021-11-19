@@ -17,6 +17,6 @@ public class CompanyInformationService: BaseService, Repository.CompanyInformati
 			return
 		}
 		
-		self.retrieve(from: url, decodingInto: CompanyInformationResponse.self, completion: completion)
+		self.retrieve(from: url, httpMethod: .get, decodingInto: CompanyInformationResponse.self, completion: completion)
 	}
 }

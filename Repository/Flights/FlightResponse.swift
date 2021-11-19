@@ -8,16 +8,15 @@
 import Foundation
 
 public struct FlightResponse: Decodable {
-	let fairings: Fairings
+	let fairings: Fairings?
 	let links: Links
-	let staticFireDateUTC: Date
-	let staticFireDateUnix: Int
+	let staticFireDateUnix: Date?
 	let net: Bool
 	let window: Int
 	let rocket: String
 	let success: Bool
 	let failures: [Failure]
-	let details: String
+	let details: String?
 	let crew: [String]
 	let ships: [String]
 	let capsules: [String]
@@ -25,9 +24,7 @@ public struct FlightResponse: Decodable {
 	let launchpad: String
 	let flightNumber: Int
 	let name: String
-	let dateUTC: Date
-	let dateUnix: Int
-	let dateLocal: Date
+	let dateUnix: Date
 	let datePrecision: String
 	let upcoming: Bool
 	let cores: [Core]
@@ -37,9 +34,9 @@ public struct FlightResponse: Decodable {
 	let id: String
 	
 	struct Fairings: Decodable {
-		let reused: Bool
-		let recoveryAttempt: Bool
-		let recovered: Bool
+		let reused: Bool?
+		let recoveryAttempt: Bool?
+		let recovered: Bool?
 		let ships: [String]
 		
 		enum CodingKeys: String, CodingKey {
@@ -122,7 +119,6 @@ public struct FlightResponse: Decodable {
 	enum CodingKeys: String, CodingKey {
 		case fairings
 		case links
-		case staticFireDateUTC = "static_fire_date_utc"
 		case staticFireDateUnix = "static_fire_date_unix"
 		case net
 		case window
@@ -137,9 +133,7 @@ public struct FlightResponse: Decodable {
 		case launchpad
 		case flightNumber = "flight_number"
 		case name
-		case dateUTC = "date_utc"
 		case dateUnix = "date_unix"
-		case dateLocal = "date_local"
 		case datePrecision = "date_precision"
 		case upcoming, cores
 		case autoUpdate = "auto_update"

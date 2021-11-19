@@ -15,7 +15,7 @@ class FlightConverter {
 	
 	static func convert(_ flightResponse: FlightResponse, _ rocket: Rocket?) -> Flight {
 		return .init(name: flightResponse.name,
-					 launchDateTime: flightResponse.dateUTC,
+					 launchDateTime: flightResponse.dateUnix,
 					 rocket: rocket,
 					 launchDidSucceed: flightResponse.success,
 					 missionPatchLowResolution: flightResponse.links.patch.small,

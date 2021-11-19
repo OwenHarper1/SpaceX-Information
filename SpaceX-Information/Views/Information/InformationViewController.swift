@@ -41,6 +41,7 @@ class InformationViewController: UIViewController {
 		setUpCollectionView()
 		
 		viewModel.loadCompanyInformation()
+		viewModel.loadFlightInformation()
 		state = .loading
 		
 		guard let navigationController = navigationController else { return }
@@ -113,10 +114,12 @@ extension InformationViewController: InformationViewModelDelegate {
 	
 	func retrievedFlights() {
 		// todo: implement
+		print("retrieved flights")
 	}
 	
 	func retrieved(flightError error: DomainError) {
-		// todo: implement 
+		print("retrieved flights error")
+		// todo: implement
 	}
 	
 	private func generateContextualMessage(for error: DomainError) -> String {
