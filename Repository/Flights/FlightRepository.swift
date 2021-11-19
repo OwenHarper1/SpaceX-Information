@@ -28,26 +28,13 @@ public class FlightRepository: Domain.FlightRepository {
 				let rocketIDs = flightsResponse.docs.map { $0.rocket }
 				
 				self.rocketRepository.retrieve(for: rocketIDs) { rocketResult in
-					guard case .success(let rockets) = rocketResult else {
-						// todo: return with all entries as nil rocket
-						let mappedFlights = flightsResponse.docs.map { flightResponse -> Flight in
-							
-							
-							return FlightConverter.convert(flightResponse, nil)
-							
-						}
-						completion(.success(mappedFlights))
-						return
+					let rockets = try? rocketResult.get()
+
+					let mappedFlights = flightsResponse.docs.map { flightResponse -> Flight in
+						let rocket = rockets?.first { $0.id == flightResponse.rocket }
+						return FlightConverter.convert(flightResponse, rocket)
 					}
 					
-					let mappedFlights = flightsResponse.docs.map { flightResponse -> Flight in
-						let rocket = rockets.first { rocketResponse in
-								  rocketResponse.id == flightResponse.rocket
-							  }
-						
-						return FlightConverter.convert(flightResponse, rocket)
-						
-					}
 					completion(.success(mappedFlights))
 				}
 				
