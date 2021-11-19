@@ -118,6 +118,12 @@
 		309183BC274736D100CB1949 /* RocketResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183BB274736D100CB1949 /* RocketResponse+Extension.swift */; };
 		309183BE274736F400CB1949 /* FlightResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183BD274736F400CB1949 /* FlightResponse+Extension.swift */; };
 		309183C02747370F00CB1949 /* PaginationContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183BF2747370F00CB1949 /* PaginationContainer+Extension.swift */; };
+		309183C3274833FC00CB1949 /* Flight+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C2274833FC00CB1949 /* Flight+Extension.swift */; };
+		309183C62748341A00CB1949 /* Rocket+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C52748341A00CB1949 /* Rocket+Extension.swift */; };
+		309183C72748346000CB1949 /* Flight+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C2274833FC00CB1949 /* Flight+Extension.swift */; };
+		309183C82748346000CB1949 /* Flight+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C2274833FC00CB1949 /* Flight+Extension.swift */; };
+		309183CA2748346A00CB1949 /* Rocket+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C52748341A00CB1949 /* Rocket+Extension.swift */; };
+		309183CB2748346A00CB1949 /* Rocket+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183C52748341A00CB1949 /* Rocket+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +396,8 @@
 		309183BB274736D100CB1949 /* RocketResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketResponse+Extension.swift"; sourceTree = "<group>"; };
 		309183BD274736F400CB1949 /* FlightResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightResponse+Extension.swift"; sourceTree = "<group>"; };
 		309183BF2747370F00CB1949 /* PaginationContainer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaginationContainer+Extension.swift"; sourceTree = "<group>"; };
+		309183C2274833FC00CB1949 /* Flight+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flight+Extension.swift"; sourceTree = "<group>"; };
+		309183C52748341A00CB1949 /* Rocket+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -649,6 +657,8 @@
 			children = (
 				308CAB2427448BA400ABBA90 /* Global Helpers */,
 				308CAB182744867C00ABBA90 /* Information */,
+				309183C1274833EF00CB1949 /* Flights */,
+				309183C42748341100CB1949 /* Rockets */,
 				308CAA47274463D200ABBA90 /* Info.plist */,
 			);
 			path = DomainTests;
@@ -878,6 +888,22 @@
 			isa = PBXGroup;
 			children = (
 				309183B7274723B600CB1949 /* MockRocketService.swift */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
+		309183C1274833EF00CB1949 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				309183C2274833FC00CB1949 /* Flight+Extension.swift */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		309183C42748341100CB1949 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				309183C52748341A00CB1949 /* Rocket+Extension.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -1323,10 +1349,12 @@
 				308CAB2627448BAF00ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB23274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift in Sources */,
 				308CAB1A274486A400ABBA90 /* CompanyInformation+Extension.swift in Sources */,
+				309183C62748341A00CB1949 /* Rocket+Extension.swift in Sources */,
 				308CAB1C274486C900ABBA90 /* MockError.swift in Sources */,
 				308CAB3B2745771200ABBA90 /* Date+Extension.swift in Sources */,
 				308CAB2827448BCE00ABBA90 /* MockCompanyInformationRepository.swift in Sources */,
 				308CAB33274492DA00ABBA90 /* URL+Extension.swift in Sources */,
+				309183C3274833FC00CB1949 /* Flight+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1344,8 +1372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309183C72748346000CB1949 /* Flight+Extension.swift in Sources */,
 				308CAB2927448BE000ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB212744870700ABBA90 /* CompanyInformation+Extension.swift in Sources */,
+				309183CB2748346A00CB1949 /* Rocket+Extension.swift in Sources */,
 				308CAB20274486EE00ABBA90 /* MockRetrieveCompanyInformationUseCase.swift in Sources */,
 				308CAB142744863200ABBA90 /* MockInformationViewModelDelegate.swift in Sources */,
 				308CAB1D274486D800ABBA90 /* MockError.swift in Sources */,
@@ -1383,11 +1413,13 @@
 				309183B5274722D300CB1949 /* FlightRepositoryTests.swift in Sources */,
 				309183C02747370F00CB1949 /* PaginationContainer+Extension.swift in Sources */,
 				309183BE274736F400CB1949 /* FlightResponse+Extension.swift in Sources */,
+				309183CA2748346A00CB1949 /* Rocket+Extension.swift in Sources */,
 				304E7E622745D2ED007999AD /* ServiceError.swift in Sources */,
 				308CAB2A27448BE100ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB31274492AE00ABBA90 /* CompanyInformationResponse+Extension.swift in Sources */,
 				309183BA274723D600CB1949 /* MockFlightService.swift in Sources */,
 				308CAB38274492F000ABBA90 /* MockCompanyInformationService.swift in Sources */,
+				309183C82748346000CB1949 /* Flight+Extension.swift in Sources */,
 				309183B8274723B700CB1949 /* MockRocketService.swift in Sources */,
 				308CAB1E274486D900ABBA90 /* MockError.swift in Sources */,
 				309183BC274736D100CB1949 /* RocketResponse+Extension.swift in Sources */,
