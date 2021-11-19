@@ -21,7 +21,6 @@ public class FlightRepository: Domain.FlightRepository {
 		flightService.retrieve { result in
 			switch result {
 			case .success(let flightsResponses):
-				
 				let rocketIDs = flightsResponses.docs.map { $0.rocket }
 				
 				let dispatchGroup = DispatchGroup()
@@ -55,30 +54,11 @@ public class FlightRepository: Domain.FlightRepository {
 					
 					completion(.success(mappedFlights))
 				}
-				
-				// todo: remove below - old
-				
-//				let mapped = flightsResponses.docs.map { flightResponse in
-//					
-//					self.rocketService.retrieve(id: flightResponse.rocket) { rocketResult in
-//
-//						switch rocketResult {
-//						case .success(let rocketResponse):
-//
-//							let mappedFlight = FlightConverter.convert(flightResponse, rocketResponse)
-//							return mappedFlight
-//
-//						case .failure(let error):
-//							break // todo: implement
-//						}
-//
-//					}
-//				}
-				
-				
+
 				break // todo: implement
 			case .failure(let error):
-				break // todo: fix
+				let mappedError = ErrorConverter.convert(error)
+				completion(.failure(mappedError))
 			}
 		}
 	}

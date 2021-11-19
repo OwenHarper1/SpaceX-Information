@@ -41,7 +41,19 @@ class FlightRepositoryTests: XCTestCase {
 	}
 	
 	func test_shouldReturnError_givenRocketServiceReturnsError() {
+		flightService.result = .failure(.unknown(error: MockError()))
 		
+		let expectation = expectation(description: "Result should return")
+		var repositoryResult: Result<[Flight], DomainError>?
+		
+		repository.retrieve { result in
+			repositoryResult = result
+			expectation.fulfill()
+		}
+		
+		wait(for: [expectation], timeout: 1)
+		XCTAssertNotNil(repositoryResult)
+		XCTAssertTrue(repositoryResult!.isFailure)
 	}
 	
 	func test_shouldReturnFlightWithoutRocket_givenFlightServiceReturnsSuccess_andRocketServiceReturnsError() {
