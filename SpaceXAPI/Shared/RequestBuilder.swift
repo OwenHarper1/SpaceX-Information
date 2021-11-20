@@ -11,11 +11,20 @@ class RequestBuilder {
 	static internal let URLBase = "https://api.spacexdata.com/v4"
 	
 	private var paths = [String]()
-//	private var url: URL?
 	private var httpMethod: HTTPMethod?
+	
+	
+	func path(_ path: Int) -> Self {
+		return self.path(String(path))
+	}
 	
 	func path(_ path: String) -> Self {
 		paths.append(path)
+		return self
+	}
+	
+	func method(_ method: HTTPMethod) -> Self {
+		httpMethod = method
 		return self
 	}
 	
@@ -28,7 +37,10 @@ class RequestBuilder {
 		
 		guard let url = URL(string: "\(Self.URLBase)\(path)") else { return nil }
 		
-		return URLRequest(url: url)
+		var request = URLRequest(url: url)
+		request.httpMethod = (httpMethod ?? .get).method
+		
+		return request
 	}
 	
 	enum HTTPMethod: String {
