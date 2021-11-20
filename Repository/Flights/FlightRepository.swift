@@ -16,6 +16,7 @@ public class FlightRepository: Domain.FlightRepository {
 	private let rocketRepository: Domain.RocketRepository
 	
 	private var currentPage: Int
+	private var requestIsExecuting = false
 	private var retrievalType: FlightRetrievalType {
 		didSet {
 			guard oldValue != retrievalType else { return }
@@ -31,6 +32,9 @@ public class FlightRepository: Domain.FlightRepository {
 	}
 	
 	public func retrieve(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ()) {
+		guard !requestIsExecuting else { return }
+		requestIsExecuting = true
+		
 		self.retrievalType = retrievalType
 		
 		let requestOptions = FlightRequest.Options(limit: 10,
@@ -40,6 +44,8 @@ public class FlightRepository: Domain.FlightRepository {
 									query: retrievalType.query)
 		
 		flightService.retrieve(with: request) {
+			self.requestIsExecuting = false
+			
 			switch $0 {
 			case .success(let success):
 				self.currentPage += 1
