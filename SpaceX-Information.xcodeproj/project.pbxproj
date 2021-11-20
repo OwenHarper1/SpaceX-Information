@@ -148,6 +148,8 @@
 		309184102749379B00CB1949 /* InformationCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840F2749379B00CB1949 /* InformationCollectionViewCellDelegate.swift */; };
 		309184122749432600CB1949 /* InformationCollectionViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184112749432600CB1949 /* InformationCollectionViewDiffableDataSource.swift */; };
 		30918414274944CD00CB1949 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30918413274944CD00CB1949 /* FilterView.swift */; };
+		3091841527499C3300CB1949 /* Logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; };
+		3091841627499C3300CB1949 /* Logic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 308CAA5C2744640200ABBA90 /* Logic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +279,13 @@
 			remoteGlobalIDString = 308CA9DF2744509300ABBA90;
 			remoteInfo = "SpaceX-Information";
 		};
+		3091841727499C3300CB1949 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308CA9D82744509300ABBA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308CAA5B2744640200ABBA90;
+			remoteInfo = Logic;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -287,6 +296,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				308CAAB2274467A500ABBA90 /* Domain.framework in Embed Frameworks */,
+				3091841627499C3300CB1949 /* Logic.framework in Embed Frameworks */,
 				308CAAC2274467D000ABBA90 /* Configuration.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -462,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309183EE2748598400CB1949 /* Kingfisher in Frameworks */,
+				3091841527499C3300CB1949 /* Logic.framework in Frameworks */,
 				308CAAB1274467A500ABBA90 /* Domain.framework in Frameworks */,
 				308CAAC1274467D000ABBA90 /* Configuration.framework in Frameworks */,
 			);
@@ -1100,6 +1111,7 @@
 			dependencies = (
 				308CAAB4274467A500ABBA90 /* PBXTargetDependency */,
 				308CAAC0274467D000ABBA90 /* PBXTargetDependency */,
+				3091841827499C3300CB1949 /* PBXTargetDependency */,
 			);
 			name = "SpaceX-Information";
 			packageProductDependencies = (
@@ -1759,6 +1771,11 @@
 			target = 308CA9DF2744509300ABBA90 /* SpaceX-Information */;
 			targetProxy = 309183F82749201E00CB1949 /* PBXContainerItemProxy */;
 		};
+		3091841827499C3300CB1949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308CAA5B2744640200ABBA90 /* Logic */;
+			targetProxy = 3091841727499C3300CB1949 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -2234,6 +2251,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Configuration;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2264,6 +2282,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.owenh.Configuration;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
