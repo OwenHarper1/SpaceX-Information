@@ -146,6 +146,7 @@
 		3091840A27492E1D00CB1949 /* MockRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840927492E1D00CB1949 /* MockRequestBody.swift */; };
 		3091840C2749322E00CB1949 /* FlightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840B2749322E00CB1949 /* FlightRequest.swift */; };
 		3091840E2749324900CB1949 /* FlightRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840D2749324900CB1949 /* FlightRequest+Extension.swift */; };
+		309184102749379B00CB1949 /* InformationCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840F2749379B00CB1949 /* InformationCollectionViewCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -450,6 +451,7 @@
 		3091840927492E1D00CB1949 /* MockRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestBody.swift; sourceTree = "<group>"; };
 		3091840B2749322E00CB1949 /* FlightRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRequest.swift; sourceTree = "<group>"; };
 		3091840D2749324900CB1949 /* FlightRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightRequest+Extension.swift"; sourceTree = "<group>"; };
+		3091840F2749379B00CB1949 /* InformationCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -685,6 +687,7 @@
 				308CA9FB2744530F00ABBA90 /* InformationViewController.xib */,
 				304E7E532745CEA1007999AD /* InformationCollectionViewDataSource.swift */,
 				304E7E572745CECB007999AD /* InformationCollectionViewCellFactory.swift */,
+				3091840F2749379B00CB1949 /* InformationCollectionViewCellDelegate.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -1479,6 +1482,7 @@
 				304E7E5E2745CF0A007999AD /* UIColor+Shared.swift in Sources */,
 				304E7E672745DD20007999AD /* AlertBuilder.swift in Sources */,
 				308CA9E42744509400ABBA90 /* AppDelegate.swift in Sources */,
+				309184102749379B00CB1949 /* InformationCollectionViewCellDelegate.swift in Sources */,
 				308CA9E62744509400ABBA90 /* SceneDelegate.swift in Sources */,
 				304E7E602745D12C007999AD /* UICollectionView+CellRegistration.swift in Sources */,
 				304E7E562745CEB9007999AD /* CellFactory.swift in Sources */,
