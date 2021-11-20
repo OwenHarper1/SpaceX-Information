@@ -39,6 +39,8 @@ public struct Flight: Equatable, Hashable {
 		public let article: URL?
 		public let wikipedia: URL?
 		
+		public var linksPresent: Bool { article != nil || webcast != nil || wikipedia != nil }
+		
 		public init(webcast: URL?, article: URL?, wikipedia: URL?) {
 			self.webcast = webcast
 			self.article = article

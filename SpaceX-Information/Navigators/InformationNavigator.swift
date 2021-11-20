@@ -25,19 +25,19 @@ class InformationNavigator {
 	
 	func presentSocialMedia(for flight: Flight) {
 		guard let links = flight.links,
-			  !links.article.isNil || !links.webcast.isNil || !links.wikipedia.isNil else { return }
+			  links.linksPresent else { return }
 		
 		let alert = AlertBuilder()
 			.style(.actionSheet)
 			.title(.information)
 			.message("Access the links below to find out more details about this flight")
-			.action(if: !links.article.isNil, style: .custom("Article")) {
+			.action(if: links.article != nil, style: .custom("Article")) {
 				self.open(url: flight.links?.article)
 			}
-			.action(if: !links.wikipedia.isNil , style: .custom("Wikipedia")) {
+			.action(if: links.wikipedia != nil , style: .custom("Wikipedia")) {
 				self.open(url: flight.links?.wikipedia)
 			}
-			.action(if: !links.webcast.isNil, style: .custom("Webcast")) {
+			.action(if: links.webcast != nil, style: .custom("Webcast")) {
 				self.open(url: flight.links?.webcast)
 			}
 			.action(style: .cancel)
