@@ -23,9 +23,7 @@ class FlightRepositoryTests: XCTestCase {
 	}
 	
 	func test_shouldRetrieveFlightAndRocket_givenBothServicesReturnSuccess() {
-		flightService.result = .success(.mock(docs: [
-			FlightResponse.mock()
-		]))
+		flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
 		rocketService.result = .success(.mock())
 		
 		let expectation = expectation(description: "Result should return")
@@ -41,6 +39,19 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertTrue(repositoryResult!.isSuccess)
 		XCTAssertEqual(try repositoryResult?.get(), [.mock()])
 		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
+	}
+	
+	func test_shouldIncrementPageNumber_givenServiceReturnsSuccess() {
+		(1...10).forEach { page in
+			flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
+			rocketService.result = .success(.mock())
+			
+			let expectation = expectation(description: "Result should return")
+			repository.retrieve { _ in expectation.fulfill() }
+			
+			wait(for: [expectation], timeout: 1)
+			XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page)))
+		}
 	}
 	
 	func test_shouldReturnError_givenRocketServiceReturnsError() {
@@ -59,10 +70,20 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertTrue(repositoryResult!.isFailure)
 	}
 	
+	func test_shouldNotIncrementPageNumber_givenServiceReturnsError() {
+		(1...10).forEach { page in
+		  flightService.result = .failure(.invalidURL)
+		  
+		  let expectation = expectation(description: "Result should return")
+		  repository.retrieve { _ in expectation.fulfill() }
+		  
+		  wait(for: [expectation], timeout: 1)
+		  XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
+		}
+	}
+	
 	func test_shouldReturnFlightWithoutRocket_givenFlightServiceReturnsSuccess_andRocketServiceReturnsError() {
-		flightService.result = .success(.mock(docs: [
-			FlightResponse.mock()
-		]))
+		flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
 		rocketService.result = .failure(.unconnected)
 		
 		let expectation = expectation(description: "Result should return")
