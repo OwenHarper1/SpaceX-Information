@@ -44,10 +44,15 @@ class RequestBuilder {
 		
 		var request = URLRequest(url: url)
 		request.httpMethod = (httpMethod ?? .get).method
-		request.httpBody = body?.toJSONData()
-		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+		addJSONData(to: &request)
 		
 		return request
+	}
+	
+	private func addJSONData(to request: inout URLRequest) {
+		guard let body = body?.toJSONData() else { return }
+		request.httpBody = body
+		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 	}
 	
 	enum HTTPMethod: String {
