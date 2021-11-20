@@ -22,3 +22,4 @@ extension Date {
 		case yearMonthDay = "yyyy/MM/dd"
 	}
 }
+

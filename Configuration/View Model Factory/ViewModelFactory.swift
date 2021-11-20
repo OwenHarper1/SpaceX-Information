@@ -21,14 +21,14 @@ public class ViewModelFactory {
 	
 	// MARK: Repositories -
 	
-	private lazy var companyInformationRepository: Domain.CompanyInformationRepository = Repository.CompanyInformationRepository(service: companyInformationService)
-	private lazy var rocketRepository: Domain.RocketRepository = Repository.RocketRepository(service: rocketService)
-	private lazy var flightRepository: Domain.FlightRepository = Repository.FlightRepository(flightService: flightService, rocketRepository: rocketRepository)
+	private var companyInformationRepository: Domain.CompanyInformationRepository { Repository.CompanyInformationRepository(service: companyInformationService) }
+	private var rocketRepository: Domain.RocketRepository { Repository.RocketRepository(service: rocketService) }
+	private var flightRepository: Domain.FlightRepository { Repository.FlightRepository(flightService: flightService, rocketRepository: rocketRepository) }
 	
 	// MARK: Use Cases -
 	
-	private lazy var retrieveCompanyInformationUseCase: RetrieveCompanyInformationUseCase = DefaultRetrieveCompanyInformationUseCase(repository: companyInformationRepository)
-	private lazy var retrieveFlightUseCase: RetrieveFlightUseCase = DefaultRetrieveFlightUseCase(repository: flightRepository)
+	private var retrieveCompanyInformationUseCase: RetrieveCompanyInformationUseCase { DefaultRetrieveCompanyInformationUseCase(repository: companyInformationRepository) }
+	private var retrieveFlightUseCase: RetrieveFlightUseCase { DefaultRetrieveFlightUseCase(repository: flightRepository) }
 	
 	// MARK: View Models -
 	
