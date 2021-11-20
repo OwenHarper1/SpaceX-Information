@@ -5,7 +5,7 @@
 //  Created by Owen Harper on 19/11/2021.
 //
 
-public struct Rocket {
+public struct Rocket: Equatable, Hashable {
 	public let id: String
 	public let name: String
 	public let type: String

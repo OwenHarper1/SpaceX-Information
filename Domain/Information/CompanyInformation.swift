@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CompanyInformation {
+public struct CompanyInformation: Hashable {
 	public let companyName: String
 	public let founderName: String
 	public let foundingYear: Date?

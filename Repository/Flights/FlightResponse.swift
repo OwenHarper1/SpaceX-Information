@@ -12,9 +12,9 @@ public struct FlightResponse: Decodable {
 	let links: Links
 	let staticFireDateUnix: Date?
 	let net: Bool
-	let window: Int
+	let window: Int?
 	let rocket: String
-	let success: Bool
+	let success: Bool?
 	let failures: [Failure]
 	let details: String?
 	let crew: [String]
@@ -27,7 +27,7 @@ public struct FlightResponse: Decodable {
 	let dateUnix: Date
 	let datePrecision: String
 	let upcoming: Bool
-	let cores: [Core]
+	let cores: [Core]?
 	let autoUpdate: Bool
 	let tbd: Bool
 	let launchLibraryID: String?
@@ -93,12 +93,12 @@ public struct FlightResponse: Decodable {
 	}
 	
 	struct Core: Decodable {
-		let core: String
-		let flight: Int
-		let gridfins: Bool
-		let legs: Bool
-		let reused: Bool
-		let landingAttempt: Bool
+		let core: String?
+		let flight: Int?
+		let gridfins: Bool?
+		let legs: Bool?
+		let reused: Bool?
+		let landingAttempt: Bool?
 		let landingSuccess: Bool?
 		let landingType: String?
 		let landpad: String?

@@ -11,11 +11,16 @@ import Repository
 public class FlightService: BaseService, Repository.FlightService {
 	public override init() {}
 	
-	public func retrieve(completion: @escaping (Result<PaginationContainer<[FlightResponse]>, ServiceError>) -> ()) {
+	public func retrieve(with request: FlightRequest, completion: @escaping (Result<PaginationContainer<[FlightResponse]>, ServiceError>) -> ()) {
+		let encoder = JSONEncoder()
+		encoder.dateEncodingStrategy = .secondsSince1970
+		
 		let request = RequestBuilder()
 			.method(.post)
 			.path("launches")
 			.path("query")
+			.body(request)
+			.encoding(with: encoder)
 			.build()
 		
 		let decoder = JSONDecoder()

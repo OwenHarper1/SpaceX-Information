@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct Flight {
+public struct Flight: Equatable, Hashable {
 	public let name: String
 	public let launchDateTime: Date
 	public let rocket: Rocket?
-	public let launchDidSucceed: Bool
+	public let launchDidSucceed: Bool?
 	public let missionPatchLowResolution: URL?
 	public let missionPatchHighResolution: URL?
 	
@@ -23,7 +23,7 @@ public struct Flight {
 		return difference.day ?? 0
 	}
 	
-	public init(name: String, launchDateTime: Date, rocket: Rocket?, launchDidSucceed: Bool, missionPatchLowResolution: URL?, missionPatchHighResolution: URL?) {
+	public init(name: String, launchDateTime: Date, rocket: Rocket?, launchDidSucceed: Bool?, missionPatchLowResolution: URL?, missionPatchHighResolution: URL?) {
 		self.name = name
 		self.launchDateTime = launchDateTime
 		self.rocket = rocket

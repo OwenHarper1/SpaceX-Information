@@ -9,8 +9,10 @@
 
 class MockFlightService: FlightService {
 	var result: Result<PaginationContainer<[FlightResponse]>, ServiceError>!
+	var request: FlightRequest!
 	
-	func retrieve(completion: @escaping (Result<PaginationContainer<[FlightResponse]>, ServiceError>) -> ()) {
+	func retrieve(with request: FlightRequest, completion: @escaping (Result<PaginationContainer<[FlightResponse]>, ServiceError>) -> ()) {
+		self.request = request
 		completion(result)
 	}
 }

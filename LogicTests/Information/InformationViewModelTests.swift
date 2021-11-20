@@ -54,6 +54,38 @@ class InformationViewModelTests: XCTestCase {
 		XCTAssertNil(delegate.flightError)
 	}
 	
+	func test_shouldAppendFlights_givenFlightUseCaseReturnsFlightsMultipleTimes() {
+		flightUseCase.result = .success([.mock()])
+		
+		let retrievalCount = 5
+		
+		(1...retrievalCount).forEach { _ in
+			viewModel.loadFlightInformation()
+		}
+		
+		XCTAssertEqual(viewModel.flights?.count, retrievalCount)
+		XCTAssertTrue(delegate.didRetrieveFlights)
+		XCTAssertNil(delegate.flightError)
+	}
+	
+	func test_shouldResetFlights_givenRetrievalTypeChanges() {
+		flightUseCase.result = .success([.mock(), .mock(), .mock()])
+		
+		viewModel.loadFlightInformation(retrievalType: .list)
+		
+		XCTAssertEqual(viewModel.flights?.count, 3)
+		XCTAssertTrue(delegate.didRetrieveFlights)
+		XCTAssertNil(delegate.flightError)
+		
+		flightUseCase.result = .success([.mock()])
+		
+		viewModel.loadFlightInformation(retrievalType: .filtered(filters: []))
+		
+		XCTAssertEqual(viewModel.flights?.count, 1)
+		XCTAssertTrue(delegate.didRetrieveFlights)
+		XCTAssertNil(delegate.flightError)
+	}
+	
 	func test_shouldReturnFlightError_givenFlightUseCaseReturnsError() {
 		flightUseCase.result = .failure(.noInternetConnection)
 		

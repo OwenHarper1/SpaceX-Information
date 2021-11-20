@@ -15,19 +15,22 @@ class InformationViewController: UIViewController {
 	@IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
 	
 	private lazy var viewModel = ViewModelFactory.shared.makeInformationViewModel(with: self)
-	private lazy var cellFactory = InformationCollectionViewCellFactory(collectionView: collectionView, viewModel: viewModel)
-	private lazy var dataSource = InformationCollectionViewDataSource(cellFactory: cellFactory, viewModel: viewModel)
+	private var cellFactory: InformationCollectionViewCellFactory?
+	private var dataSource: InformationCollectionViewDiffableDataSource?
+	private var delegate: InformationCollectionViewCellDelegate?
 	private var navigator: InformationNavigator?
 	
 	private var state: State = .loading {
 		didSet {
-			switch state {
-			case .loading:
-				activityIndicator.startAnimating()
-				collectionView.isUserInteractionEnabled = false
-			case .loaded:
-				activityIndicator.stopAnimating()
-				collectionView.isUserInteractionEnabled = true
+			DispatchQueue.main.async {
+				switch self.state {
+				case .loading:
+					self.activityIndicator.startAnimating()
+					self.collectionView.isUserInteractionEnabled = false
+				case .loaded:
+					self.activityIndicator.stopAnimating()
+					self.collectionView.isUserInteractionEnabled = true
+				}
 			}
 		}
 	}
@@ -62,14 +65,23 @@ class InformationViewController: UIViewController {
 	private func setUpCollectionView() {
 		let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
 		let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+		
+		let cellFactory = InformationCollectionViewCellFactory(collectionView: collectionView, viewModel: viewModel)
+		let dataSource = InformationCollectionViewDiffableDataSource(collectionView: collectionView, cellFactory: cellFactory, viewModel: viewModel)
+		let delegate = InformationCollectionViewCellDelegate(viewModel: viewModel)
+		
+		self.cellFactory = cellFactory
+		self.dataSource = dataSource
+		self.delegate = delegate
+		
 		collectionView.collectionViewLayout = layout
-		collectionView.dataSource = dataSource
+		collectionView.delegate = delegate
 	}
 	
 	// MARK: Actions -
 	
 	@objc private func presentFilterView() {
-		navigator?.presentFilter()
+		navigator?.presentFilter(viewModel: viewModel)
 	}
 	
 	// MARK: Section -
@@ -91,10 +103,8 @@ class InformationViewController: UIViewController {
 
 extension InformationViewController: InformationViewModelDelegate {
 	func retrievedInformation() {
-		DispatchQueue.main.async {
-			self.collectionView.reloadSections(Section.companyInformation.indexSet)
-			self.state = .loaded
-		}
+		dataSource?.applySnapshot()
+		state = .loaded
 	}
 	
 	func retrieved(informationError error: DomainError) {
@@ -116,10 +126,7 @@ extension InformationViewController: InformationViewModelDelegate {
 	}
 	
 	func retrievedFlights() {
-		DispatchQueue.main.async {
-			self.collectionView.reloadSections(Section.flights.indexSet)
-			self.state = .loaded
-		}
+		dataSource?.applySnapshot()
 	}
 	
 	func retrieved(flightError error: DomainError) {
@@ -130,7 +137,7 @@ extension InformationViewController: InformationViewModelDelegate {
 				.action(style: .cancel)
 				.action(style: .tryAgain) {
 					self.state = .loading
-					self.viewModel.loadCompanyInformation()
+					self.viewModel.loadFlightInformation()
 				}
 				.build()
 			

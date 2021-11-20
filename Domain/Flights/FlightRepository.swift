@@ -6,5 +6,5 @@
 //
 
 public protocol FlightRepository {
-	func retrieve(completion: @escaping (Result<[Flight], DomainError>) -> ())
+	func retrieve(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ())
 }

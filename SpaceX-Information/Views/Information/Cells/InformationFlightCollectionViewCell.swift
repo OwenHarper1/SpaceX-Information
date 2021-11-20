@@ -38,12 +38,31 @@ class InformationFlightCollectionViewCell: UICollectionViewCell {
 		
 		daysValueLabel.text = (flight.daysToLaunch).withCommas()
 		
-		successImage.tintColor = flight.launchDidSucceed ? .systemGreen : .systemRed
-		successImage.image = flight.launchDidSucceed ? .success : .failure
+		successImage.tintColor = successTint(for: flight.launchDidSucceed)
+		successImage.image = successImage(for: flight.launchDidSucceed)
+	}
+	
+	private func successTint(for successStatus: Bool?) -> UIColor? {
+		switch successStatus {
+		case true: return .systemGreen
+		case false: return .systemRed
+		case .none: return .systemOrange
+		default: return nil
+		}
+	}
+	
+	private func successImage(for successStatus: Bool?) -> UIImage? {
+		switch successStatus {
+		case true: return .success
+		case false: return .failure
+		case .none: return .question
+		default: return nil
+		}
 	}
 }
 
 fileprivate extension UIImage {
 	static let success = UIImage(systemName: "checkmark.circle.fill")
 	static let failure = UIImage(systemName: "xmark.circle.fill")
+	static let question = UIImage(systemName: "questionmark.circle.fill")
 }
