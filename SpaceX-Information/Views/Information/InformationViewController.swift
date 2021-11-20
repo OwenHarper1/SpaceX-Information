@@ -127,7 +127,6 @@ extension InformationViewController: InformationViewModelDelegate {
 	
 	func retrievedFlights() {
 		dataSource?.applySnapshot()
-		//		state = .loaded // todo: add loading struct
 	}
 	
 	func retrieved(flightError error: DomainError) {

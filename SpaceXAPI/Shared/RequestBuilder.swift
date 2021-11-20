@@ -8,6 +8,7 @@
 import Foundation
 
 class RequestBuilder {
+	
 	static internal let URLBase = "https://api.spacexdata.com/v4"
 	
 	private var paths = [String]()
