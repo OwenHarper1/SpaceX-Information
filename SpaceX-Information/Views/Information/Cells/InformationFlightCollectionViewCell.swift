@@ -23,6 +23,8 @@ class InformationFlightCollectionViewCell: UICollectionViewCell {
 	@IBOutlet private weak var patchImage: UIImageView!
 	@IBOutlet private weak var successImage: UIImageView!
 	
+	@IBOutlet private weak var mediaAvailableContainer: UIView!
+	
 	func configure(from flight: Flight) {
 		patchImage.kf.setImage(with: flight.missionPatchLowResolution)
 		
@@ -40,6 +42,8 @@ class InformationFlightCollectionViewCell: UICollectionViewCell {
 		
 		successImage.tintColor = successTint(for: flight.launchDidSucceed)
 		successImage.image = successImage(for: flight.launchDidSucceed)
+		
+		mediaAvailableContainer.isHidden = !(flight.links?.linksPresent ?? false)
 	}
 	
 	private func successTint(for successStatus: Bool?) -> UIColor? {

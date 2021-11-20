@@ -18,7 +18,7 @@ class InformationViewController: UIViewController {
 	private var cellFactory: InformationCollectionViewCellFactory?
 	private var dataSource: InformationCollectionViewDiffableDataSource?
 	private var delegate: InformationCollectionViewCellDelegate?
-	private var navigator: InformationNavigator?
+	private lazy var navigator = InformationNavigator(navigationController: navigationController)
 	
 	private var state: State = .loading {
 		didSet {
@@ -46,10 +46,6 @@ class InformationViewController: UIViewController {
 		viewModel.loadCompanyInformation()
 		viewModel.loadFlightInformation()
 		state = .loading
-		
-		guard let navigationController = navigationController else { return }
-		
-		navigator = .init(navigationController: navigationController)
 	}
 	
 	// MARK: Set Up -
@@ -68,7 +64,7 @@ class InformationViewController: UIViewController {
 		
 		let cellFactory = InformationCollectionViewCellFactory(collectionView: collectionView, viewModel: viewModel)
 		let dataSource = InformationCollectionViewDiffableDataSource(collectionView: collectionView, cellFactory: cellFactory, viewModel: viewModel)
-		let delegate = InformationCollectionViewCellDelegate(viewModel: viewModel)
+		let delegate = InformationCollectionViewCellDelegate(viewModel: viewModel, navigator: navigator)
 		
 		self.cellFactory = cellFactory
 		self.dataSource = dataSource
@@ -81,7 +77,7 @@ class InformationViewController: UIViewController {
 	// MARK: Actions -
 	
 	@objc private func presentFilterView() {
-		navigator?.presentFilter(viewModel: viewModel)
+		navigator.presentFilter(viewModel: viewModel)
 	}
 	
 	// MARK: Section -
@@ -113,7 +109,7 @@ extension InformationViewController: InformationViewModelDelegate {
 			
 			let alert = AlertBuilder()
 				.title(.ohNo)
-				.message(.custom(self.generateContextualMessage(for: error, problemArea: "company information")))
+				.message(self.generateContextualMessage(for: error, problemArea: "company information"))
 				.action(style: .cancel)
 				.action(style: .tryAgain) {
 					self.state = .loading
@@ -133,7 +129,7 @@ extension InformationViewController: InformationViewModelDelegate {
 		DispatchQueue.main.async {
 			let alert = AlertBuilder()
 				.title(.ohNo)
-				.message(.custom(self.generateContextualMessage(for: error, problemArea: "flights")))
+				.message(self.generateContextualMessage(for: error, problemArea: "flights"))
 				.action(style: .cancel)
 				.action(style: .tryAgain) {
 					self.state = .loading
