@@ -14,6 +14,7 @@ public struct Flight: Equatable, Hashable {
 	public let launchDidSucceed: Bool?
 	public let missionPatchLowResolution: URL?
 	public let missionPatchHighResolution: URL?
+	public let links: Links?
 	
 	public var daysToLaunch: Int {
 		let calendar = Calendar.current
@@ -23,12 +24,25 @@ public struct Flight: Equatable, Hashable {
 		return difference.day ?? 0
 	}
 	
-	public init(name: String, launchDateTime: Date, rocket: Rocket?, launchDidSucceed: Bool?, missionPatchLowResolution: URL?, missionPatchHighResolution: URL?) {
+	public init(name: String, launchDateTime: Date, rocket: Rocket?, launchDidSucceed: Bool?, missionPatchLowResolution: URL?, missionPatchHighResolution: URL?, links: Links?) {
 		self.name = name
 		self.launchDateTime = launchDateTime
 		self.rocket = rocket
 		self.launchDidSucceed = launchDidSucceed
 		self.missionPatchLowResolution = missionPatchLowResolution
 		self.missionPatchHighResolution = missionPatchHighResolution
+		self.links = links
+	}
+	
+	public struct Links: Equatable, Hashable {
+		public let webcast: URL?
+		public let article: URL?
+		public let wikipedia: URL?
+		
+		public init(webcast: URL?, article: URL?, wikipedia: URL?) {
+			self.webcast = webcast
+			self.article = article
+			self.wikipedia = wikipedia
+		}
 	}
 }

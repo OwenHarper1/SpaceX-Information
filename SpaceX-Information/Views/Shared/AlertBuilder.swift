@@ -9,7 +9,7 @@ import UIKit
 
 class AlertBuilder {
 	private var title: Title?
-	private var message: Message?
+	private var message: String?
 	private var style: UIAlertController.Style?
 	private var actions = [UIAlertAction]()
 	private var tint: UIColor?
@@ -19,7 +19,7 @@ class AlertBuilder {
 		return self
 	}
 	
-	func message(_ message: Message) -> Self {
+	func message(_ message: String) -> Self {
 		self.message = message
 		return self
 	}
@@ -34,20 +34,15 @@ class AlertBuilder {
 		return self
 	}
 	
-	func action(style: Button, handledBy handler: (() -> Void)? = nil) -> Self {
-		let alertAction = UIAlertAction(title: style.rawValue, style: style.style, handler: { _ in handler?() })
-		actions.append(alertAction)
-		return self
-	}
-	
-	func action(style: Button, handledBy handler: @escaping ((UIAlertAction) -> Void)) -> Self {
-		let alertAction = UIAlertAction(title: style.rawValue, style: style.style, handler: handler)
+	func action(if condition: Bool = true, style: Button, handledBy handler: (() -> Void)? = nil) -> Self {
+		guard condition else { return self }
+		let alertAction = UIAlertAction(title: style.value, style: style.style, handler: { _ in handler?() })
 		actions.append(alertAction)
 		return self
 	}
 	
 	func build() -> UIAlertController {
-		let alertController = UIAlertController(title: title?.rawValue, message: message?.message, preferredStyle: style ?? .alert)
+		let alertController = UIAlertController(title: title?.rawValue, message: message, preferredStyle: style ?? .alert)
 		actions.forEach { alertController.addAction($0) }
 		alertController.view.tintColor = tint ?? alertController.view.tintColor
 		
@@ -56,28 +51,35 @@ class AlertBuilder {
 	
 	enum Title: String {
 		case ohNo = "Oh no!"
-		case areYouSure = "Are you sure?"
+		case information = "Information"
 	}
 	
-	enum Message {
+	enum Button {
+		case cancel
+		case tryAgain
 		case custom(String)
 		
-		var message: String {
+		var value: String {
 			switch self {
-			case .custom(let string): return string
+			case .cancel: return "Cancel"
+			case .tryAgain: return "Try Again"
+			case .custom(let value): return value
 			}
 		}
-	}
-	
-	enum Button: String {
-		case cancel = "Cancel"
-		case tryAgain = "Try Again"
 		
 		var style: UIAlertAction.Style {
 			switch self {
 			case .cancel: return .cancel
 			case .tryAgain: return .default
+			case .custom: return .default
 			}
 		}
+	}
+}
+
+// todo: extract
+extension Optional {
+	var isNil: Bool {
+		return self == nil
 	}
 }

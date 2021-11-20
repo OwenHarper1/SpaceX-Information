@@ -19,6 +19,7 @@ class FlightConverter {
 					 rocket: rocket,
 					 launchDidSucceed: flightResponse.success,
 					 missionPatchLowResolution: flightResponse.links.patch.small,
-					 missionPatchHighResolution: flightResponse.links.patch.large)
+					 missionPatchHighResolution: flightResponse.links.patch.large,
+					 links: .init(webcast: flightResponse.links.webcast, article: flightResponse.links.article, wikipedia: flightResponse.links.wikipedia))
 	}
 }

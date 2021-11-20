@@ -14,12 +14,24 @@ extension Flight {
 					 rocket: Rocket? = .mock(),
 					 launchDidSucceed: Bool = false,
 					 missionPatchLowResolution: URL? = .mock(),
-					 missionPatchHighResolution: URL? = .mock()) -> Self {
+					 missionPatchHighResolution: URL? = .mock(),
+					 links: Links? = .mock()) -> Self {
 		return .init(name: name,
 					 launchDateTime: launchDateTime,
 					 rocket: rocket,
 					 launchDidSucceed: launchDidSucceed,
 					 missionPatchLowResolution: missionPatchLowResolution,
-					 missionPatchHighResolution: missionPatchHighResolution)
+					 missionPatchHighResolution: missionPatchHighResolution,
+					 links: links)
+	}
+}
+
+extension Flight.Links {
+	static func mock(webcast: URL? = .mock(),
+					 article: URL? = .mock(),
+					 wikipedia: URL? = .mock()) -> Self {
+		return .init(webcast: webcast,
+					 article: article,
+					 wikipedia: wikipedia)
 	}
 }
