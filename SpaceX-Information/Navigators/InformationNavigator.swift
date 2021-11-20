@@ -16,8 +16,12 @@ class InformationNavigator {
 	}
 	
 	func presentFilter(viewModel: InformationViewModel) {
-		let viewController = FilterViewController(viewModel: viewModel)
-//		let filterNavigationController = UINavigationController(rootViewController: viewController)
+		let viewController = FilterViewController(viewModel: viewModel, dismissHandler: {
+			
+			self.navigationController.dismiss(animated: true)
+			
+		})
+		//		let filterNavigationController = UINavigationController(rootViewController: viewController)
 		navigationController.present(viewController, animated: true)
 	}
 }

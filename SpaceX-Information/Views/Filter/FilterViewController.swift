@@ -9,22 +9,11 @@ import SwiftUI
 import Logic
 
 class FilterViewController: UIHostingController<FilterView> {
-
-	init(viewModel: InformationViewModel) {
-		super.init(rootView: FilterView())
+	init(viewModel: InformationViewModel, dismissHandler: @escaping () -> ()) {
+		super.init(rootView: FilterView(dismissHandler: dismissHandler))
 	}
 	
 	@objc required dynamic init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//		
-//		decorateInterface()
-//    }
-//	
-//	private func decorateInterface() {
-//		title = "Filter"
-//	}
 }

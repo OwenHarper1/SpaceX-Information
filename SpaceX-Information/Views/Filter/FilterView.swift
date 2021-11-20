@@ -17,6 +17,12 @@ struct FilterView: View {
 	private var fromDateRange: PartialRangeThrough<Date> { ...filterToYear }
 	private var toDateRange: PartialRangeFrom<Date> { filterFromYear... }
 	
+	private let dismissHandler: () -> ()
+	
+	init(dismissHandler: @escaping () -> ()) {
+		self.dismissHandler = dismissHandler
+	}
+	
 	var body: some View {
 		NavigationView {
 			ZStack {
@@ -52,6 +58,7 @@ struct FilterView: View {
 					
 					Button("Apply") {
 						// todo: implement
+						dismissHandler()
 						print("filtering...")
 					}
 					.padding(.all, 16)
@@ -70,6 +77,6 @@ struct FilterView: View {
 
 struct FilterView_Previews: PreviewProvider {
 	static var previews: some View {
-		FilterView()
+		FilterView(dismissHandler: {})
 	}
 }
