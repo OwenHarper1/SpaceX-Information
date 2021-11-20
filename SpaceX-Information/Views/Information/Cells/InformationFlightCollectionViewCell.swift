@@ -27,7 +27,7 @@ class InformationFlightCollectionViewCell: UICollectionViewCell {
 		patchImage.kf.setImage(with: flight.missionPatchLowResolution)
 		
 		missionValueLabel.text = flight.name
-		dateValueLabel.text = flight.launchDateTime.toReadableFormat(.yearMonthDay)
+		dateValueLabel.text = flight.launchDateTime.toReadableFormat(.dayMonthYear)
 		
 		rocketValueLabel.isHidden = flight.rocket == nil
 		rocketLabel.isHidden = flight.rocket == nil

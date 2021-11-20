@@ -20,6 +20,6 @@ extension Date {
 	
 	enum ReadableFormat: String {
 		case yearMonthDay = "yyyy/MM/dd"
+		case dayMonthYear = "dd/MM/yyyy"
 	}
 }
-
