@@ -22,7 +22,6 @@ class FlightRepositoryTests: XCTestCase {
 		repository = .init(flightService: flightService, rocketRepository: rocketRepository)
 	}
 	
-	// todo: add for both retrieval types
 	func test_shouldRetrieveFlightAndRocket_givenBothServicesReturnSuccess() {
 		flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
 		rocketService.result = .success(.mock())
@@ -39,7 +38,7 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isSuccess)
 		XCTAssertEqual(try repositoryResult?.get(), [.mock()])
-		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
+		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1), query: nil))
 	}
 	
 	// todo: this'll need to test filter mapping to request also
@@ -50,21 +49,31 @@ class FlightRepositoryTests: XCTestCase {
 		let expectation = expectation(description: "Result should return")
 		var repositoryResult: Result<[Flight], DomainError>?
 		
-		repository.retrieve(retrievalType: .filtered) { result in
+		let fromDate = Date.distantPast
+		let toDate = Date.distantFuture
+		
+		let filters: [FlightRetrievalType.FlightFilter] = [
+			.order(isAscending: true),
+			.onlyShowSuccessfulLaunches,
+			.year(from: fromDate, to: toDate)
+		]
+		
+		repository.retrieve(retrievalType: .filtered(filters: filters)) { result in
 			repositoryResult = result
 			expectation.fulfill()
 		}
+		
+		let expectedQuery: FlightRequest.Query = .init(date: FlightRequest.Query.DateRange(fromDate: fromDate, toDate: toDate), didSucceed: true)
 		
 		wait(for: [expectation], timeout: 1)
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isSuccess)
 		XCTAssertEqual(try repositoryResult?.get(), [.mock()])
-		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
+		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1), query: expectedQuery))
 	}
 	
-	// todo: add for both retrieval types
 	func test_shouldIncrementPageNumber_givenServiceReturnsSuccess() {
-		[FlightRetrievalType.list, .filtered].forEach { retrievalType in
+		[FlightRetrievalType.list, .filtered(filters: [])].forEach { retrievalType in
 			(1...10).forEach { page in
 				flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
 				rocketService.result = .success(.mock())
@@ -73,44 +82,41 @@ class FlightRepositoryTests: XCTestCase {
 				repository.retrieve(retrievalType: retrievalType) { _ in expectation.fulfill() }
 				
 				wait(for: [expectation], timeout: 1)
-				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page)))
+				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page), query: nil))
 			}
 		}
 	}
 	
-	// todo: add for both retrieval types
 	func test_shouldReturnError_givenRocketServiceReturnsError() {
-		flightService.result = .failure(.unknown(error: MockError()))
-		
-		let expectation = expectation(description: "Result should return")
-		var repositoryResult: Result<[Flight], DomainError>?
-		
-		repository.retrieve(retrievalType: .list) { result in
-			repositoryResult = result
-			expectation.fulfill()
+		[FlightRetrievalType.list, .filtered(filters: [])].forEach { retrievalType in
+			flightService.result = .failure(.unknown(error: MockError()))
+			
+			let expectation = expectation(description: "Result should return")
+			var repositoryResult: Result<[Flight], DomainError>?
+			
+			repository.retrieve(retrievalType: retrievalType) { result in
+				repositoryResult = result
+				expectation.fulfill()
+			}
+			
+			wait(for: [expectation], timeout: 1)
+			XCTAssertNotNil(repositoryResult)
+			XCTAssertTrue(repositoryResult!.isFailure)
 		}
-		
-		wait(for: [expectation], timeout: 1)
-		XCTAssertNotNil(repositoryResult)
-		XCTAssertTrue(repositoryResult!.isFailure)
 	}
 	
-	// todo: add for both retrieval types
 	func test_shouldNotIncrementPageNumber_givenServiceReturnsError() {
-		(1...10).forEach { page in
-		  flightService.result = .failure(.invalidURL)
-		  
-		  let expectation = expectation(description: "Result should return")
-			repository.retrieve(retrievalType: .list) { _ in expectation.fulfill() }
-		  
-		  wait(for: [expectation], timeout: 1)
-		  XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
+		[FlightRetrievalType.list, .filtered(filters: [])].forEach { retrievalType in
+			(1...10).forEach { page in
+				flightService.result = .failure(.invalidURL)
+				
+				let expectation = expectation(description: "Result should return")
+				repository.retrieve(retrievalType: retrievalType) { _ in expectation.fulfill() }
+				
+				wait(for: [expectation], timeout: 1)
+				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1), query: nil))
+			}
 		}
-	}
-	
-	// todo: implement
-	func test_shouldResetPageNumber_givenRetrievalTypeChanges_andServiceReturnsSuccess() {
-		
 	}
 	
 	func test_shouldReturnFlightWithoutRocket_givenFlightServiceReturnsSuccess_andRocketServiceReturnsError() {

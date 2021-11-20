@@ -79,7 +79,7 @@ class InformationViewModelTests: XCTestCase {
 		
 		flightUseCase.result = .success([.mock()])
 		
-		viewModel.loadFlightInformation(retrievalType: .filtered)
+		viewModel.loadFlightInformation(retrievalType: .filtered(filters: []))
 		
 		XCTAssertEqual(viewModel.flights?.count, 1)
 		XCTAssertTrue(delegate.didRetrieveFlights)

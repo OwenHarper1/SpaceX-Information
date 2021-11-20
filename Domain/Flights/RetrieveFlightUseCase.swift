@@ -23,13 +23,21 @@ public class DefaultRetrieveFlightUseCase: RetrieveFlightUseCase {
 	}
 }
 
-public enum FlightRetrievalType {
+public enum FlightRetrievalType: Equatable {
 	case list
-	case filtered
+	case filtered(filters: [FlightFilter])
 	
-	enum FlightFilter {
+	public static func == (lhs: FlightRetrievalType, rhs: FlightRetrievalType) -> Bool {
+		switch (lhs, rhs) {
+		case (.list, .list): return true
+		case (.filtered(let leftFilters), .filtered(let rightFilters)): return leftFilters == rightFilters
+		default: return false
+		}
+	}
+	
+	public enum FlightFilter: Equatable {
 		case order(isAscending: Bool)
 		case onlyShowSuccessfulLaunches
-		case year(to: Date, from: Date)
+		case year(from: Date, to: Date)
 	}
 }

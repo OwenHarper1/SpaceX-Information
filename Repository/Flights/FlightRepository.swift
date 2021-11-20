@@ -33,7 +33,7 @@ public class FlightRepository: Domain.FlightRepository {
 	public func retrieve(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ()) {
 		self.retrievalType = retrievalType
 		
-		let request = FlightRequest(options: FlightRequest.Options(limit: 10, page: currentPage))
+		let request = FlightRequest(options: FlightRequest.Options(limit: 10, page: currentPage), query: retrievalType.query)
 		
 		flightService.retrieve(with: request) {
 			switch $0 {
@@ -53,6 +53,39 @@ public class FlightRepository: Domain.FlightRepository {
 			case .failure(let error):
 				completion(.failure(ErrorConverter.convert(error)))
 			}
+		}
+	}
+}
+
+fileprivate extension FlightRetrievalType {
+	var isAscending: Bool {
+		switch self {
+		case .list: return false
+		case .filtered(let filters): return filters.reduce(false) { rolling, filter in
+			guard case .order(let isAscending) = filter else { return rolling }
+			return isAscending
+		}
+		}
+	}
+	
+	var query: FlightRequest.Query? {
+		switch self {
+		case .list: return nil
+		case .filtered(let filters):
+			guard !filters.isEmpty else { return nil }
+			
+			var dateRange: FlightRequest.Query.DateRange?
+			var onlySuccessfulLaunches: Bool?
+			
+			filters.forEach { filter in
+				switch filter {
+				case .order: break
+				case .onlyShowSuccessfulLaunches: onlySuccessfulLaunches = true
+				case .year(let from, let to): dateRange = .init(fromDate: from, toDate: to)
+				}
+			}
+			
+			return .init(date: dateRange, didSucceed: onlySuccessfulLaunches)
 		}
 	}
 }
