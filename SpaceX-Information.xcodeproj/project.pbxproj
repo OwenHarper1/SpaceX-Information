@@ -144,6 +144,8 @@
 		309184042749221700CB1949 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184032749221700CB1949 /* RequestBuilder.swift */; };
 		309184082749286000CB1949 /* FlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184072749286000CB1949 /* FlightTests.swift */; };
 		3091840A27492E1D00CB1949 /* MockRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840927492E1D00CB1949 /* MockRequestBody.swift */; };
+		3091840C2749322E00CB1949 /* FlightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840B2749322E00CB1949 /* FlightRequest.swift */; };
+		3091840E2749324900CB1949 /* FlightRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091840D2749324900CB1949 /* FlightRequest+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -446,6 +448,8 @@
 		309184032749221700CB1949 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		309184072749286000CB1949 /* FlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTests.swift; sourceTree = "<group>"; };
 		3091840927492E1D00CB1949 /* MockRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestBody.swift; sourceTree = "<group>"; };
+		3091840B2749322E00CB1949 /* FlightRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRequest.swift; sourceTree = "<group>"; };
+		3091840D2749324900CB1949 /* FlightRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightRequest+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -921,6 +925,7 @@
 				309183A8274721B300CB1949 /* FlightService.swift */,
 				309183AC274721D700CB1949 /* FlightResponse.swift */,
 				309183CC2748349100CB1949 /* FlightConverter.swift */,
+				3091840B2749322E00CB1949 /* FlightRequest.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -951,6 +956,7 @@
 			children = (
 				309183B4274722D300CB1949 /* FlightRepositoryTests.swift */,
 				309183B9274723D600CB1949 /* MockFlightService.swift */,
+				3091840D2749324900CB1949 /* FlightRequest+Extension.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -1567,6 +1573,7 @@
 				308CAB46274577CA00ABBA90 /* Date+Extension.swift in Sources */,
 				304E7E46274592A0007999AD /* CompanyInformationConverter.swift in Sources */,
 				308CAB10274485FA00ABBA90 /* Result+Extension.swift in Sources */,
+				3091840C2749322E00CB1949 /* FlightRequest.swift in Sources */,
 				308CAAB02744671E00ABBA90 /* CompanyInformationRepository.swift in Sources */,
 				304E7E41274591BB007999AD /* ErrorConverter.swift in Sources */,
 				309183A4274714D400CB1949 /* FlightRepository.swift in Sources */,
@@ -1588,6 +1595,7 @@
 				309183C02747370F00CB1949 /* PaginationContainer+Extension.swift in Sources */,
 				309183BE274736F400CB1949 /* FlightResponse+Extension.swift in Sources */,
 				309183CA2748346A00CB1949 /* Rocket+Extension.swift in Sources */,
+				3091840E2749324900CB1949 /* FlightRequest+Extension.swift in Sources */,
 				304E7E622745D2ED007999AD /* ServiceError.swift in Sources */,
 				308CAB2A27448BE100ABBA90 /* Result+Extension.swift in Sources */,
 				308CAB31274492AE00ABBA90 /* CompanyInformationResponse+Extension.swift in Sources */,
