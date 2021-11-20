@@ -38,6 +38,11 @@ public struct FlightRequest: Encodable {
 		struct DateRange: Encodable {
 			let fromDate: Date
 			let toDate: Date
+			
+			enum CodingKeys: String, CodingKey {
+				case fromDate = "$gte"
+				case toDate = "$lte"
+			}
 		}
 		
 		enum CodingKeys: String, CodingKey {
@@ -46,36 +51,3 @@ public struct FlightRequest: Encodable {
 		}
 	}
 }
-
-// todo: add order (need to look up param)
-// needs to be added to options, defualt is ascending
-/*
-"options":{
-	  "limit":1,
-	  "sort":{
-		 "flight_number":"asc"
-	  }
-   }
-*/
-
-
-// todo: add only show success launches
-/*
-"query": {
-	  "success": true
-  },
-*/
-
-
-// todo: gte = from date
-// todo: lte = to date
-/*
-{
-  "query": {
-	"date_utc": {
-	  "$gte": "2017-06-22T00:00:00.000Z",
-	  "$lte": "2017-06-25T00:00:00.000Z"
-	}
- }
-}
-*/

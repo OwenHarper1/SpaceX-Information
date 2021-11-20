@@ -13,6 +13,7 @@ class RequestBuilder {
 	private var paths = [String]()
 	private var httpMethod: HTTPMethod?
 	private var body: Encodable?
+	private var encoder: JSONEncoder?
 	
 	func path(_ path: Int) -> Self {
 		return self.path(String(path))
@@ -33,6 +34,11 @@ class RequestBuilder {
 		return self
 	}
 	
+	func encoding(with encoder: JSONEncoder) -> Self {
+		self.encoder = encoder
+		return self
+	}
+	
 	func build() -> URLRequest? {
 		let path = paths.reduce("") { rolling, next in
 			return rolling + "/" + next
@@ -50,7 +56,7 @@ class RequestBuilder {
 	}
 	
 	private func addJSONData(to request: inout URLRequest) {
-		guard let body = body?.toJSONData() else { return }
+		guard let body = body?.toJSONData(with: encoder ?? JSONEncoder()) else { return }
 		request.httpBody = body
 		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 	}
@@ -64,5 +70,7 @@ class RequestBuilder {
 }
 
 fileprivate extension Encodable {
-	func toJSONData() -> Data? { try? JSONEncoder().encode(self) }
+	func toJSONData(with encoder: JSONEncoder) -> Data? {
+		try? encoder.encode(self)
+	}
 }
