@@ -5,17 +5,26 @@
 //  Created by Owen Harper on 16/11/2021.
 //
 
-import UIKit
+import SwiftUI
+import Logic
 
-class FilterViewController: UIViewController {
+class FilterViewController: UIHostingController<FilterView> {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		
-		decorateInterface()
-    }
-	
-	private func decorateInterface() {
-		title = "Filter"
+	init(viewModel: InformationViewModel) {
+		super.init(rootView: FilterView())
 	}
+	
+	@objc required dynamic init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//		
+//		decorateInterface()
+//    }
+//	
+//	private func decorateInterface() {
+//		title = "Filter"
+//	}
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Logic
 
 class InformationNavigator {
 	private let navigationController: UINavigationController
@@ -14,9 +15,9 @@ class InformationNavigator {
 		self.navigationController = navigationController
 	}
 	
-	func presentFilter() {
-		let viewController = FilterViewController()
-		let filterNavigationController = UINavigationController(rootViewController: viewController)
-		navigationController.present(filterNavigationController, animated: true)
+	func presentFilter(viewModel: InformationViewModel) {
+		let viewController = FilterViewController(viewModel: viewModel)
+//		let filterNavigationController = UINavigationController(rootViewController: viewController)
+		navigationController.present(viewController, animated: true)
 	}
 }

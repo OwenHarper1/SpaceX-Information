@@ -81,7 +81,7 @@ class InformationViewController: UIViewController {
 	// MARK: Actions -
 	
 	@objc private func presentFilterView() {
-		navigator?.presentFilter()
+		navigator?.presentFilter(viewModel: viewModel)
 	}
 	
 	// MARK: Section -
