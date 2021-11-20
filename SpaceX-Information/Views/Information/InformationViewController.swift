@@ -17,6 +17,7 @@ class InformationViewController: UIViewController {
 	private lazy var viewModel = ViewModelFactory.shared.makeInformationViewModel(with: self)
 	private lazy var cellFactory = InformationCollectionViewCellFactory(collectionView: collectionView, viewModel: viewModel)
 	private lazy var dataSource = InformationCollectionViewDataSource(cellFactory: cellFactory, viewModel: viewModel)
+	private lazy var delegate = InformationCollectionViewCellDelegate(viewModel: viewModel)
 	private var navigator: InformationNavigator?
 	
 	private var state: State = .loading {
@@ -64,6 +65,7 @@ class InformationViewController: UIViewController {
 		let layout = UICollectionViewCompositionalLayout.list(using: configuration)
 		collectionView.collectionViewLayout = layout
 		collectionView.dataSource = dataSource
+		collectionView.delegate = delegate
 	}
 	
 	// MARK: Actions -
@@ -130,7 +132,7 @@ extension InformationViewController: InformationViewModelDelegate {
 				.action(style: .cancel)
 				.action(style: .tryAgain) {
 					self.state = .loading
-					self.viewModel.loadCompanyInformation()
+					self.viewModel.loadFlightInformation()
 				}
 				.build()
 			
@@ -143,5 +145,23 @@ extension InformationViewController: InformationViewModelDelegate {
 		case .remoteError, .unrecoverableError: return "Oh no! There seems to be a problem loading \(problemArea) ❌. Please try later!"
 		case .noInternetConnection: return "Oh no! It appears you're not currently connected to the internet 🤔. Please check your connection and try again!"
 		}
+	}
+}
+
+// todo: extract
+class InformationCollectionViewCellDelegate: NSObject, UICollectionViewDelegate {
+	typealias Section = InformationViewController.Section
+	
+	private let viewModel: InformationViewModel
+	
+	init(viewModel: InformationViewModel) {
+		self.viewModel = viewModel
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+		guard let count = viewModel.flights?.count, count > 0,
+			  indexPath == IndexPath(item: count - 1, section: Section.flights.rawValue) else { return }
+		
+		viewModel.loadFlightInformation()
 	}
 }

@@ -14,7 +14,7 @@ public struct FlightResponse: Decodable {
 	let net: Bool
 	let window: Int?
 	let rocket: String
-	let success: Bool
+	let success: Bool?
 	let failures: [Failure]
 	let details: String?
 	let crew: [String]
