@@ -9,8 +9,10 @@
 
 class MockRetrieveFlightUseCase: RetrieveFlightUseCase {
 	var result: Result<[Flight], DomainError>!
+	var retrievalType: FlightRetrievalType!
 	
-	func execute(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
+	func execute(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ()) {
+		self.retrievalType = retrievalType
 		completion(result)
 	}
 }

@@ -23,7 +23,7 @@ class DefaultRetrieveFlightUseCaseTests: XCTestCase {
 		let expectation = XCTestExpectation(description: "Result should return")
 		var useCaseResult: Result<[Flight], DomainError>?
 		
-		useCase.execute { result in
+		useCase.execute(retrievalType: .list) { result in
 			useCaseResult = result
 			expectation.fulfill()
 		}
@@ -40,7 +40,7 @@ class DefaultRetrieveFlightUseCaseTests: XCTestCase {
 		let expectation = XCTestExpectation(description: "Result should return")
 		var useCaseResult: Result<[Flight], DomainError>?
 		
-		useCase.execute { result in
+		useCase.execute(retrievalType: .list) { result in
 			useCaseResult = result
 			expectation.fulfill()
 		}

@@ -22,6 +22,7 @@ class FlightRepositoryTests: XCTestCase {
 		repository = .init(flightService: flightService, rocketRepository: rocketRepository)
 	}
 	
+	// todo: add for both retrieval types
 	func test_shouldRetrieveFlightAndRocket_givenBothServicesReturnSuccess() {
 		flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
 		rocketService.result = .success(.mock())
@@ -29,7 +30,7 @@ class FlightRepositoryTests: XCTestCase {
 		let expectation = expectation(description: "Result should return")
 		var repositoryResult: Result<[Flight], DomainError>?
 		
-		repository.retrieve { result in
+		repository.retrieve(retrievalType: .list) { result in
 			repositoryResult = result
 			expectation.fulfill()
 		}
@@ -41,26 +42,28 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
 	}
 	
+	// todo: add for both retrieval types
 	func test_shouldIncrementPageNumber_givenServiceReturnsSuccess() {
 		(1...10).forEach { page in
 			flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
 			rocketService.result = .success(.mock())
 			
 			let expectation = expectation(description: "Result should return")
-			repository.retrieve { _ in expectation.fulfill() }
+			repository.retrieve(retrievalType: .list) { _ in expectation.fulfill() }
 			
 			wait(for: [expectation], timeout: 1)
 			XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page)))
 		}
 	}
 	
+	// todo: add for both retrieval types
 	func test_shouldReturnError_givenRocketServiceReturnsError() {
 		flightService.result = .failure(.unknown(error: MockError()))
 		
 		let expectation = expectation(description: "Result should return")
 		var repositoryResult: Result<[Flight], DomainError>?
 		
-		repository.retrieve { result in
+		repository.retrieve(retrievalType: .list) { result in
 			repositoryResult = result
 			expectation.fulfill()
 		}
@@ -70,16 +73,22 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertTrue(repositoryResult!.isFailure)
 	}
 	
+	// todo: add for both retrieval types
 	func test_shouldNotIncrementPageNumber_givenServiceReturnsError() {
 		(1...10).forEach { page in
 		  flightService.result = .failure(.invalidURL)
 		  
 		  let expectation = expectation(description: "Result should return")
-		  repository.retrieve { _ in expectation.fulfill() }
+			repository.retrieve(retrievalType: .list) { _ in expectation.fulfill() }
 		  
 		  wait(for: [expectation], timeout: 1)
 		  XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
 		}
+	}
+	
+	// todo: implement
+	func test_shouldResetPageNumber_givenServiceReturnsSuccess() {
+		
 	}
 	
 	func test_shouldReturnFlightWithoutRocket_givenFlightServiceReturnsSuccess_andRocketServiceReturnsError() {
@@ -89,7 +98,7 @@ class FlightRepositoryTests: XCTestCase {
 		let expectation = expectation(description: "Result should return")
 		var repositoryResult: Result<[Flight], DomainError>?
 		
-		repository.retrieve { result in
+		repository.retrieve(retrievalType: .list) { result in
 			repositoryResult = result
 			expectation.fulfill()
 		}

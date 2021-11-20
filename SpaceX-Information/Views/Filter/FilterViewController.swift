@@ -10,7 +10,7 @@ import Logic
 
 class FilterViewController: UIHostingController<FilterView> {
 	init(viewModel: InformationViewModel, dismissHandler: @escaping () -> ()) {
-		super.init(rootView: FilterView(dismissHandler: dismissHandler))
+		super.init(rootView: FilterView(dismissHandler: dismissHandler, viewModel: viewModel))
 	}
 	
 	@objc required dynamic init?(coder aDecoder: NSCoder) {

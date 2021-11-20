@@ -19,7 +19,7 @@ public class FlightRepository: Domain.FlightRepository {
 		self.rocketRepository = rocketRepository
 	}
 	
-	public func retrieve(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
+	public func retrieve(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ()) {
 		let request = FlightRequest(options: FlightRequest.Options(limit: 10, page: currentPage))
 		
 		flightService.retrieve(with: request) {

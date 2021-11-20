@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Logic
+import Configuration
 
 struct FilterView: View {
 	@State private var filterOrder: FilterOrder = .ascending
@@ -18,9 +20,11 @@ struct FilterView: View {
 	private var toDateRange: PartialRangeFrom<Date> { filterFromYear... }
 	
 	private let dismissHandler: () -> ()
+	private var viewModel: InformationViewModel?
 	
-	init(dismissHandler: @escaping () -> ()) {
+	init(dismissHandler: @escaping () -> (), viewModel: InformationViewModel?) {
 		self.dismissHandler = dismissHandler
+		self.viewModel = viewModel
 	}
 	
 	var body: some View {
@@ -51,8 +55,6 @@ struct FilterView: View {
 						.animation(.linear)
 						
 					}
-					.navigationTitle("Filter")
-					.navigationBarTitleDisplayMode(.inline)
 					
 					Spacer()
 					
@@ -64,6 +66,11 @@ struct FilterView: View {
 					.padding(.all, 16)
 				}
 			}
+			.navigationTitle("Filter")
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar(content: {
+				Button("Close", action: dismissHandler)
+			})
 		}
 	}
 	
@@ -77,6 +84,6 @@ struct FilterView: View {
 
 struct FilterView_Previews: PreviewProvider {
 	static var previews: some View {
-		FilterView(dismissHandler: {})
+		FilterView(dismissHandler: {}, viewModel: nil)
 	}
 }

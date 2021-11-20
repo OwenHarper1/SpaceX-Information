@@ -9,8 +9,10 @@
 
 class MockFlightRepository: FlightRepository {
 	var result: Result<[Flight], DomainError>!
+	var retrievalType: FlightRetrievalType!
 	
-	func retrieve(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
+	func retrieve(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ()) {
+		self.retrievalType = retrievalType
 		completion(result)
 	}
 }

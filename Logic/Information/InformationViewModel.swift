@@ -21,6 +21,12 @@ public class InformationViewModel {
 	
 	private(set) public var companyInformation: CompanyInformation?
 	private(set) public var flights: [Flight]?
+	private(set) public var flightRetrievalType: FlightRetrievalType = .list {
+		didSet {
+			guard oldValue != flightRetrievalType else { return }
+			flights = nil
+		}
+	}
 	
 	public init(companyInformationUseCase: RetrieveCompanyInformationUseCase, flightUseCase: RetrieveFlightUseCase, delegate: InformationViewModelDelegate) {
 		self.companyInformationUseCase = companyInformationUseCase
@@ -40,8 +46,10 @@ public class InformationViewModel {
 		delegate.retrievedInformation()
 	}
 	
-	public func loadFlightInformation() {
-		flightUseCase.execute {
+	public func loadFlightInformation(retrievalType: FlightRetrievalType? = nil) {
+		flightRetrievalType = retrievalType ?? flightRetrievalType
+		
+		flightUseCase.execute(retrievalType: flightRetrievalType) {
 			$0.handle(success: self.handleFlightsRetrieved,
 					  failure: self.delegate.retrieved(flightError:))
 		}
