@@ -12,7 +12,7 @@ class RequestBuilder {
 	
 	private var paths = [String]()
 	private var httpMethod: HTTPMethod?
-	
+	private var body: Encodable?
 	
 	func path(_ path: Int) -> Self {
 		return self.path(String(path))
@@ -28,6 +28,11 @@ class RequestBuilder {
 		return self
 	}
 	
+	func body(_ body: Encodable) -> Self {
+		self.body = body
+		return self
+	}
+	
 	func build() -> URLRequest? {
 		let path = paths.reduce("") { rolling, next in
 			return rolling + "/" + next
@@ -39,6 +44,7 @@ class RequestBuilder {
 		
 		var request = URLRequest(url: url)
 		request.httpMethod = (httpMethod ?? .get).method
+		request.httpBody = body?.toJSONData()
 		
 		return request
 	}
@@ -49,4 +55,8 @@ class RequestBuilder {
 		
 		var method: String { rawValue.capitalized }
 	}
+}
+
+fileprivate extension Encodable {
+	func toJSONData() -> Data? { try? JSONEncoder().encode(self) }
 }

@@ -42,4 +42,19 @@ class RequestBuilderTests: XCTestCase {
 		
 		XCTAssertEqual(request?.httpMethod, "GET")
 	}
+	
+	func test_shouldEncodeCodableBody_givenBodyProvided() {
+		let request = RequestBuilder()
+			.path("rockets")
+			.body(MockRequestBody(paramOne: "Foo", nextedParam: .init(paramTwo: "Bar")))
+			.build()
+		
+		let body = String(data: request!.httpBody!, encoding: .utf8)
+		
+		let expectedBody = "{\"paramOne\":\"Foo\",\"nextedParam\":{\"paramTwo\":\"Bar\"}}"
+		let expectedData = expectedBody.data(using: .utf8)
+		
+		XCTAssertEqual(body, expectedBody)
+		XCTAssertEqual(request?.httpBody, expectedData)
+	}
 }
