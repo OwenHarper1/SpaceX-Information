@@ -142,6 +142,7 @@
 		309183FF2749204C00CB1949 /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183FE2749204C00CB1949 /* DateFormattingTests.swift */; };
 		309184022749220A00CB1949 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184012749220A00CB1949 /* RequestBuilderTests.swift */; };
 		309184042749221700CB1949 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184032749221700CB1949 /* RequestBuilder.swift */; };
+		309184082749286000CB1949 /* FlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184072749286000CB1949 /* FlightTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,6 +443,7 @@
 		309183FE2749204C00CB1949 /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
 		309184012749220A00CB1949 /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		309184032749221700CB1949 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		309184072749286000CB1949 /* FlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -965,6 +967,7 @@
 				309183C2274833FC00CB1949 /* Flight+Extension.swift */,
 				309183D8274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift */,
 				309183DA2748426F00CB1949 /* MockFlightRepository.swift */,
+				309184072749286000CB1949 /* FlightTests.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -1508,6 +1511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				308CAB2627448BAF00ABBA90 /* Result+Extension.swift in Sources */,
+				309184082749286000CB1949 /* FlightTests.swift in Sources */,
 				309183D9274840F900CB1949 /* DefaultRetrieveFlightUseCaseTests.swift in Sources */,
 				308CAB23274487C300ABBA90 /* DefaultRetrieveCompanyInformationUseCaseTests.swift in Sources */,
 				308CAB1A274486A400ABBA90 /* CompanyInformation+Extension.swift in Sources */,
