@@ -8,6 +8,7 @@
 import SwiftUI
 import Logic
 import Configuration
+import Domain
 
 struct FilterView: View {
 	@State private var filterOrder: FilterOrder = .ascending
@@ -59,9 +60,8 @@ struct FilterView: View {
 					Spacer()
 					
 					Button("Apply") {
-						// todo: implement
+						viewModel?.loadFlightInformation(retrievalType: .filtered(filters: generateFilters()))
 						dismissHandler()
-						print("filtering...")
 					}
 					.padding(.all, 16)
 				}
@@ -74,9 +74,25 @@ struct FilterView: View {
 		}
 	}
 	
+	private func generateFilters() -> [FlightRetrievalType.FlightFilter] {
+		var filters = [FlightRetrievalType.FlightFilter]()
+		
+		if launchSuccessful {
+			filters.append(.onlyShowSuccessfulLaunches)
+		}
+		
+		filters.append(.order(isAscending: filterOrder == .ascending))
+		
+		if showSpecificYear {
+			filters.append(.year(from: filterFromYear, to: filterToYear))
+		}
+		
+		return filters
+	}
+	
 	enum FilterOrder: String, CaseIterable {
-		case ascending
 		case descending
+		case ascending
 		
 		var displayTitle: String { rawValue.prefix(1).uppercased() + rawValue.lowercased().dropFirst() }
 	}

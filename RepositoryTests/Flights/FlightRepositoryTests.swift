@@ -41,7 +41,6 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1, sort: .init(dateSortDirection: .descending)), query: nil))
 	}
 	
-	// todo: this'll need to test filter mapping to request also
 	func test_shouldRetrieveFilteredFlightAndRocket_givenBothServicesReturnSuccess() {
 		flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
 		rocketService.result = .success(.mock())

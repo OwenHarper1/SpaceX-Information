@@ -65,10 +65,11 @@ fileprivate extension FlightRetrievalType {
 	var isAscending: Bool {
 		switch self {
 		case .list: return false
-		case .filtered(let filters): return filters.reduce(false) { rolling, filter in // todo: this seems borked, check it works
-			guard case .order(let isAscending) = filter else { return rolling }
-			return isAscending
-		}
+		case .filtered(let filters):
+			return filters.reduce(false) { rolling, filter in
+				guard case .order(let isAscending) = filter else { return rolling }
+				return isAscending
+			}
 		}
 	}
 	
