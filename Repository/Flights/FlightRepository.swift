@@ -18,7 +18,7 @@ public class FlightRepository: Domain.FlightRepository {
 	}
 	
 	public func retrieve(completion: @escaping (Result<[Flight], DomainError>) -> ()) {
-		let request = FlightRequest(options: FlightRequest.Options(limit: 10, page: 10)) // todo: extract??
+		let request = FlightRequest(options: FlightRequest.Options(limit: 10, page: 1)) // todo: extract??
 		
 		flightService.retrieve(with: request) {
 			switch $0 {

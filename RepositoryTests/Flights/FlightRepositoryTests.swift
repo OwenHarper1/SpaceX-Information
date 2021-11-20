@@ -40,6 +40,7 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isSuccess)
 		XCTAssertEqual(try repositoryResult?.get(), [.mock()])
+		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
 	}
 	
 	func test_shouldReturnError_givenRocketServiceReturnsError() {
@@ -76,5 +77,19 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isSuccess)
 		XCTAssertEqual(try repositoryResult?.get(), [.mock(rocket: nil)])
+	}
+}
+
+// todo: extract
+extension FlightRequest: Equatable {
+	public static func == (lhs: FlightRequest, rhs: FlightRequest) -> Bool {
+		return lhs.options == rhs.options
+	}
+}
+
+extension FlightRequest.Options: Equatable {
+	public static func == (lhs: FlightRequest.Options, rhs: FlightRequest.Options) -> Bool {
+		return lhs.limit == rhs.limit &&
+			lhs.page == rhs.page
 	}
 }
