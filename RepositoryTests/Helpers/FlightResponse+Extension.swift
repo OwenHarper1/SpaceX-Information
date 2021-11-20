@@ -13,7 +13,7 @@ extension FlightResponse {
 					 links: Links = .mock(),
 					 staticFireDateUnix: Date = Date(timeIntervalSince1970: 1142553600),
 					 net: Bool = false,
-					 window: Int = 2,
+					 window: Int? = 2,
 					 rocket: String = "Rocket1",
 					 success: Bool = false,
 					 failures: [Failure] = [.mock()],

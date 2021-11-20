@@ -12,7 +12,7 @@ public struct FlightResponse: Decodable {
 	let links: Links
 	let staticFireDateUnix: Date?
 	let net: Bool
-	let window: Int
+	let window: Int?
 	let rocket: String
 	let success: Bool
 	let failures: [Failure]

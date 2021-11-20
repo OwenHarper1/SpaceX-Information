@@ -45,6 +45,7 @@ class RequestBuilder {
 		var request = URLRequest(url: url)
 		request.httpMethod = (httpMethod ?? .get).method
 		request.httpBody = body?.toJSONData()
+		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 		
 		return request
 	}
