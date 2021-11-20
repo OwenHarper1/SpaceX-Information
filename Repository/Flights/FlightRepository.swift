@@ -33,7 +33,11 @@ public class FlightRepository: Domain.FlightRepository {
 	public func retrieve(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ()) {
 		self.retrievalType = retrievalType
 		
-		let request = FlightRequest(options: FlightRequest.Options(limit: 10, page: currentPage), query: retrievalType.query)
+		let requestOptions = FlightRequest.Options(limit: 10,
+												   page: currentPage,
+												   sort: .init(dateSortDirection: retrievalType.isAscending ? .ascending : .descending))
+		let request = FlightRequest(options: requestOptions,
+									query: retrievalType.query)
 		
 		flightService.retrieve(with: request) {
 			switch $0 {
@@ -61,7 +65,7 @@ fileprivate extension FlightRetrievalType {
 	var isAscending: Bool {
 		switch self {
 		case .list: return false
-		case .filtered(let filters): return filters.reduce(false) { rolling, filter in
+		case .filtered(let filters): return filters.reduce(false) { rolling, filter in // todo: this seems borked, check it works
 			guard case .order(let isAscending) = filter else { return rolling }
 			return isAscending
 		}

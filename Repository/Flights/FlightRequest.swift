@@ -14,6 +14,21 @@ public struct FlightRequest: Encodable {
 	struct Options: Encodable {
 		let limit: Int
 		let page: Int
+		let sort: Sort
+		
+		struct Sort: Encodable {
+			let dateSortDirection: SortDirection
+			
+			enum SortDirection: String, Encodable {
+				case ascending = "asc"
+				case descending = "desc"
+			}
+			
+			enum CodingKeys: String, CodingKey {
+				case dateSortDirection = "date_unix"
+			}
+		}
+		
 	}
 	
 	struct Query: Encodable {

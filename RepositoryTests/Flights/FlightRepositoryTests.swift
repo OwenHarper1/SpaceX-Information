@@ -38,7 +38,7 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isSuccess)
 		XCTAssertEqual(try repositoryResult?.get(), [.mock()])
-		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1), query: nil))
+		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1, sort: .init(dateSortDirection: .descending)), query: nil))
 	}
 	
 	// todo: this'll need to test filter mapping to request also
@@ -69,7 +69,7 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertNotNil(repositoryResult)
 		XCTAssertTrue(repositoryResult!.isSuccess)
 		XCTAssertEqual(try repositoryResult?.get(), [.mock()])
-		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1), query: expectedQuery))
+		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1, sort: .init(dateSortDirection: .ascending)), query: expectedQuery))
 	}
 	
 	func test_shouldIncrementPageNumber_givenServiceReturnsSuccess() {
@@ -82,7 +82,7 @@ class FlightRepositoryTests: XCTestCase {
 				repository.retrieve(retrievalType: retrievalType) { _ in expectation.fulfill() }
 				
 				wait(for: [expectation], timeout: 1)
-				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page), query: nil))
+				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page, sort: .init(dateSortDirection: .descending)), query: nil))
 			}
 		}
 	}
@@ -114,7 +114,7 @@ class FlightRepositoryTests: XCTestCase {
 				repository.retrieve(retrievalType: retrievalType) { _ in expectation.fulfill() }
 				
 				wait(for: [expectation], timeout: 1)
-				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1), query: nil))
+				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1, sort: .init(dateSortDirection: .descending)), query: nil))
 			}
 		}
 	}
