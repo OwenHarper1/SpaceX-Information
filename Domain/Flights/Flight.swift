@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Flight {
+public struct Flight: Equatable, Hashable {
 	public let name: String
 	public let launchDateTime: Date
 	public let rocket: Rocket?
