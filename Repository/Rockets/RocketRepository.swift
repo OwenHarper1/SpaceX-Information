@@ -20,8 +20,6 @@ public class RocketRepository: Domain.RocketRepository {
 		
 		var rocketResponses = [RocketResponse]()
 		
-		// todo: tidy
-		
 		ids.forEach { rocketID in
 			dispatchGroup.enter()
 			
@@ -32,6 +30,7 @@ public class RocketRepository: Domain.RocketRepository {
 				}
 				
 				rocketResponses.append(rocketResponse)
+				
 				dispatchGroup.leave()
 			}
 		}

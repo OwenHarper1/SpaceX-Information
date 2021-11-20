@@ -140,6 +140,8 @@
 		309183EB27484FFD00CB1949 /* InformationFlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309183E927484FFD00CB1949 /* InformationFlightCollectionViewCell.xib */; };
 		309183EE2748598400CB1949 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 309183ED2748598400CB1949 /* Kingfisher */; };
 		309183FF2749204C00CB1949 /* DateFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309183FE2749204C00CB1949 /* DateFormattingTests.swift */; };
+		309184022749220A00CB1949 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184012749220A00CB1949 /* RequestBuilderTests.swift */; };
+		309184042749221700CB1949 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309184032749221700CB1949 /* RequestBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -438,6 +440,8 @@
 		309183F32749201E00CB1949 /* SpaceX-InformationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpaceX-InformationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		309183F72749201E00CB1949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		309183FE2749204C00CB1949 /* DateFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingTests.swift; sourceTree = "<group>"; };
+		309184012749220A00CB1949 /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
+		309184032749221700CB1949 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				304E7E642745D355007999AD /* BaseService.swift */,
+				309184032749221700CB1949 /* RequestBuilder.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -829,6 +834,7 @@
 		308CAAE927446A8900ABBA90 /* SpaceXAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				30918400274921FF00CB1949 /* Shared */,
 				308CAAEC27446A8900ABBA90 /* Info.plist */,
 			);
 			path = SpaceXAPITests;
@@ -1009,6 +1015,14 @@
 			isa = PBXGroup;
 			children = (
 				309183FE2749204C00CB1949 /* DateFormattingTests.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		30918400274921FF00CB1949 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				309184012749220A00CB1949 /* RequestBuilderTests.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1598,6 +1612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309184042749221700CB1949 /* RequestBuilder.swift in Sources */,
 				308CAB11274485FA00ABBA90 /* Result+Extension.swift in Sources */,
 				304E7E652745D355007999AD /* BaseService.swift in Sources */,
 				308CAB0327446BAA00ABBA90 /* CompanyInformationService.swift in Sources */,
@@ -1613,6 +1628,7 @@
 			files = (
 				308CAB3E2745771F00ABBA90 /* Date+Extension.swift in Sources */,
 				308CAB2B27448BE100ABBA90 /* Result+Extension.swift in Sources */,
+				309184022749220A00CB1949 /* RequestBuilderTests.swift in Sources */,
 				308CAB36274492E600ABBA90 /* URL+Extension.swift in Sources */,
 				308CAB1F274486DA00ABBA90 /* MockError.swift in Sources */,
 			);
