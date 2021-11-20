@@ -105,10 +105,6 @@ extension InformationViewController: InformationViewModelDelegate {
 	func retrievedInformation() {
 		dataSource?.applySnapshot()
 		state = .loaded
-		//		DispatchQueue.main.async {
-		//			self.collectionView.reloadSections(Section.companyInformation.indexSet)
-		//			self.state = .loaded
-		//		}
 	}
 	
 	func retrieved(informationError error: DomainError) {

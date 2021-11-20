@@ -25,15 +25,3 @@ extension CompanyInformation {
 					 companySummary: companySummary)
 	}
 }
-
-extension CompanyInformation: Equatable {
-	public static func == (lhs: CompanyInformation, rhs: CompanyInformation) -> Bool {
-		return lhs.companyName == rhs.companyName &&
-			lhs.founderName == rhs.founderName &&
-			lhs.foundingYear == rhs.foundingYear &&
-			lhs.employeeCount == rhs.employeeCount &&
-			lhs.totalLaunchSites == rhs.totalLaunchSites &&
-			lhs.unitedStatesDollarValuation == rhs.unitedStatesDollarValuation &&
-			lhs.companySummary == rhs.companySummary
-	}
-}

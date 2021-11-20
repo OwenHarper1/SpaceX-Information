@@ -23,14 +23,3 @@ extension Flight {
 					 missionPatchHighResolution: missionPatchHighResolution)
 	}
 }
-
-extension Flight: Equatable {
-	public static func == (lhs: Flight, rhs: Flight) -> Bool {
-		return lhs.name == rhs.name &&
-			lhs.launchDateTime == rhs.launchDateTime &&
-			lhs.rocket == rhs.rocket &&
-			lhs.launchDidSucceed == rhs.launchDidSucceed &&
-			lhs.missionPatchLowResolution == rhs.missionPatchLowResolution &&
-			lhs.missionPatchHighResolution == rhs.missionPatchHighResolution
-	}
-}

@@ -16,11 +16,3 @@ extension Rocket {
 					 type: type)
 	}
 }
-
-extension Rocket: Equatable {
-	public static func == (lhs: Rocket, rhs: Rocket) -> Bool {
-		return lhs.id == rhs.id &&
-			lhs.name == rhs.name &&
-			lhs.type == rhs.type
-	}
-}
