@@ -22,20 +22,27 @@ struct FilterView: View {
 			ZStack {
 				VStack {
 					Form {
-						Picker("Order", selection: $filterOrder) {
-							ForEach(FilterOrder.allCases, id: \.self) { order in
-								Text(order.displayTitle).tag(order)
+						Section(header: Text("Order")) {
+							Picker("Order", selection: $filterOrder) {
+								ForEach(FilterOrder.allCases, id: \.self) { order in
+									Text(order.displayTitle).tag(order)
+								}
 							}
 						}
 						
-						Toggle("Only show successful launches", isOn: $launchSuccessful)
-						
-						Toggle("Filter by year", isOn: $showSpecificYear)
-						
-						if showSpecificYear {
-							DatePicker("From", selection: $filterFromYear, in: fromDateRange, displayedComponents: .date)
-							DatePicker("To", selection: $filterToYear, in: toDateRange, displayedComponents: .date)
+						Section(header: Text("Successful launches")) {
+							Toggle("Only show successful launches", isOn: $launchSuccessful)
 						}
+						
+						Section(header: Text("Filter by Year")) {
+							Toggle("Filter by year", isOn: $showSpecificYear)
+							
+							if showSpecificYear {
+								DatePicker("From", selection: $filterFromYear, in: fromDateRange, displayedComponents: .date)
+								DatePicker("To", selection: $filterToYear, in: toDateRange, displayedComponents: .date)
+							}
+						}
+						.animation(.linear)
 						
 					}
 					.navigationTitle("Filter")
