@@ -10,13 +10,23 @@
 
 class MockInformationViewModelDelegate: InformationViewModelDelegate {
 	var didRetrieveInformation: Bool!
-	var error: DomainError!
+	var informationError: DomainError!
+	var didRetrieveFlights: Bool!
+	var flightError: DomainError!
 	
 	func retrievedInformation() {
 		didRetrieveInformation = true
 	}
 	
-	func retrieved(_ error: DomainError) {
-		self.error = error
+	func retrieved(informationError error: DomainError) {
+		self.informationError = error
+	}
+	
+	func retrievedFlights() {
+		didRetrieveFlights = true
+	}
+	
+	func retrieved(flightError error: DomainError) {
+		self.flightError = error
 	}
 }

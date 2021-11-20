@@ -28,6 +28,7 @@ class InformationCollectionViewDataSource: NSObject, UICollectionViewDataSource 
 		
 		switch section {
 		case .companyInformation: return viewModel.companyInformation == nil ? 0 : 1
+		case .flights: return viewModel.flights?.count ?? 0
 		default: return 0
 		}
 	}

@@ -22,6 +22,7 @@ class InformationCollectionViewCellFactory: CellFactory {
 	
 	func registerCells() {
 		collectionView.register(InformationCompanyCollectionViewCell.self)
+		collectionView.register(InformationFlightCollectionViewCell.self)
 	}
 	
 	func makeCell(at indexPath: IndexPath) -> UICollectionViewCell {
@@ -29,6 +30,7 @@ class InformationCollectionViewCellFactory: CellFactory {
 		
 		switch section {
 		case .companyInformation: return makeCompanyCell(at: indexPath)
+		case .flights: return makeFlightCell(at: indexPath)
 		default: return UICollectionViewCell()
 		}
 	}
@@ -39,6 +41,16 @@ class InformationCollectionViewCellFactory: CellFactory {
 		}
 		
 		cell.configure(from: companyInformation)
+		
+		return cell
+	}
+	
+	private func makeFlightCell(at indexPath: IndexPath) -> UICollectionViewCell {
+		guard let cell = collectionView.dequeueReusableCell(ofType: InformationFlightCollectionViewCell.self, at: indexPath), let flight = viewModel.flights?[indexPath.row] else {
+			return UICollectionViewCell()
+		}
+		
+		cell.configure(from: flight)
 		
 		return cell
 	}

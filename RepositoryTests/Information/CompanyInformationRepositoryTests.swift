@@ -58,4 +58,3 @@ class CompanyInformationRepositoryTests: XCTestCase {
 		XCTAssertTrue(repositoryResult!.isFailure)
 	}
 }
-
