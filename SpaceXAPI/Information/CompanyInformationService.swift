@@ -12,11 +12,10 @@ public class CompanyInformationService: BaseService, Repository.CompanyInformati
 	public override init() {}
 	
 	public func retrieve(completion: @escaping (Result<CompanyInformationResponse, ServiceError>) -> ()) {
-		guard let url = URL(string: "\(Self.URLBase)/company") else { // todo: make url generation nicer
-			completion(.failure(.invalidURL))
-			return
-		}
+		let request = RequestBuilder()
+			.path("company")
+			.build()
 		
-		self.retrieve(from: url, httpMethod: .get, decodingInto: CompanyInformationResponse.self, completion: completion)
+		self.retrieve(request: request, decodingInto: CompanyInformationResponse.self, completion: completion)
 	}
 }

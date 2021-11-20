@@ -12,14 +12,15 @@ public class FlightService: BaseService, Repository.FlightService {
 	public override init() {}
 	
 	public func retrieve(completion: @escaping (Result<PaginationContainer<[FlightResponse]>, ServiceError>) -> ()) {
-		guard let url = URL(string: "\(Self.URLBase)/launches/query") else { // todo: make url generation nicer
-			completion(.failure(.invalidURL))
-			return
-		}
+		let request = RequestBuilder()
+			.method(.post)
+			.path("launches")
+			.path("query")
+			.build()
 		
 		let decoder = JSONDecoder()
 		decoder.dateDecodingStrategy = .secondsSince1970
 		
-		self.retrieve(from: url, httpMethod: .post, decodingInto: PaginationContainer<[FlightResponse]>.self, with: decoder, completion: completion)
+		self.retrieve(request: request, decodingInto: PaginationContainer<[FlightResponse]>.self, with: decoder, completion: completion)
 	}
 }

@@ -12,10 +12,10 @@ public class RocketService: BaseService, Repository.RocketService {
 	public override init() {}
 	
 	public func retrieve(id: String, completion: @escaping (Result<RocketResponse, ServiceError>) -> ()) {
-		guard let url = URL(string: "\(Self.URLBase)/rockets/\(id)") else { // todo: make url generation nicer
-			completion(.failure(.invalidURL))
-			return
-		}
+		let request = RequestBuilder()
+			.path("rockets")
+			.path(id)
+			.build()
 		
 		let formatter = DateFormatter()
 		formatter.dateFormat = "yyyy-MM-dd"
@@ -23,6 +23,6 @@ public class RocketService: BaseService, Repository.RocketService {
 		let decoder = JSONDecoder()
 		decoder.dateDecodingStrategy = .formatted(formatter)
 		
-		self.retrieve(from: url, httpMethod: .get, decodingInto: RocketResponse.self, with: decoder, completion: completion)
+		self.retrieve(request: request, decodingInto: RocketResponse.self, with: decoder, completion: completion)
 	}
 }

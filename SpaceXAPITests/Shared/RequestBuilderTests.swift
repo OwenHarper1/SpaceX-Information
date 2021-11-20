@@ -40,6 +40,6 @@ class RequestBuilderTests: XCTestCase {
 			.path("rockets")
 			.build()
 		
-		XCTAssertEqual(request?.httpMethod, "POST")
+		XCTAssertEqual(request?.httpMethod, "GET")
 	}
 }
