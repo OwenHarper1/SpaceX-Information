@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Logic
 
 class InformationCollectionViewCellDelegate: NSObject, UICollectionViewDelegate {
 	typealias Section = InformationViewController.Section
