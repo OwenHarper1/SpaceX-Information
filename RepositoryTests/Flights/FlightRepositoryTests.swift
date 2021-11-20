@@ -42,17 +42,39 @@ class FlightRepositoryTests: XCTestCase {
 		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
 	}
 	
+	// todo: this'll need to test filter mapping to request also
+	func test_shouldRetrieveFilteredFlightAndRocket_givenBothServicesReturnSuccess() {
+		flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
+		rocketService.result = .success(.mock())
+		
+		let expectation = expectation(description: "Result should return")
+		var repositoryResult: Result<[Flight], DomainError>?
+		
+		repository.retrieve(retrievalType: .filtered) { result in
+			repositoryResult = result
+			expectation.fulfill()
+		}
+		
+		wait(for: [expectation], timeout: 1)
+		XCTAssertNotNil(repositoryResult)
+		XCTAssertTrue(repositoryResult!.isSuccess)
+		XCTAssertEqual(try repositoryResult?.get(), [.mock()])
+		XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: 1)))
+	}
+	
 	// todo: add for both retrieval types
 	func test_shouldIncrementPageNumber_givenServiceReturnsSuccess() {
-		(1...10).forEach { page in
-			flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
-			rocketService.result = .success(.mock())
-			
-			let expectation = expectation(description: "Result should return")
-			repository.retrieve(retrievalType: .list) { _ in expectation.fulfill() }
-			
-			wait(for: [expectation], timeout: 1)
-			XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page)))
+		[FlightRetrievalType.list, .filtered].forEach { retrievalType in
+			(1...10).forEach { page in
+				flightService.result = .success(.mock(docs: [FlightResponse.mock()]))
+				rocketService.result = .success(.mock())
+				
+				let expectation = expectation(description: "Result should return")
+				repository.retrieve(retrievalType: retrievalType) { _ in expectation.fulfill() }
+				
+				wait(for: [expectation], timeout: 1)
+				XCTAssertEqual(flightService.request, .init(options: .init(limit: 10, page: page)))
+			}
 		}
 	}
 	
@@ -87,7 +109,7 @@ class FlightRepositoryTests: XCTestCase {
 	}
 	
 	// todo: implement
-	func test_shouldResetPageNumber_givenServiceReturnsSuccess() {
+	func test_shouldResetPageNumber_givenRetrievalTypeChanges_andServiceReturnsSuccess() {
 		
 	}
 	

@@ -9,17 +9,30 @@ import Domain
 import Foundation
 
 public class FlightRepository: Domain.FlightRepository {
+	static let DefaultPage = 1
+	static let DefaultRetrievalType = FlightRetrievalType.list
+	
 	private let flightService: FlightService
 	private let rocketRepository: Domain.RocketRepository
 	
-	private var currentPage = 1
+	private var currentPage: Int
+	private var retrievalType: FlightRetrievalType {
+		didSet {
+			guard oldValue != retrievalType else { return }
+			currentPage = Self.DefaultPage
+		}
+	}
 	
 	public init(flightService: FlightService, rocketRepository: Domain.RocketRepository) {
 		self.flightService = flightService
 		self.rocketRepository = rocketRepository
+		currentPage = Self.DefaultPage
+		retrievalType = Self.DefaultRetrievalType
 	}
 	
 	public func retrieve(retrievalType: FlightRetrievalType, completion: @escaping (Result<[Flight], DomainError>) -> ()) {
+		self.retrievalType = retrievalType
+		
 		let request = FlightRequest(options: FlightRequest.Options(limit: 10, page: currentPage))
 		
 		flightService.retrieve(with: request) {
